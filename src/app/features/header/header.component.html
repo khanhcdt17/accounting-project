@@ -1,22 +1,39 @@
-<div class="flex justify-between mx-40">
-  <div>
-    <a><img alt="2KT – Đại lý Thuế Chuyên Nghiệp"/></a>
-  </div>
-  <div class="flex justify-between">
-    <div>
-      <a href="https://smarttax.vn/" aria-current="page">Trang chủ</a>
+<div class="w-full common-bg-color">
+  <div class="flex justify-between mx-80">
+    <div class="flex items-center">
+      <a class="mx-4 block w-32"><img src="https://smarttax.vn/wp-content/uploads/2023/10/Logo-Smarttax-02.png"
+          alt="2KT – Đại lý Thuế Chuyên Nghiệp" loading="lazy" /></a>
     </div>
-    <div>
-      <a href="https://smarttax.vn/ve-chung-toi/">Về chúng tôi</a>
-    </div>
-    <div>
-      <a href="https://smarttax.vn/smarttax-dich-vu/">Dịch vụ</a>
-    </div>
-    <div>
-      <a href="https://smarttax.vn/blog/">Blog</a>
-    </div>
-    <div>
-      <a href="https://smarttax.vn/lien-he/">Liên hệ</a>
+    <div class="flex justify-between">
+      <div class="h-auto">
+        <a class="mx-8 py-6 block text-white font-semibold text-base" href="" aria-current="page">Trang
+          chủ</a>
+      </div>
+      <div class="h-auto">
+        <a class="mx-8 py-6 block text-white font-semibold text-base" href="#">Về chúng
+          tôi</a>
+      </div>
+      <div class="h-auto">
+        <a class="mx-8 py-6 flex text-white font-semibold text-base items-center" href="#">Dịch vụ<ng-container
+            *ngTemplateOutlet="iconTemplate"></ng-container></a>
+      </div>
+      <div class="h-auto">
+        <a class="mx-8 py-6 flex text-white font-semibold text-base items-center" href="#">Blog <ng-container
+            *ngTemplateOutlet="iconTemplate"></ng-container></a>
+      </div>
+      <div class="h-auto">
+        <a class="mx-8 py-6 block text-white font-semibold text-base" href="#">Liên hệ</a>
+      </div>
     </div>
   </div>
 </div>
+
+<ng-template #iconTemplate>
+  <div class="pl-1">
+    <svg class="h-4 w-4 text-white" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+      fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  </div>
+</ng-template>

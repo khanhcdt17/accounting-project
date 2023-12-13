@@ -1,3 +1,12 @@
-<div>
+<div class="hp-content">
   <app-header></app-header>
+  <app-carousel></app-carousel>
+  <div class="flex justify-content-center card-content position-relative">
+    <app-infor-card icon="fa-solid fa-user-shield" [content]="content1" title="An toàn" class="mr-8"></app-infor-card>
+    <app-infor-card icon="fa-solid fa-bullseye" [content]="content2" title="Chính xác" class="mr-8"></app-infor-card>
+    <app-infor-card icon="fa-solid fa-users" [content]="content3" title="Chuyên nghiệp"></app-infor-card>
+  </div>
+  <div>
+    <app-profile-card></app-profile-card>
+  </div>
 </div>

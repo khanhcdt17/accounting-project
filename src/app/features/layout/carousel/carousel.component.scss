@@ -1,0 +1,136 @@
+.banner-img {
+  position: relative;
+  opacity: 0.5;
+}
+
+.content-image {
+  top: 25%;
+  left: 20%;
+}
+
+.btn-border-radius {
+  border-radius: 2px;
+}
+
+.btn-common {
+  text-transform: uppercase;
+  background-color: #ff4700;
+  border: #ff4700;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 35px 15px 35px;
+}
+
+.btn-contact {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 35px 15px 35px;
+  color: #ff4700;
+}
+
+.btn-common:hover {
+  background-color: #ad3302;
+}
+
+.fade-in-up {
+  animation: fade-in-up 1s ease-out;
+}
+
+.cs-header {
+  width: auto;
+  z-index: 7;
+  height: auto;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  white-space: normal;
+  min-height: 0px;
+  min-width: 0px;
+  max-height: none;
+  max-width: none;
+  text-align: left;
+  letter-spacing: -4px;
+  font-weight: 700;
+  font-size: 102px;
+  backdrop-filter: none;
+  filter: none;
+  transform-origin: 50% 50%;
+  opacity: 1;
+  transform: translate(0px, 0px);
+  visibility: visible;
+}
+
+.cs-description {
+  z-index: 8;
+  touch-action: manipulation;
+  height: auto;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  white-space: normal;
+  width: 871px;
+  min-height: 0px;
+  min-width: 0px;
+  max-height: none;
+  max-width: none;
+  text-align: left;
+  line-height: 32px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-size: 18px;
+  backdrop-filter: none;
+  filter: none;
+  transform-origin: 50% 50%;
+  opacity: 1;
+  transform: translate(0px, 0px);
+  visibility: visible;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  pointer-events: none;
+}
