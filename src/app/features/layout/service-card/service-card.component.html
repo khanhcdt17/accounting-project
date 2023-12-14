@@ -1,0 +1,12 @@
+<div class="card-group divide-x-2 bg-sky-800 border-gray-50 ">
+    <div class="card bg-inherit border-y-0 sc-content" *ngFor="let content of listContent">
+        <div class="card-body px-5 flex flex-col justify-end">
+            <h5 class="number-title">{{content.index}}</h5>
+            <h5 class="sc-title">{{content.title1}}<br>{{content.title2}}</h5>
+            <p class="sc-text" [ngClass]=" hoveredItem === content.index ? 'block':'hidden'">
+                {{content.content}}</p>
+            <a class="btn btn-primary sc-btn mt-4" (mouseenter)="onHover(content.index)" (mouseleave)="onHover('')"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+</div>

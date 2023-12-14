@@ -1,0 +1,31 @@
+.number-title {
+  color: #e95500;
+  font-size: 24px;
+  display: block;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.sc-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.sc-text {
+  font-size: 17px;
+  font-weight: 400;
+  text-transform: none;
+  color: #fff;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sc-content {
+  height: 550px;
+}
+
+.sc-btn-show {
+  opacity: 1;
+  transform: translateY(-10px);
+}
