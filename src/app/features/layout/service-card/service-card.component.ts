@@ -14,7 +14,7 @@ export class ServiceCardComponent {
     {
       title1: 'Dịch vụ', title2: 'Kế toán', content: '2KT cung cấp dịch vụ kế toán nhằm hỗ trợ doanh nghiệp về thủ tục thuế trong suốt quá trình thành lập và hoạt động, giúp doanh nghiệp yên tâm phát triển kinh doanh.', index: '01'
     },
-    { title1: 'Đại lý thuế', title2: 'An Tâm', content: '2KT cung cấp dịch vụ kế toán nhằm hỗ trợ doanh nghiệp về thủ tục thuế trong suốt quá trình thành lập và hoạt động, giúp doanh nghiệp yên tâm phát triển kinh doanh.', index: '02' },
+    { title1: 'Đại lý', title2: 'thuế', content: '2KT cung cấp dịch vụ kế toán nhằm hỗ trợ doanh nghiệp về thủ tục thuế trong suốt quá trình thành lập và hoạt động, giúp doanh nghiệp yên tâm phát triển kinh doanh.', index: '02' },
     { title1: 'Quyết toán', title2: 'thuế', content: '2KT cung cấp dịch vụ kế toán nhằm hỗ trợ doanh nghiệp về thủ tục thuế trong suốt quá trình thành lập và hoạt động, giúp doanh nghiệp yên tâm phát triển kinh doanh.', index: '03' },
     { title1: 'Đăng ký', title2: 'kinh doanh', content: '2KT cung cấp dịch vụ kế toán nhằm hỗ trợ doanh nghiệp về thủ tục thuế trong suốt quá trình thành lập và hoạt động, giúp doanh nghiệp yên tâm phát triển kinh doanh.', index: '04' },
     { title1: 'Bảo hiểm', title2: 'xã hội', content: '2KT cung cấp dịch vụ kế toán nhằm hỗ trợ doanh nghiệp về thủ tục thuế trong suốt quá trình thành lập và hoạt động, giúp doanh nghiệp yên tâm phát triển kinh doanh.', index: '05' },
