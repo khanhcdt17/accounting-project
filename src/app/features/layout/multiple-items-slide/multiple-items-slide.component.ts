@@ -7,6 +7,16 @@ import { AfterViewInit, Component, ElementRef, OnInit, Renderer2 } from '@angula
 })
 export class MultipleItemsSlideComponent implements OnInit, AfterViewInit {
 
+  dataImage = [
+    'https://i.imgur.com/JyaIFQO.jpg',
+    'https://i.imgur.com/B3Zhx2V.jpg',
+    'https://i.imgur.com/DlEnTvq.jpg',
+    'https://i.imgur.com/m8J0s1a.jpg',
+    'https://i.imgur.com/E8cRS0Z.jpg',
+    'https://i.imgur.com/qMdSfv5.jpg',
+    'https://i.imgur.com/xWxX0NN.png'
+  ]
+  
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   ngAfterViewInit(): void {

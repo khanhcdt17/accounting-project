@@ -1,5 +1,5 @@
 .profile-card-container {
-  max-width: 1150px;
+  max-width: 65%;
 }
 
 .profile-card-content h2 {
@@ -7,6 +7,12 @@
   font-family: "Roboto", Sans-serif;
   font-size: 26px;
   font-weight: 600;
+}
+
+.profile-card-content h3 {
+  font-family: "Roboto", Sans-serif;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .profile-card-content p {
@@ -32,3 +38,7 @@
   background-color: #ad3302;
 }
 
+.cv-icon {
+  font-size: 50px;
+  color: #ff4700;
+}
