@@ -1,0 +1,21 @@
+<div class="flex mb-3 border-0 justify-center ">
+    <div class="row g-0 profile-card-container">
+        <div class="col-md-6 flex items-end">
+            <img src="https://i.imgur.com/54NHn99.jpg" class="img-fluid rounded shadow-xl shadow-gray-500">
+        </div>
+        <div class="col-md-6 pl-16">
+            <div class="card-body profile-card-content">
+                <h2 class="card-title">Giá trị cốt lõi</h2>
+                <div class="flex mt-4" *ngFor="let item of profiles">
+                    <div class="shadow rounded-md h-fit">
+                        <i class="{{item.icon}} cv-icon m-3"></i>
+                    </div>
+                    <div class="ml-8">
+                        <h3>{{item.title}}</h3>
+                        <p class="card-text pt-2">{{item.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

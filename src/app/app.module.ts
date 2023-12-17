@@ -12,9 +12,11 @@ import { ProfileCardComponent } from './features/layout/profile-card/profile-car
 import { MultipleItemsSlideComponent } from './features/layout/multiple-items-slide/multiple-items-slide.component';
 import { ServiceCardComponent } from './features/layout/service-card/service-card.component';
 import { FooterComponent } from './features/layout/footer/footer.component';
+import { CoreValueComponent } from './features/layout/core-value/core-value.component';
+import { ReviewCardComponent } from './features/layout/review-card/review-card.component';
 
 @NgModule({
-  declarations: [AppComponent, HomepageComponent, ContentsComponent, HeaderComponent, CarouselComponent, InforCardComponent, ProfileCardComponent, MultipleItemsSlideComponent, ServiceCardComponent, FooterComponent],
+  declarations: [AppComponent, HomepageComponent, ContentsComponent, HeaderComponent, CarouselComponent, InforCardComponent, ProfileCardComponent, MultipleItemsSlideComponent, ServiceCardComponent, FooterComponent, CoreValueComponent, ReviewCardComponent, CarouselComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

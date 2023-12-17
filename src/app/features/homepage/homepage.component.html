@@ -2,25 +2,31 @@
   <app-header></app-header>
   <app-carousel></app-carousel>
   <div class="flex justify-content-center card-content position-relative">
-    <app-infor-card icon="fa-solid fa-user-shield" [content]="content1" title="An toàn" class="mr-8"></app-infor-card>
-    <app-infor-card icon="fa-solid fa-bullseye" [content]="content2" title="Chính xác" class="mr-8"></app-infor-card>
-    <app-infor-card icon="fa-solid fa-users" [content]="content3" title="Chuyên nghiệp"></app-infor-card>
+    <app-infor-card icon="fa-solid fa-pen-nib" [content]="content3" title="Chuyên nghiệp" class="mr-8"></app-infor-card>
+    <app-infor-card icon="fa-solid fa-circle-check" [content]="content1" title="Uy tín" class="mr-8"></app-infor-card>
+    <app-infor-card icon="fa-solid fa-hand-holding-dollar" [content]="content2" title="Hiệu quả"></app-infor-card>
   </div>
   <div class="mt-16">
     <app-profile-card></app-profile-card>
   </div>
   <div class="mt-16 w-full h-fit bg-gray-100">
-    <h2 class="title text-center pt-16">Khách hàng của chúng tôi</h2>
-    <div class="mt-10 pb-16">
+    <h2 class="title text-center pt-20">Khách hàng của chúng tôi</h2>
+    <div class="mt-10 pb-4">
       <app-multiple-items-slide></app-multiple-items-slide>
     </div>
   </div>
-  <div class="position-relative">
-    <app-service-card></app-service-card>
-    <!-- <div class="dark-overlay">
-      <h2 class="title text-center pt-16">Dịch vụ của chúng tôi</h2>
-    </div> -->
+  <div>
+    <h2 class="title text-center pt-16 pb-8 bg-gray-100">Dịch vụ của chúng tôi</h2>
+    <div class="position-relative">
+      <app-service-card></app-service-card>
+    </div>
   </div>
+  <div class="mt-16">
+    <app-core-value></app-core-value>
+  </div>
+  <!-- <div>
+    <app-review-card></app-review-card>
+  </div> -->
   <div class="mt-32">
     <app-footer></app-footer>
   </div>
