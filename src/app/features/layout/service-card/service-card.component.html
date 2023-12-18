@@ -1,16 +1,16 @@
 <div class="card-group border-gray-50 service-card">
     <div class="dark-overlay"></div>
-    <div class="card bg-inherit sc-container rounded-none border-1 border-white" (mouseenter)="onHover(content.index)"
+    <div class="card card-bg-inherit sc-container rounded-none border-1 border-white" (mouseenter)="onHover(content.index)"
         (mouseleave)="onHover('')" *ngFor="let content of listContent">
         <div class="dark-overlay" *ngIf="hoveredItem === content.index"></div>
-        <div class="card-body px-5 flex flex-col justify-end sc-content">
+        <div class="card-body !px-5 flex flex-col justify-end sc-content">
             <h5 class="number-title">{{content.index}}</h5>
             <h5 class="sc-title">{{content.title1}}<br>{{content.title2}}</h5>
             <p class="sc-text" [ngClass]=" hoveredItem === content.index ? 'block':'hidden'">
                 {{content.content}}</p>
-            <a class="btn sc-btn mt-4 w-fit flex items-center h-10 border-white">
+            <a class="btn sc-btn !mt-4 w-fit flex items-center !h-10 border-white">
                 <i class="fa-solid fa-arrow-right"></i>
-                <p class="sc-text-btn ml-2">Xem thêm</p>
+                <p class="sc-text-btn !ml-2">Xem thêm</p>
             </a>
         </div>
     </div>

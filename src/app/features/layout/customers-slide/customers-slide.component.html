@@ -1,0 +1,35 @@
+<!-- <div class="container text-center my-3 flex justify-center">
+    <div class="row mx-auto my-auto justify-content-center">
+        <div class="carousel" data-bs-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active" *ngFor="let imgUrl of dataImage">
+                    <div class="">
+                        <div class="w-fit">
+                            <div class="w-fit">
+                                <img src="{{imgUrl}}" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="flex justify-center">
+  <div class="company-slider-container">
+    <carousel
+      [interval]="2500"
+      [itemsPerSlide]="5"
+      [singleSlideOffset]="true"
+      [startFromIndex]="6"
+      [noPause]="true"
+      #carousel
+    >
+      <slide *ngFor="let item of items" class="item">
+        <div class="carousel-content">
+          <img [src]="item" />
+        </div>
+      </slide>
+    </carousel>
+  </div>
+</div>
