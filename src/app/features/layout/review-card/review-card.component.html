@@ -1,16 +1,27 @@
-<div class="container text-center my-3 flex justify-center">
-    <div class="row mx-auto my-auto justify-content-center">
-        <div class="py-8" role="listbox">
-            <div #carousel class="carousel" *ngFor="let item of items">
-                <div class="card text-center w-80"><img class="card-img-top" src="{{item.image}}" alt="">
-                    <div class="card-body">
-                        <h5>{{item.name}}<br />
-                            <span>{{item.position}}</span>
-                        </h5>
-                        <p class="card-text">“ {{item.comment}} ” </p>
-                    </div>
-                </div>
+<div class="flex justify-center">
+  <div class="">
+    <carousel
+      [interval]="0"
+      [itemsPerSlide]="3"
+      [singleSlideOffset]="true"
+      [startFromIndex]="6"
+      [noPause]="true"
+      #carousel
+    >
+      <slide *ngFor="let item of items" class="item">
+        <div class="carousel">
+          <div class="card text-center w-80">
+            <img class="card-img-top" src="{{ item.image }}" alt="" />
+            <div class="card-body">
+              <h5>
+                {{ item.name }}<br />
+                <span>{{ item.position }}</span>
+              </h5>
+              <p class="card-text">“ {{ item.comment }} ”</p>
             </div>
+          </div>
         </div>
-    </div>
+      </slide>
+    </carousel>
+  </div>
 </div>
