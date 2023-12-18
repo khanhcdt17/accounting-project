@@ -1,0 +1,18 @@
+<div class="flex justify-center">
+  <div class="company-slider-container">
+    <carousel
+      [interval]="2500"
+      [itemsPerSlide]="5"
+      [singleSlideOffset]="true"
+      [startFromIndex]="6"
+      [noPause]="true"
+      #carousel
+    >
+      <slide *ngFor="let item of items" class="item">
+        <div class="carousel-content">
+          <img [src]="item" />
+        </div>
+      </slide>
+    </carousel>
+  </div>
+</div>
