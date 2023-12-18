@@ -94,3 +94,16 @@ h2 {
     outline: 0;
   }
 }
+
+.rc-h-350 {
+  height: 350px;
+}
+
+::ng-deep app-review-card carousel {
+  .carousel-control-next {
+    right: -150px !important;
+  }
+  .carousel-control-prev {
+    left: -150px !important;
+  }
+}
