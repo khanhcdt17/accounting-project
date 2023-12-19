@@ -3,12 +3,27 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-core-value',
   templateUrl: './core-value.component.html',
-  styleUrls: ['./core-value.component.scss']
+  styleUrls: ['./core-value.component.scss'],
 })
 export class CoreValueComponent {
   profiles = [
-    { icon: 'fa-solid fa-circle-check', title: 'Trung thực', content: 'Trung Thực trong mọi dịch vụ là cam kết. Chúng tôi hiểu giá trị của con số chính xác và tận tâm với số liệu. Đồng hành cùng bạn, chúng tôi tạo lập sự tin cậy và ổn định trong tài chính doanh nghiệp.' },
-    { icon: 'fa-solid fa-heart', title: 'Tận tâm', content: 'Không chỉ là chuyên gia kế toán và thuế, mà còn tận tâm với mục tiêu và sứ mệnh của doanh nghiệp bạn. Cam kết đồng hành một cách tận tâm, mang lại dịch vụ chất lượng và giải pháp tài chính độc đáo cho sự thành công của khách hàng.' },
-    { icon: 'fa-solid fa-lightbulb', title: 'Đổi mới', content: 'Không ngừng đổi mới, luôn phát triển bản thân.Cam kết mang lại giải pháp tài chính độc đáo, giúp doanh nghiệp trở nên linh hoạt và hiệu quả hơn.' }
-  ]
+    {
+      icon: 'fa-solid fa-circle-check',
+      title: 'Tin cậy',
+      content: `Các dịch vụ  mà 2KT mang lại cho khách hàng đều có độ tin cậy cao, 
+      con người 2KT với tri thức và văn hóa cao luôn mang lại cho khách hàng cảm giác tin cậy trong giao dịch.`,
+    },
+    {
+      icon: 'fa-solid fa-heart',
+      title: 'Tận tình',
+      content: `2KT Phát triển đội ngũ nhân viên, bộ phận kinh doanh, tư vấn và các bộ phận khác luôn luôn tận tâm, tận lực phục vụ vì lợi ích của khách hàng, 
+        làm cho khách hàng tin cậy như một người bạn, một người đồng hành trong sự nghiệp.`,
+    },
+    {
+      icon: 'fa-solid fa-lightbulb',
+      title: 'Uy tín',
+      content: `Các dịch vụ của 2KT luôn đáp ứng được yêu cầu của khách hàng. Đội ngũ tư vấn luôn hỗ trợ khách hàng 24/7. 
+        Chúng tôi cam kết có trách nhiệm đồng hành dài lâu cùng Doanh nghiệp trên từng chặng đường phát triển thành công, bền vững.`,
+    },
+  ];
 }

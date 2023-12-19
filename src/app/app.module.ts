@@ -16,6 +16,7 @@ import { ReviewCardComponent } from './features/layout/review-card/review-card.c
 import { CustomCarouselComponent } from './features/layout/custom-carousel/custom-carousel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ShapesComponent } from './features/layout/shapes/shapes.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     FooterComponent,
     CoreValueComponent,
     ReviewCardComponent,
+    ShapesComponent,
   ],
   imports: [
     BrowserModule,
