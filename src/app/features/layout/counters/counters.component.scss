@@ -1,0 +1,18 @@
+
+
+.counter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f95911;
+}
+
+.counter-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.counter-content p,h1{
+    @apply text-white;
+}

@@ -1,6 +1,6 @@
 .shape-container {
   background-image: none;
-  min-height: 1462px;
+  min-height: 1180px;
   position: relative;
   color: #111111;
   background-color: rgb(243 244 246);
@@ -9,11 +9,11 @@
 
 .u-section-1,
 .u-image-1 {
-  width: 746px;
-  height: 746px;
-  background-image: url(//images01.nicepage.com/c461c07…/09976c1…/girl-siiting-legs-mountains.jpg);
+  width: 650px;
+  height: 650px;
+  background-image: url(https://i.imgur.com/x9PX6ew.jpg);
   background-position: 50% 50%;
-  margin: -419px auto 0 calc(((100% - 1140px) / 2));
+  margin: -350px auto 0 calc(((100% - 1140px) / 2));
 }
 
 .u-image-circle,
@@ -31,7 +31,7 @@
 
 .u-section-1,
 .u-shape-1 {
-  height: 491px;
+  height: 350px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -56,10 +56,10 @@
 
 .u-section-1,
 .u-group-1 {
-  width: 536px;
-  min-height: 501px;
+  width: 550px;
+  min-height: 430px;
   background-image: none;
-  margin: -479px calc(((100% - 1140px) / 2)) 0 auto;
+  margin: -450px calc(((100% - 1100px) / 2)) 0 auto;
 }
 
 .u-white {
@@ -76,7 +76,7 @@
 
 .u-section-1,
 .u-group-2 {
-  min-height: 455px;
+  min-height: 425px;
   width: 604px;
   margin: 72px auto 0 calc(((100% - 1140px) / 2));
 }
@@ -97,4 +97,24 @@
 }
 .u-shape-circle {
   border-radius: 50%;
+}
+
+.u-text {
+  line-height: 2;
+  letter-spacing: normal;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-transform: none;
+  margin: 20px 0 0;
+  color: #2c2933;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+}
+
+.u-text-title {
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  text-align: left;
+  font-size: 34px;
 }

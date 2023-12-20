@@ -1,0 +1,47 @@
+<!-- <div class="counter-container">
+  <div
+    class="counter-content row w-3/4 py-20"
+    (window:scroll)="onScroll($event)"
+  >
+    <div class="col-3">
+      <h1 class="text-center">{{ yearEx }} +</h1>
+      <p class="text-center">Năm kinh nghiệm</p>
+    </div>
+    <div class="col-3">
+      <h1 class="text-center">{{ customer }} +</h1>
+      <p class="text-center">Khách hàng</p>
+    </div>
+    <div class="col-3">
+      <h1 class="text-center">{{ staff }} +</h1>
+      <p class="text-center">Nhân viên</p>
+    </div>
+    <div class="col-3">
+      <h1 class="text-center">{{ service }} +</h1>
+      <p class="text-center">Dịch vụ hỗ trợ</p>
+    </div>
+  </div>
+</div> -->
+<div class="counter-container">
+  <div
+    [@counterAnimation]="animationState"
+    class="counter-content row w-3/4 py-20"
+    (window:scroll)="onScroll()"
+  >
+    <div class="col-3">
+      <h1 class="text-center">{{ yearEx }} +</h1>
+      <p class="text-center">Năm kinh nghiệm</p>
+    </div>
+    <div class="col-3">
+      <h1 class="text-center">{{ customer }} +</h1>
+      <p class="text-center">Khách hàng</p>
+    </div>
+    <div class="col-3">
+      <h1 class="text-center">{{ staff }} +</h1>
+      <p class="text-center">Nhân viên</p>
+    </div>
+    <div class="col-3">
+      <h1 class="text-center">{{ service }} +</h1>
+      <p class="text-center">Dịch vụ hỗ trợ</p>
+    </div>
+  </div>
+</div>
