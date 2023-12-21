@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { ShapesComponent } from './features/layout/shapes/shapes.component';
 import { CountersComponent } from './features/layout/counters/counters.component';
+import { QuestionComponent } from './features/layout/question/question.component';
+import { BlogCardComponent } from './features/layout/blog-card/blog-card.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { CountersComponent } from './features/layout/counters/counters.component
     ReviewCardComponent,
     ShapesComponent,
     CountersComponent,
+    QuestionComponent,
+    BlogCardComponent,
   ],
   imports: [
     BrowserModule,
