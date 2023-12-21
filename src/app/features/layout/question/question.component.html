@@ -1,0 +1,52 @@
+<div class="flex !mb-3 border-0 justify-center mx-32">
+  <div class="row g-0 profile-card-container">
+    <div class="col-md-6">
+      <div class="card-body profile-card-content">
+        <h2 class="card-title">Luôn đồng hành cùng doanh nghiệp</h2>
+        <div class="mt-4" *ngFor="let item of profiles">
+          <div
+            class="flex items-center shadow rounded-md h-16 w-5/6"
+            (click)="openTab(item.index)"
+            [ngClass]="{ 'common-background text-white': item.isOpen }"
+          >
+            <div class="ml-4">
+              <i class="fa-solid fa-angle-right" *ngIf="!item.isOpen"></i>
+              <i class="fa-solid fa-angle-down" *ngIf="item.isOpen"></i>
+            </div>
+            <div class="ml-8">
+              <h5 class="m-0 p-0">{{ item.title }}</h5>
+            </div>
+          </div>
+          <div *ngIf="item.isOpen" class="w-5/6">
+            <div class="mx-4 mt-4" *ngFor="let content of item.contents">
+              <div class="flex">
+                <i
+                  class="fa-solid fa-circle-arrow-right mr-2 mt-1 common-color"
+                ></i>
+                <p>{{ content }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <a
+            class="btn btn-danger border-0 h-16 w-5/6 common-background flex items-center py-3"
+          >
+            <span class="flex justify-content">
+              <span class="align-icon-right flex items-center">
+                <i class="fa-solid fa-comments text-white text-2xl"></i>
+              </span>
+              <span class="button-text text-2xl">Liên hệ tư vấn miễn phí </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 flex items-center">
+      <img
+        src="https://i.imgur.com/wpL3gS6.jpg"
+        class="img-fluid rounded shadow-xl shadow-gray-500"
+      />
+    </div>
+  </div>
+</div>

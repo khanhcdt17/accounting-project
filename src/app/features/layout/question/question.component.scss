@@ -1,0 +1,29 @@
+@media (max-width: 992px) {
+  .profile-card-container {
+    max-width: 80vw;
+  }
+}
+
+@media (min-width: 1500px) {
+  .profile-card-container {
+    max-width: 1300px;
+  }
+}
+
+.common-background {
+  background-color: #f95911;
+}
+
+.common-color {
+  color: #f95911;
+}
+.align-icon-right {
+  margin-left: 5px;
+  order: 15;
+}
+
+.button-text {
+  flex-grow: 1;
+  order: 10;
+  display: inline-block;
+}

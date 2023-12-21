@@ -1,0 +1,41 @@
+<!-- <h3>Tin tức</h3> -->
+<div class="flex justify-center relative">
+  <div class="bc-container absolute w-full"></div>
+  <div class="">
+    <carousel
+      [interval]="7000"
+      [itemsPerSlide]="3"
+      [singleSlideOffset]="true"
+      [startFromIndex]="6"
+      [noPause]="true"
+      #carousel
+    >
+      <slide *ngFor="let item of items" class="item">
+        <div class="carousel my-8 mx-2">
+          <div class="card text-center w-96 bc-card">
+            <div class="flex items-center justify-center p-8">
+              <img class="bc-image" src="{{ item.image1 }}" alt="" />
+            </div>
+            <div class="card-body !pt-0">
+              <p class="text-left h-16">{{ item.title1 }}</p>
+              <a class="btn btn-danger border-0 common-background mt-4 mb-2"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+          <div class="card text-center w-96 mt-8 bc-card">
+            <div class="flex items-center justify-center p-8">
+              <img class="bc-image" src="{{ item.image2 }}" alt="" />
+            </div>
+            <div class="card-body !pt-0">
+              <p class="text-left h-16">{{ item.title2 }}</p>
+              <a class="btn btn-danger border-0 common-background mt-4 mb-2"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+</div>
