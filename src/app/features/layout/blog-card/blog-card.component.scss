@@ -1,7 +1,7 @@
 .bc-container {
   background-color: #f95911;
   top: 40%;
-  height: 70%;
+  height: 67%;
 }
 
 ::ng-deep app-blog-card carousel {
@@ -17,7 +17,6 @@
 }
 
 .bc-card {
-  border-radius: 50px;
 }
 
 .bc-image {
@@ -27,7 +26,6 @@
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  border-radius: 30px;
 }
 
 .common-background {

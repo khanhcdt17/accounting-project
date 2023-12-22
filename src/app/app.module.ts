@@ -4,8 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './features/homepage/homepage.component';
-import { ContentsComponent } from './features/contents/contents.component';
-import { HeaderComponent } from './features/header/header.component';
+import { HeaderComponent } from './features/layout/header/header.component';
 import { InforCardComponent } from './features/layout/infor-card/infor-card.component';
 import { ProfileCardComponent } from './features/layout/profile-card/profile-card.component';
 import { CustomersSlideComponent } from './features/layout/customers-slide/customers-slide.component';
@@ -20,12 +19,15 @@ import { ShapesComponent } from './features/layout/shapes/shapes.component';
 import { CountersComponent } from './features/layout/counters/counters.component';
 import { QuestionComponent } from './features/layout/question/question.component';
 import { BlogCardComponent } from './features/layout/blog-card/blog-card.component';
+import { AboutPageComponent } from './features/about-page/about-page.component';
+import { ServicePageComponent } from './features/service-page/service-page.component';
+import { BlogPageComponent } from './features/blog-page/blog-page.component';
+import { ContactPageComponent } from './features/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    ContentsComponent,
     HeaderComponent,
     CustomCarouselComponent,
     InforCardComponent,
@@ -39,6 +41,10 @@ import { BlogCardComponent } from './features/layout/blog-card/blog-card.compone
     CountersComponent,
     QuestionComponent,
     BlogCardComponent,
+    AboutPageComponent,
+    ServicePageComponent,
+    BlogPageComponent,
+    ContactPageComponent,
   ],
   imports: [
     BrowserModule,
