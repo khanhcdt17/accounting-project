@@ -17,7 +17,7 @@ export class BlogCardComponent {
     {
       image1: 'https://i.imgur.com/xZeFzGg.jpg',
       title1:
-        'Dịch Vụ Kế toán Trọn Gói Giá Rẻ Tại TPHCM: Top 1 Lựa chọn cho doanh nghiệp',
+        'Dịch Vụ Kế toán Trọn Gói Giá Rẻ Tại Việt Nam: Top 1 Lựa chọn cho doanh nghiệp',
       image2: 'https://i.imgur.com/kFNcTLb.jpg',
       title2:
         'Dịch Vụ Kế Toán – 7 Bước Quan Trọng để Tối Ưu Hóa Quy Trình Kế Toán',
