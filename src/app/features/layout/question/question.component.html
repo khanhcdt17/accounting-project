@@ -5,7 +5,7 @@
         <h2 class="card-title">Luôn đồng hành cùng doanh nghiệp</h2>
         <div class="mt-4" *ngFor="let item of profiles">
           <div
-            class="flex items-center shadow rounded-md h-16 w-5/6"
+            class="flex items-center shadow rounded-md h-16 w-5/6 cursor-pointer hover:bg-orange-100"
             (click)="openTab(item.index)"
             [ngClass]="{ 'common-background text-white': item.isOpen }"
           >
