@@ -23,6 +23,7 @@ import { AboutPageComponent } from './features/about-page/about-page.component';
 import { ServicePageComponent } from './features/service-page/service-page.component';
 import { BlogPageComponent } from './features/blog-page/blog-page.component';
 import { ContactPageComponent } from './features/contact-page/contact-page.component';
+import { LinkCardComponent } from './features/layout/link-card/link-card.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ContactPageComponent } from './features/contact-page/contact-page.compo
     ServicePageComponent,
     BlogPageComponent,
     ContactPageComponent,
+    LinkCardComponent,
   ],
   imports: [
     BrowserModule,
