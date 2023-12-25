@@ -24,6 +24,7 @@ import { ServicePageComponent } from './features/service-page/service-page.compo
 import { BlogPageComponent } from './features/blog-page/blog-page.component';
 import { ContactPageComponent } from './features/contact-page/contact-page.component';
 import { LinkCardComponent } from './features/layout/link-card/link-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { LinkCardComponent } from './features/layout/link-card/link-card.compone
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

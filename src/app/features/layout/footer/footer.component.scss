@@ -15,19 +15,19 @@
 
 .fa-facebook {
   font-size: 30px;
-  color: #002a85;
+  @apply footer-custom-color;
 }
 
 .fa-tiktok {
-  color: #000000;
+  @apply footer-custom-color;
 }
 
 .fa-envelope {
-  color: #014080;
+  @apply footer-custom-color;
 }
 
 .fa-youtube {
-  color: #cd201f;
+  @apply footer-custom-color;
 }
 
 .social-icons i {
