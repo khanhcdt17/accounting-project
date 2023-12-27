@@ -1,5 +1,89 @@
 <div class="hp-content">
   <app-header></app-header>
+  <div class="mt-16 mb-16">
+    <app-profile-card
+      [imgSrc]="'https://i.imgur.com/AbAFHDU.jpg'"
+      [isHomePage]="false"
+    ></app-profile-card>
+  </div>
+  <div class="flex justify-center bg-gray-100 py-16">
+    <div>
+      <h2 class="title text-center">Đội ngũ của chúng tôi</h2>
+      <div class="flex">
+        <div *ngFor="let item of items" class="item">
+          <div class="my-8 mx-4">
+            <div class="card card-staff text-center w-80 !p-0">
+              <img class="card-img-top" src="{{ item.image }}" alt="" />
+              <div class="card-body">
+                <h5 class="card-text common-color">
+                  {{ item.name }}
+                </h5>
+                <span class="font-medium card-text">{{ item.position }}</span>
+                <p class="card-text mt-1">“{{ item.comment }}”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="service-container flex justify-center">
+    <div class="my-16">
+      <h1 class="common-color text-center">Dịch vụ của 2KT</h1>
+      <div class="flex mt-8">
+        <carousel
+          [interval]="5000"
+          [itemsPerSlide]="4"
+          [singleSlideOffset]="true"
+          [startFromIndex]="6"
+          [noPause]="true"
+          #carousel
+        >
+          <slide *ngFor="let item of serviceItems" class="item">
+            <div class="carousel my-16">
+              <div class="card card-sv text-center w-64 !p-0 !shadow-none">
+                <div class="common-bg rounded-t-2xl !shadow-none">
+                  <div
+                    class="card-img-to card-img-top-sv flex items-center justify-center sv-icon"
+                  >
+                    <i class="{{ item.image }} "></i>
+                  </div>
+                  <h5 class="card-text my-4">{{ item.name }}<br /></h5>
+                </div>
+                <div class="card-body flex justify-center">
+                  <p class="card-text px-3 text-justify py-2">
+                    “ {{ item.comment }} ”
+                  </p>
+                </div>
+                <div class="border-t">
+                  <a class="flex items-center justify-between sv-btn-more"
+                    ><p class="p-0 font-semibold !text-sm ml-6 sv-more">
+                      XEM THÊM
+                    </p>
+                    <i class="fa-solid fa-arrow-right mr-6 sv-more"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </slide>
+        </carousel>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="bg-gray-100 py-32">
+    <div class="content-1 flex justify-center relative">
+      <div class="u-shape-1"></div>
+      <div class="u-shape-2"></div>
+      <img
+        src="https://assets.nicepagecdn.com/d2cc3eaa/518898/images/bussiness-people-working-team-office4.jpg"
+        alt=""
+        class="u-image"
+        data-image-width="1500"
+        data-image-height="1000"
+      />
+      <div class="u-group-1"></div>
+    </div>
+  </div> -->
   <div class="">
     <app-footer></app-footer>
   </div>

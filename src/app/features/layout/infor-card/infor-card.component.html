@@ -1,12 +1,20 @@
-<div class="flex bg-white rounded shadow shadow-gray-500 px-4 py-4 mt-1 infor-card-container">
-    <div>
-        <div class="flex mr-4 rounded-full bg-orange-100 justify-center items-center icon-container"><i
-                class="icon-size {{icon}}"></i></div>
+<div
+  class="flex bg-white pt-4 mt-1"
+  [ngClass]="{
+    'infor-card-container rounded shadow shadow-gray-500 px-4 pb-4': isStyle
+  }"
+>
+  <div>
+    <div
+      class="flex mr-4 rounded-full bg-orange-100 justify-center items-center icon-container"
+    >
+      <i class="icon-size {{ icon }}"></i>
     </div>
-    <div class="w-60 mt-1">
-        <h5 class="ic-title-box">{{title}}</h5>
-        <div class="mt-2">
-            <p class="ic-content-box">{{content}}</p>
-        </div>
+  </div>
+  <div class="mt-1" [ngClass]="{ 'w-60': isStyle }">
+    <h5 class="ic-title-box">{{ title }}</h5>
+    <div class="mt-2">
+      <p class="ic-content-box">{{ content }}</p>
     </div>
+  </div>
 </div>

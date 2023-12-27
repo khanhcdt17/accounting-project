@@ -1,5 +1,144 @@
 <div class="hp-content">
   <app-header></app-header>
+  <div class="my-16 flex justify-center">
+    <div class="flex row !m-0 2xl:w-4/5">
+      <div class="col-6 !pl-32 !pr-20">
+        <h2>Liên hệ với chúng tôi</h2>
+        <p class="mt-8 mb-4">
+          Vui lòng điền thông tin cần tư vấn, đội ngũ tư vấn hỗ trợ khách hàng
+          24/7 sẽ liên lạc lại ngay với bạn.
+          <br />
+          <br />
+          Liên hệ trực tiếp với chúng tôi:
+        </p>
+        <div class="border-t-2 border-gray-400">
+          <app-infor-card
+            icon="fa-solid fa-location-dot"
+            [content]="
+              'Số 5A, Đường Hoàng Văn Thụ, Phường Minh Khai, Quận Hồng Bàng, TP Hải Phòng'
+            "
+            title="Địa chỉ"
+            [isStyle]="false"
+            class=""
+          ></app-infor-card>
+          <app-infor-card
+            icon="fa-solid fa-phone-volume"
+            [content]="'0828121277 - 0904515969'"
+            title="Hotline"
+            [isStyle]="false"
+            class="mr-8"
+          ></app-infor-card>
+          <app-infor-card
+            icon=""
+            [content]="'0828121277 - 0904515969'"
+            title="Zalo"
+            [isStyle]="false"
+            class="mr-8"
+          ></app-infor-card>
+          <app-infor-card
+            icon="fa-solid fa-envelope"
+            [content]="'2kthpcompany@gmail.com'"
+            title="Email"
+            [isStyle]="false"
+            class="mr-8"
+          ></app-infor-card>
+        </div>
+      </div>
+      <div class="col-6 flex items-center justify-center">
+        <div class="px-24 py-24 bg-gray-100 rounded-3xl">
+          <h3 class="text-center">Bạn hãy điền thông tin cần tư vấn</h3>
+          <form [formGroup]="contactForm" class="">
+            <div class="form-group mt-2">
+              <label for="gender" class="mt-2">Danh xưng:</label>
+              <select id="gender" formControlName="gender" class="form-control">
+                <option value="male">Anh</option>
+                <option value="female">Chị</option>
+              </select>
+            </div>
+            <div class="form-group mt-2">
+              <label for="name">Tên:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                formControlName="name"
+              />
+              <span
+                class="help-block text-danger"
+                *ngIf="
+                  !contactForm.controls['name'].valid &&
+                  contactForm.controls['name'].touched
+                "
+              >
+                Vui lòng nhập tên
+              </span>
+            </div>
+            <div class="form-group mt-2">
+              <label for="phone">Số điện thoại:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="phone"
+                formControlName="phone"
+              />
+              <span
+                class="help-block text-danger"
+                *ngIf="
+                  !contactForm.controls['phone'].valid &&
+                  contactForm.controls['phone'].touched
+                "
+              >
+                Vui lòng nhập số điện thoại
+              </span>
+            </div>
+            <div class="form-group mt-2">
+              <label for="email">Email:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                formControlName="email"
+              />
+              <span
+                class="help-block"
+                *ngIf="
+                  !contactForm.controls['email'].valid &&
+                  contactForm.controls['email'].touched
+                "
+              >
+                Vui lòng nhập đúng định dạng email
+              </span>
+            </div>
+            <div class="form-group mt-2">
+              <label for="infor">Thông tin:</label>
+              <textarea
+                id="description"
+                formControlName="description"
+                class="form-control"
+                placeholder="Nhập thông tin cần tư vấn"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              (click)="onSubmit()"
+              class="btn mt-4 w-full h-12 !font-semibold text-white btn-common"
+            >
+              Gửi
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.211083300858!2d106.68128811973163!3d20.863540561286758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7af6afa8245f%3A0x4c640935a82f8822!2zNUEgSG_DoG5nIFbEg24gVGjhu6UsIE1pbmggS2hhaSwgSOG7k25nIELDoG5nLCBI4bqjaSBQaMOybmcgMTgwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1703509950600!5m2!1svi!2s"
+    height="450"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    class="w-full"
+  ></iframe>
   <div class="">
     <app-footer></app-footer>
   </div>
