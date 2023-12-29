@@ -17,7 +17,7 @@ export class AboutPageComponent {
     },
     {
       image: 'https://i.imgur.com/hBbLumK.png',
-      name: 'Phạm Thị Thanh Đoan',
+      name: 'Nguyễn Thị Huệ',
       position: 'Trưởng phòng kế toán',
       comment: `Trải qua nhiều năm hoạt động trong lĩnh vực Kế Toán và Thuế.
       Những kinh nghiệm tích lũy từ việc làm việc với cả doanh nghiệp lớn và nhỏ đã giúp tôi hiểu rõ về các vấn đề liên quan đến Kế Toán và Thuế, 
