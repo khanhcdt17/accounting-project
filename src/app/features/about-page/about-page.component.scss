@@ -97,7 +97,7 @@
 .u-shape-1 {
   height: 375px;
   width: 666px;
-  margin: 522px auto 0 0;
+  margin: 390px auto 0 0;
   background-color: #eb6928;
 }
 
@@ -108,7 +108,7 @@
 
 .u-shape-2 {
   width: 471px;
-  height: 637px;
+  height: 500px;
   margin: 0 0 0 auto;
   background-color: #eb6928;
 }
@@ -116,7 +116,7 @@
 .u-image {
   width: 800px;
   height: 626px;
-  margin: -566px auto 0;
+  margin: 70px auto 0;
   overflow: hidden;
   object-fit: cover;
   display: block;
@@ -124,18 +124,64 @@
   background-position: 50% 50%;
   border-style: none;
   background-repeat: no-repeat;
-  position: relative;
+  position: absolute;
 }
 
 .u-group-1 {
-  margin-top: -170px;
-  margin-right: 143px;
-  margin-bottom: -382px;
-  width: 464px;
-  min-height: 470px;
+  width: 400px;
+  min-height: 350px;
   background-image: none;
-  margin: -244px 119px 60px auto;
+  margin: 550px -250px 0 auto;
   text-align: left;
   color: #111111;
   background-color: #ffffff;
+  position: absolute;
+}
+
+.u-image-2 {
+  width: 380px;
+  height: 380px;
+  border-radius: 50% !important;
+  object-fit: cover;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+  border-style: none;
+}
+.icon-2 {
+  font-size: 50px;
+}
+
+.u-group-2 {
+  width: 400px;
+  min-height: 380px;
+  background-image: none;
+  margin: 550px 400px 0 auto;
+  text-align: left;
+  color: #111111;
+  background-color: #ffffff;
+  position: absolute;
+}
+
+.u-shape-3 {
+  height: 375px;
+  width: 466px;
+  margin: 390px auto 0 0;
+  background-color: #eb6928;
+}
+
+.btn-common {
+  margin-top: 20px;
+  background-color: #eb6928;
+  border: #eb6928;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 30px 10px 30px;
+}
+
+.btn-common:hover {
+  background-color: #f19570;
 }
