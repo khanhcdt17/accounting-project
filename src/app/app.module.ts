@@ -25,6 +25,7 @@ import { BlogPageComponent } from './features/blog-page/blog-page.component';
 import { ContactPageComponent } from './features/contact-page/contact-page.component';
 import { LinkCardComponent } from './features/layout/link-card/link-card.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MessageComponent } from './features/chat-box/message/message.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BlogPageComponent,
     ContactPageComponent,
     LinkCardComponent,
+    MessageComponent,
   ],
   imports: [
     BrowserModule,
