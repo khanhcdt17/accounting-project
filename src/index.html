@@ -5,13 +5,48 @@
     <title>2KT - Công Ty Dịch Vụ Kế Toán</title>
     <base href="/" />
     <meta name="2kt" content="width=device-width, initial-scale=1" />
-    <meta name="2kt" content="Công Ty Dịch Vụ Kế Toán, Thuế">
-    <meta name="2kt" content="thuế, kế toán, đăng ký kinh doanh">
-    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/xLG6Hi5.png" />
+    <meta name="2kt" content="Công Ty Dịch Vụ Kế Toán, Thuế" />
+    <meta name="2kt" content="thuế, kế toán, đăng ký kinh doanh" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.imgur.com/xLG6Hi5.png"
+    />
   </head>
 
   <body class="tailwind-components">
     <app-root></app-root>
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "104798449117713");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v18.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
   </body>
   <link
     href="https://fonts.googleapis.com/css?family=Roboto:700%2C500%2C400%7COpen+Sans:400&amp;display=swap"
