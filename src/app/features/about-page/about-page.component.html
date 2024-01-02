@@ -13,7 +13,12 @@
         <div *ngFor="let item of items" class="item">
           <div class="my-8 mx-4">
             <div class="card card-staff text-center w-80 !p-0">
-              <img class="card-img-top" src="{{ item.image }}" alt="" />
+              <img
+                class="card-img-top"
+                src="{{ item.image }}"
+                alt=""
+                loading="lazy"
+              />
               <div class="card-body">
                 <h5 class="card-text common-color">
                   {{ item.name }}
@@ -80,6 +85,7 @@
         class="u-image"
         data-image-width="1500"
         data-image-height="1000"
+        loading="lazy"
       />
       <div class="u-group-1">
         <h3 class="common-color text-left mt-12 pl-12">Uy tín tạo niềm tin</h3>
@@ -106,6 +112,7 @@
             src="https://i.imgur.com/ImrHkrF.jpg"
             alt=""
             class="u-image-2 mx-8 my-8"
+            loading="lazy"
           />
         </div>
         <div class="col-7 !p-16">
@@ -135,6 +142,7 @@
         class="u-image"
         data-image-width="1500"
         data-image-height="1000"
+        loading="lazy"
       />
       <div class="u-group-2">
         <h3 class="common-color text-left mx-12 mt-12">
@@ -150,8 +158,9 @@
         <a
           class="btn btn-danger btn-common btn-border-radius ml-12 mb-6"
           href="lien-he"
-          >Liên hệ tư vấn miễn phí <i class="fa-solid fa-comments text-white text-sm ml-1"></i></a
-        >
+          >Liên hệ tư vấn miễn phí
+          <i class="fa-solid fa-comments text-white text-sm ml-1"></i
+        ></a>
       </div>
     </div>
   </div>
