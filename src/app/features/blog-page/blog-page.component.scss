@@ -1,0 +1,34 @@
+@media (min-width: 1600px) {
+  .blog-container {
+    @apply mx-32;
+  }
+}
+
+.title {
+  color: #c24902;
+  font-family: "Roboto", Sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-common {
+  color: white;
+  margin-top: 20px;
+  background-color: #eb6928;
+  border: #eb6928;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 30px 10px 30px;
+}
+
+.btn-common:hover {
+  background-color: #f19570;
+}
+
+.border-common {
+  border-color: #eb6928 !important;
+}
+
+.common-background {
+  background-color: #f95911;
+}

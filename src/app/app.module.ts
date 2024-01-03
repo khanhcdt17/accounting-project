@@ -26,6 +26,8 @@ import { ContactPageComponent } from './features/contact-page/contact-page.compo
 import { LinkCardComponent } from './features/layout/link-card/link-card.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MessageComponent } from './features/chat-box/message/message.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ContentPageComponent } from './features/blog-page/content-page/content-page.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { MessageComponent } from './features/chat-box/message/message.component'
     ContactPageComponent,
     LinkCardComponent,
     MessageComponent,
+    ContentPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +60,7 @@ import { MessageComponent } from './features/chat-box/message/message.component'
     BrowserAnimationsModule,
     CarouselModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

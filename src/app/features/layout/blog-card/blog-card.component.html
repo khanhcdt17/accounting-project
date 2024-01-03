@@ -3,7 +3,7 @@
   <div class="bc-container absolute w-full"></div>
   <div class="">
     <carousel
-      [interval]="7000"
+      [interval]="0000"
       [itemsPerSlide]="3"
       [singleSlideOffset]="true"
       [startFromIndex]="6"
@@ -16,7 +16,7 @@
             <div class="flex items-center justify-center p-8">
               <img class="bc-image" src="{{ item.image1 }}" alt="" loading="lazy"/>
             </div>
-            <div class="card-body !pt-0">
+            <div class="card-body !pt-0 !px-8">
               <p class="text-left h-16">{{ item.title1 }}</p>
             </div>
             <div class="border-t">
@@ -29,7 +29,7 @@
             <div class="flex items-center justify-center p-8">
               <img class="bc-image" src="{{ item.image2 }}" alt="" loading="lazy"/>
             </div>
-            <div class="card-body !pt-0">
+            <div class="card-body !pt-0 !px-8">
               <p class="text-left h-16">{{ item.title2 }}</p>
             </div>
             <div class="border-t">

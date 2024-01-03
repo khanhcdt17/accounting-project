@@ -5,6 +5,7 @@ import { AboutPageComponent } from './features/about-page/about-page.component';
 import { ContactPageComponent } from './features/contact-page/contact-page.component';
 import { ServicePageComponent } from './features/service-page/service-page.component';
 import { BlogPageComponent } from './features/blog-page/blog-page.component';
+import { ContentPageComponent } from './features/blog-page/content-page/content-page.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
     path: 'tin-tuc',
     component: BlogPageComponent,
   },
+  {
+    path: 'tin-tuc/bai-viet/:id',
+    component: ContentPageComponent,
+  }
 ];
 
 @NgModule({
