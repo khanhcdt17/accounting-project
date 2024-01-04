@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BlogStore } from './blog-page.store';
 import { LIST_TABS } from './blog-page.util';
 import { Subject, debounceTime, distinctUntilChanged, pipe } from 'rxjs';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blog-page',
@@ -58,7 +59,8 @@ export class BlogPageComponent {
   defaultUrl = 'https://i.imgur.com/zuC1C4w.jpg';
   private inputSubject = new Subject<string>();
   listTabs = LIST_TABS;
-  constructor(private blogStore: BlogStore) {
+
+  constructor(private blogStore: BlogStore, public sanitizer: DomSanitizer) {
     this.inputSubject
       .pipe(debounceTime(200), distinctUntilChanged())
       .subscribe((value) => {

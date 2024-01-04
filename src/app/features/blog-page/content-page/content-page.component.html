@@ -1,7 +1,14 @@
-<div class="hp-content">
-  <app-header></app-header>
-  <div></div>
-  <div class="">
-    <app-footer></app-footer>
+<ng-container *ngIf="vm$ | async as vm">
+  <div class="hp-content">
+    <app-header></app-header>
+    <div>
+      <iframe
+        [src]="getSourceUrl(vm.selectedContent.content.rendered)"
+        frameborder="0"
+      ></iframe>
+    </div>
+    <div class="">
+      <app-footer></app-footer>
+    </div>
   </div>
-</div>
+</ng-container>

@@ -9,6 +9,7 @@ const state = {
   searchValue: '',
   contents: [] as BlogContent[],
   displayContents: [] as BlogContent[],
+  selectedContent: null as unknown as BlogContent,
 };
 
 type State = typeof state;
