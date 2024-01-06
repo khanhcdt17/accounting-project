@@ -28,6 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MessageComponent } from './features/chat-box/message/message.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContentPageComponent } from './features/blog-page/content-page/content-page.component';
+import { ChunkPipe } from './features/common/chunk.pipe';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ContentPageComponent } from './features/blog-page/content-page/content-
     LinkCardComponent,
     MessageComponent,
     ContentPageComponent,
+    ChunkPipe,
   ],
   imports: [
     BrowserModule,

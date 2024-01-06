@@ -1,3 +1,5 @@
+import { TAB_CONTENT } from '../common/constant.model';
+
 export interface blogParam {
   tab: string;
   searchText: string;
@@ -5,9 +7,9 @@ export interface blogParam {
 
 export const LIST_TABS = [
   { value: '', title: 'Tất cả' },
-  { value: '23449', title: 'Thuế - Kế toán' },
-  { value: '7452946', title: 'Doanh nghiệp' },
-  { value: '812108', title: 'Cá nhân' },
+  { value: TAB_CONTENT.TAX, title: 'Thuế - Kế toán' },
+  { value: TAB_CONTENT.COMPANY, title: 'Doanh nghiệp' },
+  { value: TAB_CONTENT.PERSONAL, title: 'Cá nhân' },
 ];
 
 export interface BlogContent {
@@ -16,7 +18,8 @@ export interface BlogContent {
   modified: string;
   title: Title;
   jetpack_featured_media_url: string;
-  categories: number[];
+  categories?: number[];
+  tabs: string[];
 }
 
 export interface Content {

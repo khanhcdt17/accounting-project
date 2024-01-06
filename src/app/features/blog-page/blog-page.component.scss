@@ -6,7 +6,7 @@
 
 .title {
   color: #c24902;
-  font-family: "Roboto", Sans-serif;
+  font-family: "Roboto", Sans-serif !important;
   font-size: 16px;
   font-weight: 600;
 }
@@ -27,8 +27,4 @@
 
 .border-common {
   border-color: #eb6928 !important;
-}
-
-.common-background {
-  background-color: #f95911;
 }
