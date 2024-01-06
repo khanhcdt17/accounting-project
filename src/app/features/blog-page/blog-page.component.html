@@ -1,6 +1,62 @@
-<div class="hp-content">
-  <app-header></app-header>
-  <div class="">
-    <app-footer></app-footer>
+<ng-container *ngIf="vm$ | async as vm">
+  <div class="hp-content">
+    <app-header></app-header>
+    <div class="flex items-center justify-center mt-20"><h3>Bài viết</h3></div>
+    <nav class="navbar navbar-light !justify-center !pt-12">
+      <a
+        *ngFor="let tab of listTabs"
+        class="mx-4 title border-b-2 border-white cursor-pointer"
+        [ngClass]="{
+          'border-common':
+            (vm.tabValue === '' && tab.value === 'all') ||
+            vm.tabValue === tab.value
+        }"
+        (click)="tabClick(tab.value)"
+        >{{ tab.title }}</a
+      >
+
+      <form class="form-inline flex">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Tìm kiếm"
+          aria-label="Search"
+          (keyup)="searchInput($event)"
+        />
+        <!-- <button class="btn btn-common my-2 my-sm-0 ml-2" type="submit">Tìm</button> -->
+      </form>
+    </nav>
+    <div class="flex flex-wrap justify-center lg:mx-4 mb-16 blog-container">
+      <div
+        class="card text-center w-96 bc-card m-4"
+        *ngFor="let content of vm.displayContents"
+      >
+        <div class="flex items-center justify-center p-8">
+          <img
+            class="bc-image"
+            src="{{
+              content.jetpack_featured_media_url === ''
+                ? defaultUrl
+                : content.jetpack_featured_media_url
+            }}"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+        <div class="card-body !pt-0 !px-8">
+          <p class="text-left h-16">{{ content.title.rendered }}</p>
+        </div>
+        <div class="border-t">
+          <a
+            class="btn btn-danger border-0 common-background my-3"
+            (click)="redirectToPost(content.id)"
+            >Xem thêm</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <app-footer></app-footer>
+    </div>
   </div>
-</div>
+</ng-container>

@@ -4,6 +4,7 @@
       <img
         src="{{ imgSrc }}"
         class="img-fluid rounded shadow-xl shadow-gray-500"
+        loading="lazy"
       />
     </div>
     <div
@@ -34,7 +35,7 @@
           </p>
           <a
             class="btn btn-danger btn-common btn-border-radius"
-            href="gioi-thieu"
+            (click)="redirectTo('gioi-thieu')"
             >Xem thêm</a
           ></ng-container
         >

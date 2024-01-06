@@ -1,0 +1,211 @@
+<ng-container *ngIf="vm$ | async as vm">
+  <div class="hp-content bg-gray-100">
+    <app-header></app-header>
+    <div
+      *ngIf="vm.selectedContent?.content"
+      class="flex justify-center mt-16 iframe-container"
+    >
+      <div class="flex flex-col w-4/5">
+        <div class="flex justify-center">
+          <div class="flex flex-col w-3/5">
+            <h3 class="text-left" style="color: #3c434a">
+              {{ vm.selectedContent.title.rendered }}
+            </h3>
+            <time style="color: #646970; font-size: 0.8rem"
+              >{{ calculateDays(vm.selectedContent.modified) }} ngày trước</time
+            >
+            <div class="mt-1">
+              <span
+                *ngFor="let item of vm.selectedContent.tabs"
+                class="tab-custom mr-2 py-1 px-2 bg-white rounded"
+                (click)="tabClick(item)"
+                >{{ getTab(item) }}</span
+              >
+            </div>
+            <div class="mt-2">
+              <img
+                src="{{
+                  vm.selectedContent.jetpack_featured_media_url === ''
+                    ? defaultUrl
+                    : vm.selectedContent.jetpack_featured_media_url
+                }}"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div
+              [innerHTML]="vm.selectedContent.content.rendered"
+              class="mt-8 custom-style"
+            ></div>
+            <div>
+              <div class="medium-3 large-3 p-0">
+                <div class="col-inner max-w-32">
+                  <div class="flex items-center">
+                    <div class="p-0 w-32">
+                      <img
+                        src="https://i.imgur.com/xLG6Hi5.png"
+                        alt="2KT – Đại lý Thuế Chuyên Nghiệp"
+                        loading="lazy"
+                      />
+                    </div>
+                    <h2 class="ml-4 common-color">
+                      Đối tác tin cậy của doanh nghiệp
+                    </h2>
+                  </div>
+                  <ul class="mt-2 mr-16 p-0">
+                    <li class="ft-text">
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span class="ml-2"
+                        ><strong>Địa chỉ:</strong>&nbsp;Số 5A, Đường Hoàng Văn
+                        Thụ, Phường Minh Khai, Quận Hồng Bàng, TP Hải
+                        Phòng</span
+                      >
+                    </li>
+                    <li class="ft-text mt-1">
+                      <i class="fa-solid fa-phone"></i>
+                      <span class="ml-2"
+                        ><strong>Tel:</strong>&nbsp;0906051522 -
+                        0904515969</span
+                      >
+                    </li>
+                    <li class="ft-text mt-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 48 48"
+                        class="inline icon-zalo"
+                      >
+                        <path
+                          fill="#000"
+                          d="M15,36V6.827l-1.211-0.811C8.64,8.083,5,13.112,5,19v10c0,7.732,6.268,14,14,14h10	c4.722,0,8.883-2.348,11.417-5.931V36H15z"
+                        ></path>
+                        <path
+                          fill="#fff"
+                          d="M29,5H19c-1.845,0-3.601,0.366-5.214,1.014C10.453,9.25,8,14.528,8,19	c0,6.771,0.936,10.735,3.712,14.607c0.216,0.301,0.357,0.653,0.376,1.022c0.043,0.835-0.129,2.365-1.634,3.742	c-0.162,0.148-0.059,0.419,0.16,0.428c0.942,0.041,2.843-0.014,4.797-0.877c0.557-0.246,1.191-0.203,1.729,0.083	C20.453,39.764,24.333,40,28,40c4.676,0,9.339-1.04,12.417-2.916C42.038,34.799,43,32.014,43,29V19C43,11.268,36.732,5,29,5z"
+                        ></path>
+                        <path
+                          fill="#000"
+                          d="M36.75,27C34.683,27,33,25.317,33,23.25s1.683-3.75,3.75-3.75s3.75,1.683,3.75,3.75	S38.817,27,36.75,27z M36.75,21c-1.24,0-2.25,1.01-2.25,2.25s1.01,2.25,2.25,2.25S39,24.49,39,23.25S37.99,21,36.75,21z"
+                        ></path>
+                        <path
+                          fill="#000"
+                          d="M31.5,27h-1c-0.276,0-0.5-0.224-0.5-0.5V18h1.5V27z"
+                        ></path>
+                        <path
+                          fill="#000"
+                          d="M27,19.75v0.519c-0.629-0.476-1.403-0.769-2.25-0.769c-2.067,0-3.75,1.683-3.75,3.75	S22.683,27,24.75,27c0.847,0,1.621-0.293,2.25-0.769V26.5c0,0.276,0.224,0.5,0.5,0.5h1v-7.25H27z M24.75,25.5	c-1.24,0-2.25-1.01-2.25-2.25S23.51,21,24.75,21S27,22.01,27,23.25S25.99,25.5,24.75,25.5z"
+                        ></path>
+                        <path
+                          fill="#000"
+                          d="M21.25,18h-8v1.5h5.321L13,26h0.026c-0.163,0.211-0.276,0.463-0.276,0.75V27h7.5	c0.276,0,0.5-0.224,0.5-0.5v-1h-5.321L21,19h-0.026c0.163-0.211,0.276-0.463,0.276-0.75V18z"
+                        ></path>
+                      </svg>
+                      <span class="ml-2"
+                        ><strong>Zalo:</strong>&nbsp;0906051522 -
+                        0904515969</span
+                      >
+                    </li>
+                    <li class="ft-text mt-1">
+                      <i class="fa-solid fa-envelope"></i>
+                      <span class="ml-2"
+                        ><strong>Email</strong>: 2kthpcompany@gmail.com</span
+                      >
+                    </li>
+                    <li class="ft-text mt-1">
+                      <i class="fa-solid fa-calendar-days"></i>
+                      <span class="ml-2"
+                        ><strong>Giờ làm việc:</strong>&nbsp;Từ 9h a.m - 7h p.m
+                        ( Từ T2 - T7, Chủ nhật nghỉ )</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-end">
+              <div class="social-icons w-fit">
+                <a
+                  href="https://www.facebook.com/anlocphat.thebest"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-facebook common-color"></i>
+                </a>
+                <a href="mailto:2kthpcompany@gmail.com" class="ml-2">
+                  <i class="fa-solid fa-envelope common-color"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/@doan369"
+                  target="_blank"
+                  class="ml-2"
+                >
+                  <i class="fa-brands fa-youtube common-color"></i>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@dailythue2kt"
+                  target="_blank"
+                  class="ml-2"
+                >
+                  <i class="fa-brands fa-tiktok common-color"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="max-w-screen-xl mt-4">
+            <div class="ml-12">
+              <h3>Bài viết liên quan</h3>
+            </div>
+            <div class="flex justify-center">
+              <carousel
+                [interval]="0000"
+                [itemsPerSlide]="3"
+                [singleSlideOffset]="true"
+                [startFromIndex]="6"
+                [noPause]="true"
+                #carousel
+              >
+                <slide *ngFor="let content of vm.relatedContent" class="item">
+                  <div class="carousel my-8 mx-2">
+                    <div class="card text-center max-w-96 bc-card mt-6">
+                      <div class="flex items-center justify-center p-8">
+                        <img
+                          class="bc-image"
+                          src="{{
+                            content.jetpack_featured_media_url === ''
+                              ? defaultUrl
+                              : content.jetpack_featured_media_url
+                          }}"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="card-body !pt-0 !px-8">
+                        <p class="text-left h-16">
+                          {{ content.title.rendered }}
+                        </p>
+                      </div>
+                      <div class="border-t">
+                        <a
+                          class="btn btn-danger border-0 common-background my-3"
+                          href="tin-tuc/bai-viet/{{ content.id }}"
+                          >Xem thêm</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </slide>
+              </carousel>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <app-footer></app-footer>
+    </div>
+  </div>
+</ng-container>

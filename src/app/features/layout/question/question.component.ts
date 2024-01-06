@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-question',
@@ -63,5 +64,11 @@ export class QuestionComponent {
   openTab(index: number): void {
     this.profiles.forEach((x) => x.index !== index && (x.isOpen = false));
     this.profiles[index].isOpen = !this.profiles[index].isOpen;
+  }
+
+  constructor(private route: Router) {}
+
+  redirectTo(url: string) {
+    this.route.navigate([url]);
   }
 }

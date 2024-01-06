@@ -1,0 +1,39 @@
+.custom-style {
+  p {
+    margin-bottom: 24px;
+  }
+
+  font-weight: 400;
+}
+
+.tab-custom {
+  color: #646970;
+  font-size: 0.8rem;
+}
+
+.social-icons i {
+  font-size: 35px;
+}
+
+.icon-zalo {
+  margin-left: -3px;
+}
+
+.carousel-indicators {
+  display: none;
+}
+.carousel-control-next {
+  right: -120px !important;
+}
+.carousel-control-prev {
+  left: -120px !important;
+}
+
+.bc-image {
+  height: 219px;
+  object-fit: cover;
+  display: block;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}

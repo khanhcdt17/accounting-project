@@ -16,9 +16,9 @@
               class="nav-item mx-6 border-b-2 border-common-color hover:!border-white"
             >
               <a
-                class="nav-link block !text-white !font-semibold !text-base"
+                class="nav-link block !text-white !font-semibold !text-base cursor-pointer"
                 aria-current="page"
-                href=""
+                (click)="redirectTo('')"
                 >Trang chủ</a
               >
             </li>
@@ -26,8 +26,8 @@
               class="nav-item mx-6 border-b-2 border-common-color hover:!border-white"
             >
               <a
-                class="nav-link block !text-white !font-semibold !text-base"
-                href="gioi-thieu"
+                class="nav-link block !text-white !font-semibold !text-base cursor-pointer"
+                (click)="redirectTo('gioi-thieu')"
                 >Giới thiệu</a
               >
             </li>
@@ -36,7 +36,7 @@
             >
               <a
                 class="nav-link block !text-white !font-semibold !text-base dropdown-toggle"
-                href="dich-vu"
+                (click)="redirectTo('dich-vu')"
                 id="navbarDropdown"
                 role="button"
                 aria-expanded="false"
@@ -76,10 +76,10 @@
             >
               <a
                 class="nav-link block !text-white !font-semibold !text-base dropdown-toggle"
-                href="tin-tuc"
                 id="navbarDropdown"
                 role="button"
                 aria-expanded="false"
+                (click)="redirectToBlog('')"
               >
                 Tin tức
               </a>
@@ -88,13 +88,25 @@
                 aria-labelledby="navbarDropdown"
               >
                 <li class="!rounded-t-md">
-                  <a class="dropdown-item !rounded-t-md" href="#"
+                  <a
+                    class="dropdown-item !rounded-t-md"
+                    (click)="redirectToBlog(keyTab.TAX)"
                     >Thuế - kế toán</a
                   >
                 </li>
-                <li><a class="dropdown-item" href="#">Doanh nhgiệp</a></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    (click)="redirectToBlog(keyTab.COMPANY)"
+                    >Doanh nhgiệp</a
+                  >
+                </li>
                 <li class="!rounded-b-md">
-                  <a class="dropdown-item !rounded-b-md" href="#">Cá nhân</a>
+                  <a
+                    class="dropdown-item !rounded-b-md"
+                    (click)="redirectToBlog(keyTab.PERSONAL)"
+                    >Cá nhân</a
+                  >
                 </li>
               </ul>
             </li>
@@ -103,7 +115,7 @@
             >
               <a
                 class="nav-link block !text-white !font-semibold !text-base dropdown-toggle"
-                href="lien-he"
+                (click)="redirectTo('lien-he')"
                 id="navbarDropdown"
                 role="button"
                 aria-expanded="false"
@@ -115,7 +127,11 @@
                 aria-labelledby="navbarDropdown"
               >
                 <li class="!rounded-md">
-                  <a class="dropdown-item !rounded-md" href="lien-he">Tuyển dụng</a>
+                  <a
+                    class="dropdown-item !rounded-md"
+                    (click)="redirectTo('lien-he')"
+                    >Tuyển dụng</a
+                  >
                 </li>
               </ul>
             </li>

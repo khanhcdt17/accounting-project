@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <title>2KT - Công Ty Dịch Vụ Kế Toán</title>
     <base href="/" />
+    <meta
+      name="zalo-platform-site-verification"
+      content="VkUQC87kIpDbmP0IjUm556JEWGw8k5DMC30n"
+    />
     <meta name="2kt" content="width=device-width, initial-scale=1" />
     <meta name="2kt" content="Công Ty Dịch Vụ Kế Toán, Thuế" />
     <meta name="2kt" content="thuế, kế toán, đăng ký kinh doanh" />
@@ -22,32 +26,41 @@
     <!-- Your Plugin chat code -->
     <div id="fb-customer-chat" class="fb-customerchat"></div>
 
-    <script>
-      var chatbox = document.getElementById("fb-customer-chat");
-      chatbox.setAttribute("page_id", "104798449117713");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          xfbml: true,
-          version: "v18.0",
-        });
-      };
-
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
+    <div
+      class="zalo-chat-widget"
+      data-oaid="25191188839929179"
+      data-welcome-message="Xin chào! 2KT có thể giúp gì cho bạn?"
+      data-autopopup="10"
+      data-width="200"
+      data-height="200"
+    ></div>
   </body>
+  <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+
+  <script>
+    var chatbox = document.getElementById("fb-customer-chat");
+    chatbox.setAttribute("page_id", "104798449117713");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v18.0",
+      });
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
   <link
     href="https://fonts.googleapis.com/css?family=Roboto:700%2C500%2C400%7COpen+Sans:400&amp;display=swap"
     rel="stylesheet"

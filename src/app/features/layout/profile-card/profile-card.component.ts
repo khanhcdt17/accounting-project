@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile-card',
@@ -8,4 +9,10 @@ import { Component, Input } from '@angular/core';
 export class ProfileCardComponent {
   @Input() imgSrc = '';
   @Input() isHomePage = true;
+
+  constructor(private route: Router) {}
+
+  redirectTo(url: string) {
+    this.route.navigate([url]);
+  }
 }

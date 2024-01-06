@@ -4,7 +4,7 @@
 
 .profile-card-content h2 {
   color: #c24902;
-  font-family: "Roboto", Sans-serif;
+  font-family: "Roboto", Sans-serif !important;
   font-size: 26px;
   font-weight: 600;
 }
@@ -15,7 +15,7 @@
   text-transform: none;
   font-size: 16px;
   color: #5f5f5f;
-  font-family: "Roboto", Sans-serif;
+  font-family: "Roboto", Sans-serif !important;
 }
 
 .btn-common {
@@ -31,4 +31,3 @@
 .btn-common:hover {
   background-color: #ad3302;
 }
-

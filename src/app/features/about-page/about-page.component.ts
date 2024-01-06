@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about-page',
@@ -57,4 +58,10 @@ export class AboutPageComponent {
       comment: `2KT sẵn sàng chia sẻ với cộng đồng, mang lại kiến thức thiết thực cho sinh viên, đào tạo cho đội ngũ kế toán của Doanh nghiệp, cá nhân có nhu cầu`,
     },
   ];
+
+  constructor(private route: Router) {}
+
+  redirectAbout() {
+    this.route.navigate(['lien-he']);
+  }
 }

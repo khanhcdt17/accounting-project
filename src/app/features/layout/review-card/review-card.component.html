@@ -1,11 +1,22 @@
 <div class="flex justify-center">
   <div class="pb-16">
-    <carousel [interval]="5000" [itemsPerSlide]="3" [singleSlideOffset]="true" [startFromIndex]="6" [noPause]="true"
-      #carousel>
+    <carousel
+      [interval]="5000"
+      [itemsPerSlide]="3"
+      [singleSlideOffset]="true"
+      [startFromIndex]="6"
+      [noPause]="true"
+      #carousel
+    >
       <slide *ngFor="let item of items" class="item">
         <div class="carousel my-8">
           <div class="card text-center w-80">
-            <img class="card-img-top" src="{{ item.image }}" alt="" />
+            <img
+              class="card-img-top"
+              src="{{ item.image }}"
+              alt=""
+              loading="lazy"
+            />
             <div class="card-body">
               <h5>
                 {{ item.name }}<br />
