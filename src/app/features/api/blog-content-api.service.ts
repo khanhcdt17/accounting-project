@@ -8,7 +8,7 @@ import { BlogContent } from '../blog-page/blog-page.util';
 })
 export class BlogContentApiService {
   private apiUrl =
-    'https://public-api.wordpress.com/wp/v2/sites/khanhcdt5.wordpress.com';
+    'https://public-api.wordpress.com/wp/v2/sites/my2kt.wordpress.com';
   constructor(private http: HttpClient) {}
   // Lấy danh sách bài viết
   getPosts(): Observable<BlogContent[]> {
