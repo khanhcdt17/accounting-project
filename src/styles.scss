@@ -43,3 +43,8 @@ body {
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
 @import "./app/styles/common.scss";
+
+.zalo-chat-widget {
+  bottom: 82px !important;
+  right: 27px !important;
+}
