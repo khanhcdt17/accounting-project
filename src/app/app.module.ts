@@ -29,6 +29,7 @@ import { MessageComponent } from './features/chat-box/message/message.component'
 import { HttpClientModule } from '@angular/common/http';
 import { ContentPageComponent } from './features/blog-page/content-page/content-page.component';
 import { ChunkPipe } from './features/common/chunk.pipe';
+import { ToastComponent } from './features/common/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { ChunkPipe } from './features/common/chunk.pipe';
     MessageComponent,
     ContentPageComponent,
     ChunkPipe,
+    ToastComponent,
   ],
   imports: [
     BrowserModule,
