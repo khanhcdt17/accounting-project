@@ -1,10 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastComponent } from '../common/toast/toast.component';
+import { ContactApiService } from '../api/contact-api.service';
 
 @Component({
   selector: 'app-contact-page',
@@ -13,10 +10,13 @@ import {
 })
 export class ContactPageComponent implements OnInit {
   contactForm!: FormGroup;
+  lastSubmitTime!: number;
+  cooldownTime: number = 5000;
 
-  constructor(private fb: FormBuilder) {}
-
+  constructor(private fb: FormBuilder, private contactApi: ContactApiService) {}
+  @ViewChild(ToastComponent) toast!: ToastComponent;
   ngOnInit() {
+    this.lastSubmitTime = 0;
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       phone: ['', Validators.required],
@@ -27,9 +27,33 @@ export class ContactPageComponent implements OnInit {
   }
 
   onSubmit() {
+    const currentTime = Date.now();
     this.contactForm.markAllAsTouched();
     if (this.contactForm.valid) {
-      this.contactForm.reset();
+      if (currentTime - this.lastSubmitTime >= this.cooldownTime) {
+        const formData = {
+          ['Thông báo']: 'Người dùng đã gửi thông tin tư vấn',
+          ['Danh xưng']: this.contactForm.controls['gender']?.value
+            ? 'Anh'
+            : 'Chị',
+          ['Tên']: this.contactForm.controls['name']?.value,
+          ['Số điện thoại']: this.contactForm.controls['phone']?.value,
+          ['Địa chỉ email']: this.contactForm.controls['email']?.value,
+          ['Thông tin cần tư vấn']:
+            this.contactForm.controls['description']?.value,
+        };
+
+        this.contactApi.submitForm(formData).subscribe((response) => {
+          this.toast.open('Gửi thông tin thành công', 'alert-success');
+        });
+        this.contactForm.reset();
+      } else {
+        this.toast.open(
+          'Vui lòng gửi lại thông tin sau 5 giây',
+          'alert-warning'
+        );
+      }
+      this.lastSubmitTime = currentTime;
     }
   }
 }

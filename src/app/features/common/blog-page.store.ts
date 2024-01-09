@@ -57,7 +57,6 @@ export class BlogStore extends ComponentStore<State> {
     pipe(
       switchMap(() => this.contentApi.getPosts()),
       tap((result) => {
-        console.log('result :>> ', result);
         var contents = result.map((x) => {
           return {
             id: x.id,
@@ -75,8 +74,6 @@ export class BlogStore extends ComponentStore<State> {
             tabs: this.getTabs(x.categories),
           };
         });
-        console.log('result :>> ', contents);
-
         this.patchState({ contents });
       })
     )
@@ -114,7 +111,6 @@ export class BlogStore extends ComponentStore<State> {
     pipe(
       filter(([contents, searchValue, tabVale]) => !!contents.length),
       tap(([contents, searchValue, tabVale]) => {
-        console.log('contents :>> ', contents);
         var displayContents = contents.filter(
           (x) =>
             x.title.rendered

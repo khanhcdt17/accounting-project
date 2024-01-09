@@ -1,6 +1,6 @@
 <div class="hp-content">
   <app-header></app-header>
-  <div class="my-16 flex justify-center">
+  <div class="my-20 flex justify-center">
     <div class="flex row !m-0 2xl:w-4/5">
       <div class="col-6 !pl-32 !pr-20">
         <h2>Liên hệ với chúng tôi</h2>
@@ -23,7 +23,7 @@
           ></app-infor-card>
           <app-infor-card
             icon="fa-solid fa-phone-volume"
-            [content]="'0906051522 - 0904515969'"
+            [content]="'0828121277 - 0904515969'"
             title="Hotline"
             [isStyle]="false"
             class="mr-8"
@@ -51,8 +51,8 @@
             <div class="form-group mt-2">
               <label for="gender" class="mt-2">Danh xưng:</label>
               <select id="gender" formControlName="gender" class="form-control">
-                <option value="male">Anh</option>
-                <option value="female">Chị</option>
+                <option value="true">Anh</option>
+                <option value="false">Chị</option>
               </select>
             </div>
             <div class="form-group mt-2">
@@ -143,3 +143,4 @@
     <app-footer></app-footer>
   </div>
 </div>
+<app-toast></app-toast>
