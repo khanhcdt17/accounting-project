@@ -1,0 +1,21 @@
+.sv-card {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 350px;
+  height: 350px;
+  background-image: url(https://i.imgur.com/zuC1C4w.jpg);
+  background-position: 50% 50%;
+  &:hover {
+    margin-top: -3px !important;
+  }
+}
+
+.custom-bg-color {
+  background-color: #d7cec9;
+}
+
+.lx-container {
+  margin-top: -150px;
+}

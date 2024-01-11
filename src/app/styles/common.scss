@@ -32,3 +32,9 @@
 .common-background {
   background-color: #f95911;
 }
+
+@media (min-width: 1600px) {
+  .lx-container {
+    @apply mx-32;
+  }
+}
