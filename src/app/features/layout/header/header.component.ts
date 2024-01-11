@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BlogStore } from '../../common/blog-page.store';
+import { CommonStore } from '../../common/common.store';
 import { TAB_CONTENT } from '../../common/constant.model';
 import { Router } from '@angular/router';
 
@@ -11,11 +11,16 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   keyTab = TAB_CONTENT;
 
-  constructor(private blogStore: BlogStore, private route: Router) {}
+  constructor(private commonStore: CommonStore, private route: Router) {}
 
   redirectToBlog(tabValue: string) {
-    this.blogStore.patchState({ tabValue });
+    this.commonStore.patchState({ tabValue });
     this.route.navigate(['tin-tuc']);
+  }
+
+  redirectToService(selectedServiceId: string) {
+    this.commonStore.patchState({ selectedServiceId });
+    this.route.navigate([`dich-vu/${selectedServiceId}`]);
   }
 
   redirectTo(url: string) {

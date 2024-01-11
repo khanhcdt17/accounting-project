@@ -1,0 +1,36 @@
+<ng-container *ngIf="vm$ | async as vm">
+  <div class="hp-content">
+    <app-header></app-header>
+    <div class="custom-bg-color">
+      <div
+        class="text-white py-36 service-card relative"
+        *ngIf="vm.selectedService"
+      >
+        <div class="overlay"></div>
+        <h1 class="text-center text-6xl relative uppercase">
+          {{ vm.selectedService.serviceTitle }}
+        </h1>
+        <p class="text-center pt-8 text-lg relative">
+          {{ vm.selectedService.serviceDes }}
+        </p>
+      </div>
+    </div>
+    <div class="my-16">
+      <app-profile-card
+        [imgSrc]="'https://i.imgur.com/3abWgNu.jpg'"
+        [isHomePage]="false"
+        [title]="'GIỚI THIỆU SƠ LƯỢC'"
+        [content1]="content1"
+        [content2]="content2"
+      ></app-profile-card>
+    </div>
+    <div class="my-16">
+      <h2 class="text-center text-center">
+        VÌ SAO NÊN SỬ DỤNG DỊCH VỤ CỦA 2KT?
+      </h2>
+    </div>
+    <div class="">
+      <app-footer></app-footer>
+    </div>
+  </div>
+</ng-container>

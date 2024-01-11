@@ -50,22 +50,42 @@
                 aria-labelledby="navbarDropdown"
               >
                 <li class="!rounded-t-md">
-                  <a class="dropdown-item !rounded-t-md" href="#"
+                  <a
+                    class="dropdown-item !rounded-t-md cursor-pointer"
+                    (click)="redirectToService('dai-ly-thue')"
                     >Đại lý thuế</a
                   >
                 </li>
-                <li><a class="dropdown-item" href="#">Kế toán</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Quyết toán thuế</a>
+                  <a class="dropdown-item cursor-pointer" (click)="redirectToService('ke-toan')"
+                    >Kế toán</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Bảo hiểm xã hội</a>
+                  <a
+                    class="dropdown-item cursor-pointer"
+                    (click)="redirectToService('quyet-toan-thue')"
+                    >Quyết toán thuế</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Đăng ký kinh doanh</a>
+                  <a
+                    class="dropdown-item cursor-pointer"
+                    (click)="redirectToService('bao-hiem-xa-hoi')"
+                    >Bảo hiểm xã hội</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item cursor-pointer"
+                    (click)="redirectToService('dang-ky-kinh-doanh')"
+                    >Đăng ký kinh doanh</a
+                  >
                 </li>
                 <li class="!rounded-b-md">
-                  <a class="dropdown-item !rounded-b-md" href="#"
+                  <a
+                    class="dropdown-item !rounded-b-md cursor-pointer"
+                    (click)="redirectToService('dao-tao-ke-toan')"
                     >Đào tạo kế toán</a
                   >
                 </li>
@@ -75,7 +95,7 @@
               class="nav-item mx-6 border-b-2 border-common-color dropdown nav-item-2"
             >
               <a
-                class="nav-link block !text-white !font-semibold !text-base dropdown-toggle"
+                class="nav-link block !text-white !font-semibold !text-base dropdown-toggle cursor-pointer"
                 id="navbarDropdown"
                 role="button"
                 aria-expanded="false"
@@ -89,19 +109,19 @@
               >
                 <li class="!rounded-t-md">
                   <a
-                    class="dropdown-item !rounded-t-md"
+                    class="dropdown-item !rounded-t-md cursor-pointer"
                     (click)="redirectToBlog(keyTab.TAX)"
                     >Thuế - kế toán</a
                   >
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    class="dropdown-item cursor-pointer"
                     (click)="redirectToBlog(keyTab.COMPANY)"
                     >Doanh nhgiệp</a
                   >
                 </li>
-                <li class="!rounded-b-md">
+                <li class="!rounded-b-md cursor-pointer">
                   <a
                     class="dropdown-item !rounded-b-md"
                     (click)="redirectToBlog(keyTab.PERSONAL)"
@@ -114,7 +134,7 @@
               class="nav-item mx-6 border-b-2 border-common-color dropdown nav-item-3"
             >
               <a
-                class="nav-link block !text-white !font-semibold !text-base dropdown-toggle"
+                class="nav-link block !text-white !font-semibold !text-base dropdown-toggle cursor-pointer"
                 (click)="redirectTo('lien-he')"
                 id="navbarDropdown"
                 role="button"
@@ -128,7 +148,7 @@
               >
                 <li class="!rounded-md">
                   <a
-                    class="dropdown-item !rounded-md"
+                    class="dropdown-item !rounded-md cursor-pointer"
                     (click)="redirectTo('lien-he')"
                     >Tuyển dụng</a
                   >
