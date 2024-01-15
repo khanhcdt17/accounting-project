@@ -6,6 +6,7 @@ import { ContactPageComponent } from './features/contact-page/contact-page.compo
 import { ServicePageComponent } from './features/service-page/service-page.component';
 import { BlogPageComponent } from './features/blog-page/blog-page.component';
 import { ContentPageComponent } from './features/blog-page/content-page/content-page.component';
+import { ServiceContentComponent } from './features/service-page/service-content/service-content.component';
 
 const routes: Routes = [
   {
@@ -25,17 +26,21 @@ const routes: Routes = [
     component: ServicePageComponent,
   },
   {
+    path: 'dich-vu/:id',
+    component: ServiceContentComponent,
+  },
+  {
     path: 'tin-tuc',
     component: BlogPageComponent,
   },
   {
     path: 'tin-tuc/bai-viet/:id',
     component: ContentPageComponent,
-  }
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

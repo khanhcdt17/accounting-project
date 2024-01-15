@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { BlogStore } from '../../common/blog-page.store';
+import { CommonStore } from '../../common/common.store';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CATE_ID, DEFAULT_URL, TAB_CONTENT } from '../../common/constant.model';
 
@@ -13,12 +13,12 @@ export class ContentPageComponent {
   defaultUrl = DEFAULT_URL;
 
   constructor(
-    private blogStore: BlogStore,
+    private commonStore: CommonStore,
     private activeRoute: ActivatedRoute,
     private router: Router
   ) {}
 
-  vm$ = this.blogStore.select((state) => {
+  vm$ = this.commonStore.select((state) => {
     return {
       selectedContent: state.selectedContent,
       relatedContent: state.relatedContent,
@@ -27,7 +27,7 @@ export class ContentPageComponent {
 
   ngOnInit() {
     const selectedId = this.activeRoute.snapshot.params['id'];
-    this.blogStore.patchState({ selectedId });
+    this.commonStore.patchState({ selectedId });
   }
   replaceText(text: string) {
     return text.replace('', '');
@@ -57,7 +57,7 @@ export class ContentPageComponent {
     }
   }
   tabClick(tabValue: string) {
-    this.blogStore.patchState({ tabValue });
+    this.commonStore.patchState({ tabValue });
     this.router.navigate(['tin-tuc']);
   }
 }

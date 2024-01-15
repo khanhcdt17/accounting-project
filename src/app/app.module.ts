@@ -30,6 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContentPageComponent } from './features/blog-page/content-page/content-page.component';
 import { ChunkPipe } from './features/common/chunk.pipe';
 import { ToastComponent } from './features/common/toast/toast.component';
+import { ServiceContentComponent } from './features/service-page/service-content/service-content.component';
+import { MajorCardComponent } from './features/layout/major-card/major-card.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { ToastComponent } from './features/common/toast/toast.component';
     ContentPageComponent,
     ChunkPipe,
     ToastComponent,
+    ServiceContentComponent,
+    MajorCardComponent,
   ],
   imports: [
     BrowserModule,

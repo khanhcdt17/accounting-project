@@ -35,3 +35,36 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.7); /* Điều chỉnh mức độ đen tối ở đây */
 }
+
+@media (min-width: 1600px) {
+  .image-container {
+    @apply w-2/3;
+  }
+  .sv-container {
+    @apply pb-80;
+  }
+}
+
+@media (max-width: 1600px) {
+  .image-container {
+    @apply w-4/5;
+  }
+}
+
+@media (max-width: 1500px) {
+  .sv-content {
+    @apply w-2/3;
+  }
+  .sv-container {
+    @apply pb-52;
+  }
+}
+
+@media (max-width: 1300px) {
+  .sv-content {
+    @apply w-full;
+  }
+  .image-container {
+    @apply hidden;
+  }
+}

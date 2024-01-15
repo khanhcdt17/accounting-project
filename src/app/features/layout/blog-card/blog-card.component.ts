@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BlogStore } from '../../common/blog-page.store';
+import { CommonStore } from '../../common/common.store';
 import { DEFAULT_URL, TAB_CONTENT } from '../../common/constant.model';
 
 @Component({
@@ -9,9 +9,9 @@ import { DEFAULT_URL, TAB_CONTENT } from '../../common/constant.model';
 })
 export class BlogCardComponent {
   defaultUrl = DEFAULT_URL;
-  constructor(private blogStore: BlogStore) {}
+  constructor(private commonStore: CommonStore) {}
 
-  vm$ = this.blogStore.select((state) => {
+  vm$ = this.commonStore.select((state) => {
     return {
       displayContents: state.displayContents,
     };

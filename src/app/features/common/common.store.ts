@@ -3,7 +3,12 @@ import { ComponentStore } from '@ngrx/component-store';
 import { BlogContentApiService } from '../api/blog-content-api.service';
 import { combineLatest, filter, pipe, switchMap, tap } from 'rxjs';
 import { BlogContent } from '../blog-page/blog-page.util';
-import { CATE_ID, TAB_CONTENT } from './constant.model';
+import {
+  CATE_ID,
+  TAB_CONTENT,
+  serviceModel,
+  ListServices,
+} from './constant.model';
 
 const state = {
   tabValue: '',
@@ -13,6 +18,8 @@ const state = {
   selectedContent: null as unknown as BlogContent,
   relatedContent: [] as BlogContent[],
   selectedId: 0,
+  selectedServiceId: '',
+  selectedService: null as unknown as serviceModel,
 };
 
 type State = typeof state;
@@ -20,7 +27,7 @@ type State = typeof state;
 @Injectable({
   providedIn: 'root',
 })
-export class BlogStore extends ComponentStore<State> {
+export class CommonStore extends ComponentStore<State> {
   constructor(private contentApi: BlogContentApiService) {
     super(state);
     this.loadAllContents('');
@@ -43,6 +50,7 @@ export class BlogStore extends ComponentStore<State> {
         this.select((x) => x.selectedContent),
       ])
     );
+    this.loadServiceContent(this.select((x) => x.selectedServiceId));
   }
 
   get snapshotContents(): BlogContent[] {
@@ -90,7 +98,10 @@ export class BlogStore extends ComponentStore<State> {
 
   private loadRelatedContent = this.effect<[BlogContent[], BlogContent]>(
     pipe(
-      filter(([contents, selectedContent]) => !!contents?.length && !!selectedContent?.title.rendered),
+      filter(
+        ([contents, selectedContent]) =>
+          !!contents?.length && !!selectedContent?.title.rendered
+      ),
       tap(([contents, selectedContent]) => {
         const inputWords = selectedContent.title.rendered
           .toLowerCase()
@@ -123,6 +134,17 @@ export class BlogStore extends ComponentStore<State> {
     )
   );
 
+  private loadServiceContent = this.effect<string>(
+    pipe(
+      tap((serviceContent) => {
+        const selectedService = ListServices.find(
+          (x) => x.key === serviceContent
+        );
+        this.patchState({ selectedService });
+      })
+    )
+  );
+
   private getCate(cateId: number) {
     switch (cateId) {
       case CATE_ID.TAX:
@@ -135,6 +157,7 @@ export class BlogStore extends ComponentStore<State> {
         return '';
     }
   }
+
   private getTabs(categories: number[] | undefined) {
     if (!categories || (categories.length && categories[0] == 1)) {
       return [TAB_CONTENT.TAX, TAB_CONTENT.PERSONAL, TAB_CONTENT.COMPANY];

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BlogStore } from '../common/blog-page.store';
+import { CommonStore } from '../common/common.store';
 import { LIST_TABS } from './blog-page.util';
 import { Subject, debounceTime, distinctUntilChanged, pipe } from 'rxjs';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -17,20 +17,20 @@ export class BlogPageComponent {
   listTabs = LIST_TABS;
 
   constructor(
-    private blogStore: BlogStore,
+    private commonStore: CommonStore,
     public sanitizer: DomSanitizer,
     private route: Router
   ) {
     this.inputSubject
       .pipe(debounceTime(200), distinctUntilChanged())
       .subscribe((value) => {
-        this.blogStore.patchState({
+        this.commonStore.patchState({
           searchValue: value,
         });
       });
   }
 
-  vm$ = this.blogStore.select((state) => {
+  vm$ = this.commonStore.select((state) => {
     return {
       tabValue: state.tabValue,
       displayContents: state.displayContents,
@@ -39,7 +39,7 @@ export class BlogPageComponent {
 
   tabClick(tabValue: string) {
     console.log('tabValue :>> ', tabValue);
-    this.blogStore.patchState({ tabValue });
+    this.commonStore.patchState({ tabValue });
   }
 
   searchInput(event: Event) {
@@ -48,7 +48,7 @@ export class BlogPageComponent {
   }
 
   redirectToPost(selectedId: number) {
-    this.blogStore.patchState({ selectedId });
+    this.commonStore.patchState({ selectedId });
     this.route.navigate([`tin-tuc/bai-viet/${selectedId}`]);
   }
 }

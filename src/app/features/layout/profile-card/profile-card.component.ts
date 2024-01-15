@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 export class ProfileCardComponent {
   @Input() imgSrc = '';
   @Input() isHomePage = true;
+  @Input() title = 'Đại Lý Thuế 2KT';
+  @Input() content1 = '';
+  @Input() content2 = '';
 
   constructor(private route: Router) {}
 
