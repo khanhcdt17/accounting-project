@@ -1,0 +1,27 @@
+.icon-size {
+  font-size: 50px;
+  color: #ff4700;
+}
+
+.ic-title-box {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ic-content-box {
+  font-size: 16px;
+  color: #5f5f5f;
+}
+
+.icon-container {
+  width: 100px;
+  height: 100px;
+}
+
+.infor-card-container:hover {
+  transform: translateY(-10px);
+}
+.infor-card-container {
+  min-height: 28rem;
+}

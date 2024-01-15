@@ -16,18 +16,71 @@
       </div>
     </div>
     <div class="my-16">
-      <app-profile-card
-        [imgSrc]="'https://i.imgur.com/3abWgNu.jpg'"
-        [isHomePage]="false"
-        [title]="'GIỚI THIỆU SƠ LƯỢC'"
-        [content1]="content1"
-        [content2]="content2"
-      ></app-profile-card>
+      <ng-container *ngFor="let content of introductionContents">
+        <ng-container *ngIf="content.id === vm.selectedService.key">
+          <app-profile-card
+            [imgSrc]="'https://i.imgur.com/3abWgNu.jpg'"
+            [isHomePage]="false"
+            [title]="'GIỚI THIỆU SƠ LƯỢC'"
+            [content1]="content.content1"
+            [content2]="content.content2"
+          ></app-profile-card>
+        </ng-container>
+      </ng-container>
     </div>
-    <div class="my-16">
-      <h2 class="text-center text-center">
+    <div class="my-32 common-bg pb-40 pt-24 sv-container">
+      <h2 class="text-center text-white">
         VÌ SAO NÊN SỬ DỤNG DỊCH VỤ CỦA 2KT?
       </h2>
+      <div class="flex justify-center">
+        <div class="flex my-16 lg:w-3/4 relative">
+          <div class="sv-image absolute image-container">
+            <img
+              src="https://i.imgur.com/4Yb6L20.jpg"
+              class="img-fluid rounded shadow-gray-500"
+              loading="lazy"
+            />
+          </div>
+          <div class="why-content z-10 flex flex-col items-end">
+            <div
+              class="border rounded shadow bg-white mt-3 w-1/2 sv-content"
+              *ngFor="let item of contentWhys"
+            >
+              <div class="p-8">
+                <div class="flex common-color items-center">
+                  <i class="fa-regular fa-hand-point-right mr-2"></i>
+                  <h5 class="!m-0">{{ item.title }}</h5>
+                </div>
+
+                <p class="mt-2 text-justify">
+                  {{ item.content }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-28 my-32">
+      <div><h3 class="common-color text-center">NGHIỆP VỤ THỰC HIỆN</h3></div>
+      <div class="flex flex-wrap justify-center">
+        <ng-container *ngFor="let serviceMajor of listServiceMajor">
+          <ng-container *ngIf="serviceMajor.id === vm.selectedService.key">
+            <div
+              *ngFor="let major of serviceMajor.major"
+              class="w-fit mx-3 mt-12"
+            >
+              <app-major-card
+                [icon]="major.icon"
+                [content]="major.content"
+                [title]="major.title"
+                class="flex w-fit"
+              ></app-major-card>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
     </div>
     <div class="">
       <app-footer></app-footer>

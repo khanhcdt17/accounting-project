@@ -14,7 +14,7 @@ export class ServicePageComponent {
       nav: 'ke-toan',
     },
     {
-      img: 'https://i.imgur.com/VZqwpps.jpg',
+      img: 'https://i.imgur.com/kFNcTLb.jpg',
       label: 'Đại lý thuế',
       nav: 'dai-ly-thue',
     },

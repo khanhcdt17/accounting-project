@@ -12,25 +12,28 @@
       [ngClass]="{ ' flex items-center': !isHomePage }"
     >
       <div class="card-body profile-card-content">
-        <h2 class="card-title" [ngClass]="{ 'text-center': title }">
+        <h2
+          class="card-title common-color"
+          [ngClass]="{ 'text-center': title }"
+        >
           {{ title }}
         </h2>
         <ng-container *ngIf="!content1 && !content2">
-          <p class="card-text pt-6">
+          <p class="card-text pt-6 text-justify">
             Với đội ngũ nòng cốt dày dạn kinh nghiệm trên 15 năm, làm việc tại
             các vị trí Giám đốc tài chính, Kế toán trưởng trong các Doanh
             nghiệp.<strong> Đại lý thuế 2KT</strong> thành lập chuyên dịch vụ
             trong lĩnh vực tư vấn Thuế - Kế toán - Kiểm toán và các dịch vụ khác
             hỗ trợ Doanh nghiệp khác.
           </p>
-          <p class="card-text pt-6">
+          <p class="card-text pt-6 text-justify">
             Với hàng trăm khách hàng Doanh nghiệp và nhiều khách hàng cá
             nhân,<strong> 2KT</strong>
             đã và đang trở thành người bạn đồng hành của cộng đồng doanh nghiệp
             và cá nhân.
           </p>
           <ng-container *ngIf="isHomePage">
-            <p class="card-text pt-6">
+            <p class="card-text pt-6 text-justify">
               Sứ mệnh của<strong> 2KT</strong> là cam kết đồng hành cùng Doanh
               nghiệp, cá nhân với dịch vụ của mình giúp khách hàng yên tâm phát
               triển kinh doanh bền vững, năng suất và hiệu quả hơn nhằm thúc đẩy
@@ -44,10 +47,10 @@
           >
         </ng-container>
         <ng-container *ngIf="content1 && content2">
-          <p class="card-text pt-6">
+          <p class="card-text pt-6 text-justify">
             {{ content1 }}
           </p>
-          <p class="card-text pt-6">
+          <p class="card-text pt-6 text-justify">
             {{ content2 }}
           </p>
         </ng-container>
