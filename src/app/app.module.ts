@@ -32,6 +32,7 @@ import { ChunkPipe } from './features/common/chunk.pipe';
 import { ToastComponent } from './features/common/toast/toast.component';
 import { ServiceContentComponent } from './features/service-page/service-content/service-content.component';
 import { MajorCardComponent } from './features/layout/major-card/major-card.component';
+import { ContactFormComponent } from './features/layout/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { MajorCardComponent } from './features/layout/major-card/major-card.comp
     ToastComponent,
     ServiceContentComponent,
     MajorCardComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,

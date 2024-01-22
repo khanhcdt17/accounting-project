@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="mx-28 my-32">
-      <div><h3 class="common-color text-center">NGHIỆP VỤ THỰC HIỆN</h3></div>
+      <div><h2 class="common-color text-center">NGHIỆP VỤ THỰC HIỆN</h2></div>
       <div class="flex flex-wrap justify-center">
         <ng-container *ngFor="let serviceMajor of listServiceMajor">
           <ng-container *ngIf="serviceMajor.id === vm.selectedService.key">
@@ -82,8 +82,117 @@
         </ng-container>
       </div>
     </div>
+    <div class="relative">
+      <h2 class="common-color text-center">QUY TRÌNH TRIỂN KHAI DỊCH VỤ</h2>
+      <div class="sv-line flex justify-center">
+        <div class="sv-line-style" #scrollableDiv>
+          <div class="sv-line-style-bg" [style.height.px]="divHeight"></div>
+        </div>
+      </div>
+      <div class="flex justify-center relative mt-8">
+        <div class="grid grid-cols-11 grid-rows-7 w-2/3">
+          <ng-container
+            *ngFor="let item of process"
+            class="flex items-center w-full"
+          >
+            <ng-container *ngIf="item.step % 2 != 0">
+              <ng-container
+                *ngTemplateOutlet="
+                  processContent;
+                  context: {
+                    title: item.title,
+                    content: item.content,
+                    arrow: 'right'
+                  }
+                "
+              ></ng-container>
+            </ng-container>
+            <ng-container *ngIf="item.step % 2 == 0">
+              <ng-container
+                *ngTemplateOutlet="
+                  processStep;
+                  context: { step: item.step, justify: 'justify-end' }
+                "
+              ></ng-container>
+            </ng-container>
+            <div class="col-span-1 flex items-center justify-center">
+              <div
+                class="flex justify-center items-center rounded-full common-bg icon-rounded"
+              >
+                <div
+                  class="flex rounded-full bg-white justify-center items-center icon-container"
+                >
+                  <i class="icon-size fa-solid fa-arrow-down"></i>
+                </div>
+              </div>
+            </div>
+            <ng-container *ngIf="item.step % 2 == 0">
+              <ng-container
+                *ngTemplateOutlet="
+                  processContent;
+                  context: {
+                    title: item.title,
+                    content: item.content,
+                    arrow: 'left'
+                  }
+                "
+              ></ng-container>
+            </ng-container>
+            <ng-container *ngIf="item.step % 2 != 0">
+              <ng-container
+                *ngTemplateOutlet="
+                  processStep;
+                  context: { step: item.step, justify: 'justify-start' }
+                "
+              ></ng-container>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="mb-16 mt-24 flex justify-center">
+      <div class="form-content">
+        <app-contact-form></app-contact-form>
+      </div>
+    </div>
+    <div class="py-16">
+      <h2 class="common-color text-center">ĐÁNH GIÁ CỦA KHÁCH HÀNG</h2>
+      <app-review-card></app-review-card>
+    </div>
     <div class="">
       <app-footer></app-footer>
     </div>
   </div>
 </ng-container>
+
+<ng-template #processStep let-step="step" let-justify="justify">
+  <div class="col-span-5 flex items-center {{ justify }}">
+    <div
+      class="rounded-lg shadow-md bordered border-common-color p-2 common-bg"
+    >
+      <h4 class="text-white !m-0">Bước {{ step }}</h4>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template
+  #processContent
+  let-title="title"
+  let-content="content"
+  let-arrow="arrow"
+>
+  <div class="col-span-5 flex justify-end">
+    <div
+      class="w-full rounded-lg shadow-md border-2 border-common-color square {{
+        arrow
+      }}"
+    >
+      <div class="px-4 pt-4">
+        <h4 class="common-color">{{ title }}</h4>
+      </div>
+      <div class="px-4 pb-4 pt-2">
+        <span class="text-justify">{{ content }}</span>
+      </div>
+    </div>
+  </div>
+</ng-template>

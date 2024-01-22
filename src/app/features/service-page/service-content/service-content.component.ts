@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonStore } from '../../common/common.store';
 
@@ -65,11 +71,21 @@ export class ServiceContentComponent {
     kinh nghiệm thực tế, cung cấp nguồn nhân lực chất lượng cho thị trường.`,
     },
   ];
-
+  divHeight = '';
   constructor(
     private activeRoute: ActivatedRoute,
-    private commonStore: CommonStore
+    private commonStore: CommonStore,
+    private renderer: Renderer2,
+    private el: ElementRef
   ) {}
+
+  // @HostListener('window:scroll', ['$event'])
+  // onScroll(event: Event): void {
+  //   const scrollPosition = window.scrollY || window.pageYOffset;
+  //   if (scrollPosition < 4600) {
+  //     this.divHeight = `${scrollPosition - 3600}`;
+  //   }
+  // }
 
   vm$ = this.commonStore.select((state) => {
     return {
@@ -308,6 +324,48 @@ export class ServiceContentComponent {
           content: `Đào tạo chuyên sâu về kế toán và luật doanh nghiệp, các linh vực liên quan`,
         },
       ],
+    },
+  ];
+
+  process = [
+    {
+      title: `TIẾP NHẬN THÔNG TIN`,
+      content: `2KT tiếp nhận thông tin tiếp nhận thông tin từ khách hàng và tiến hành trao đổi chi tiết, 
+      liệt kê thông tin để tìm ra vấn đề mấu chốt mà khách hàng đang gặp phải. 
+      Những thông tin khách hàng cung cấp sẽ được chuyển giao đến các chuyên viên để kiểm tra thông tin và phân tích vấn đề.`,
+      step: 1,
+    },
+    {
+      title: `KIỂM TRA THÔNG TIN`,
+      content: `2KT sẽ kiểm tra và xác minh thông tin khách hàng cung cấp để đảm bảo tính chính xác, đầy đủ và hợp lệ. 
+    Sau đó khách hàng sẽ được tư vấn sơ bộ và lắng nghe các đề xuất giải pháp cho doanh nghiệp của mình.`,
+      step: 2,
+    },
+    {
+      title: `GỬI BÁO PHÍ DỊCH VỤ CỤ THỂ`,
+      content: `Sau khi đề xuất các giải pháp, chuyên viên tư vấn sẽ lập và gửi bảng báo giá chi tiết, mô tả rõ từng khoản chi phí và điều kiện thanh toán.`,
+      step: 3,
+    },
+    {
+      title: `KÝ HỢP ĐỒNG DỊCH VỤ`,
+      content: `Sau khi đàm phán về các điều khoản và điều kiện, hợp đồng dịch vụ được lập thành văn bản và tiến đến ký kết giữa các bên.`,
+      step: 4,
+    },
+    {
+      title: `YÊU CẦU CUNG CẤP DỮ LIỆU KẾ TOÁN ĐỂ THỰC HIỆN RÀ SOÁT`,
+      content: `Khách hàng chuyển giao những thông tin và dữ liệu kế toán cần thiết để bộ phận kế toán thực hiện kiểm tra, rà soát, 
+      tính toán một cách đầy đủ và chính xác để từ đó lập các báo cáo và hoàn thiện hồ sơ liên quan.`,
+      step: 5,
+    },
+    {
+      title: `LIÊN HỆ CÁN BỘ THUẾ PHỤ TRÁCH VÀ PHỐI HỢP LÀM VIỆC THUẾ`,
+      content: `2KT thay mặt khách hàng liên hệ và phối hợp với cán bộ Thuế để thực hiện các nghiệp vụ theo quy định.`,
+      step: 6,
+    },
+    {
+      title: `THÔNG BÁO CHO KHÁCH HÀNG KHI CÓ QUYẾT ĐỊNH`,
+      content: `Sau khi quá trình hoàn tất, 2KT sẽ nhanh chóng thông báo về kết quả thực hiện thủ tục cho khách hàng.`,
+      step: 7,
     },
   ];
 
