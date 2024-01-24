@@ -57,7 +57,9 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item cursor-pointer" (click)="redirectToService('ke-toan')"
+                  <a
+                    class="dropdown-item cursor-pointer"
+                    (click)="redirectToService('ke-toan')"
                     >Kế toán</a
                   >
                 </li>
@@ -162,3 +164,17 @@
   </div>
 </div>
 <div class="snap-container"></div>
+<!-- <mat-toolbar color="primary">
+  <button mat-icon-button (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Logo</span>
+</mat-toolbar>
+<div *ngIf="isMenuOpen" class="menu">
+  <button mat-button (click)="closeMenu()">Close Menu</button>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+</div> -->
