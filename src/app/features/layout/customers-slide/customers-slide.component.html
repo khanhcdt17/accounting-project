@@ -5,12 +5,13 @@
       [itemsPerSlide]="5"
       [singleSlideOffset]="true"
       [startFromIndex]="6"
+      [noWrap]="false"
       [noPause]="true"
       #carousel
     >
       <slide *ngFor="let item of items" class="item">
         <div class="carousel-content">
-          <img [src]="item" loading="lazy"/>
+          <img [src]="item" loading="lazy" />
         </div>
       </slide>
     </carousel>
