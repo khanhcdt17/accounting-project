@@ -1,11 +1,11 @@
-<div class="flex !mb-3 border-0 justify-center mx-32">
-  <div class="row g-0 profile-card-container">
-    <div class="col-md-6">
+<div class="flex !mb-3 border-0 justify-center lg:mx-32">
+  <div class="grid lg:grid-cols-2 g-0 profile-card-container">
+    <div class="lg:col-span-1">
       <div class="card-body profile-card-content">
         <h2 class="card-title">Luôn đồng hành cùng doanh nghiệp</h2>
         <div class="mt-4" *ngFor="let item of profiles">
           <div
-            class="flex items-center shadow rounded-md h-16 w-5/6 cursor-pointer hover:bg-orange-100"
+            class="flex items-center shadow rounded-md h-16 lg:w-5/6 cursor-pointer hover:bg-orange-100"
             (click)="openTab(item.index)"
             [ngClass]="{ 'common-background text-white': item.isOpen }"
           >
@@ -13,24 +13,26 @@
               <i class="fa-solid fa-angle-right" *ngIf="!item.isOpen"></i>
               <i class="fa-solid fa-angle-down" *ngIf="item.isOpen"></i>
             </div>
-            <div class="ml-8">
+            <div class="mx-4">
               <h5 class="m-0 p-0">{{ item.title }}</h5>
             </div>
           </div>
-          <div *ngIf="item.isOpen" class="w-5/6">
+          <div *ngIf="item.isOpen" class="">
             <div class="mx-4 mt-4" *ngFor="let content of item.contents">
               <div class="flex">
                 <i
                   class="fa-solid fa-circle-arrow-right mr-2 mt-1 common-color"
                 ></i>
-                <p>{{ content }}</p>
+                <div class="block question-content lg:!w-96">
+                  <span >{{ content }}</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="mt-4">
           <a
-            class="btn btn-danger border-0 h-16 w-5/6 common-background flex items-center py-3"
+            class="btn btn-danger border-0 h-16 lg:w-5/6 common-background flex items-center py-3"
             (click)="redirectTo('lien-he')"
           >
             <span class="flex justify-content">
@@ -43,7 +45,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6 flex items-center">
+    <div class="lg:col-span-1 lg:flex items-center hidden">
       <img
         src="https://i.imgur.com/wpL3gS6.jpg"
         class="img-fluid rounded shadow-xl shadow-gray-500"

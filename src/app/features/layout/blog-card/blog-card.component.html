@@ -5,14 +5,14 @@
     <div class="">
       <carousel
         [interval]="7000"
-        [itemsPerSlide]="3"
+        [itemsPerSlide]="itemsPerSlide"
         [singleSlideOffset]="true"
         [startFromIndex]="6"
         [noPause]="true"
         #carousel
       >
         <slide
-          *ngFor="let chunk of vm.displayContents | chunk : 2"
+          *ngFor="let chunk of vm.displayContents | chunk : chuck"
           class="item"
         >
           <div class="carousel my-8 mx-2">
