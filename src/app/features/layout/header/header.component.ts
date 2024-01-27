@@ -10,6 +10,10 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   keyTab = TAB_CONTENT;
+  isMenuOpen = false;
+  serviceIsOpen = false;
+  blogIsOpen = false;
+  contactIsOpen = false;
 
   constructor(private commonStore: CommonStore, private route: Router) {}
 
@@ -25,5 +29,23 @@ export class HeaderComponent {
 
   redirectTo(url: string) {
     this.route.navigate([url]);
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  expendMenu(menu: string) {
+    switch (menu) {
+      case 'service':
+        this.serviceIsOpen = !this.serviceIsOpen;
+        break;
+      case 'blog':
+        this.blogIsOpen = !this.blogIsOpen;
+        break;
+      case 'contact':
+        this.contactIsOpen = !this.contactIsOpen;
+        break;
+    }
   }
 }

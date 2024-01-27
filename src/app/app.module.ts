@@ -25,7 +25,6 @@ import { BlogPageComponent } from './features/blog-page/blog-page.component';
 import { ContactPageComponent } from './features/contact-page/contact-page.component';
 import { LinkCardComponent } from './features/layout/link-card/link-card.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MessageComponent } from './features/chat-box/message/message.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContentPageComponent } from './features/blog-page/content-page/content-page.component';
 import { ChunkPipe } from './features/common/chunk.pipe';
@@ -56,7 +55,6 @@ import { ContactFormComponent } from './features/layout/contact-form/contact-for
     BlogPageComponent,
     ContactPageComponent,
     LinkCardComponent,
-    MessageComponent,
     ContentPageComponent,
     ChunkPipe,
     ToastComponent,

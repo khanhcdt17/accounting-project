@@ -75,3 +75,9 @@ a {
 .footer-custom-color {
   color: #eb6928;
 }
+
+@media screen and (max-width: 992px) {
+  .footer-col {
+    @apply grid grid-cols-1;
+  }
+}

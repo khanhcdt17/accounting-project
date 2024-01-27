@@ -1,180 +1,339 @@
-<div class="w-full common-bg-color fixed z-20" #header>
-  <div class="flex justify-between mx-80">
+<div class="desktop-layout">
+  <div class="w-full common-bg-color fixed z-20" #header>
+    <div class="flex justify-between 2xl:mx-80 lg:mx-40">
+      <div class="flex items-center">
+        <a class="mx-4 block w-24" href="" aria-current="page"
+          ><img
+            src="https://i.imgur.com/iyPUbcM.png"
+            alt="2KT – Đại lý Thuế Chuyên Nghiệp"
+            loading="lazy"
+        /></a>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light common-bg-color">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li
+                class="nav-item mx-6 border-b-2 border-common-color hover:!border-white"
+              >
+                <a
+                  class="nav-link block !text-white !font-semibold !text-base cursor-pointer"
+                  aria-current="page"
+                  (click)="redirectTo('')"
+                  >Trang chủ</a
+                >
+              </li>
+              <li
+                class="nav-item mx-6 border-b-2 border-common-color hover:!border-white"
+              >
+                <a
+                  class="nav-link block !text-white !font-semibold !text-base cursor-pointer"
+                  (click)="redirectTo('gioi-thieu')"
+                  >Giới thiệu</a
+                >
+              </li>
+              <li
+                class="nav-item mx-6 border-b-2 border-common-color dropdown nav-item-1"
+              >
+                <a
+                  class="nav-link block !text-white !font-semibold !text-base dropdown-toggle"
+                  (click)="redirectTo('dich-vu')"
+                  id="navbarDropdown"
+                  role="button"
+                  aria-expanded="false"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                >
+                  Dịch vụ
+                </a>
+                <ul
+                  class="dropdown-menu divide-y divide-slate-100 !border-0 !p-0 w-60 dropdown-menu-1"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <li class="!rounded-t-md">
+                    <a
+                      class="dropdown-item !rounded-t-md cursor-pointer"
+                      (click)="redirectToService('dai-ly-thue')"
+                      >Đại lý thuế</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item cursor-pointer"
+                      (click)="redirectToService('ke-toan')"
+                      >Kế toán</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item cursor-pointer"
+                      (click)="redirectToService('quyet-toan-thue')"
+                      >Quyết toán thuế</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item cursor-pointer"
+                      (click)="redirectToService('bao-hiem-xa-hoi')"
+                      >Bảo hiểm xã hội</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item cursor-pointer"
+                      (click)="redirectToService('dang-ky-kinh-doanh')"
+                      >Đăng ký kinh doanh</a
+                    >
+                  </li>
+                  <li class="!rounded-b-md">
+                    <a
+                      class="dropdown-item !rounded-b-md cursor-pointer"
+                      (click)="redirectToService('dao-tao-ke-toan')"
+                      >Đào tạo kế toán</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="nav-item mx-6 border-b-2 border-common-color dropdown nav-item-2"
+              >
+                <a
+                  class="nav-link block !text-white !font-semibold !text-base dropdown-toggle cursor-pointer"
+                  id="navbarDropdown"
+                  role="button"
+                  aria-expanded="false"
+                  (click)="redirectToBlog('')"
+                >
+                  Tin tức
+                </a>
+                <ul
+                  class="dropdown-menu divide-y divide-slate-100 !border-0 !p-0 w-60 dropdown-menu-2"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <li class="!rounded-t-md">
+                    <a
+                      class="dropdown-item !rounded-t-md cursor-pointer"
+                      (click)="redirectToBlog(keyTab.TAX)"
+                      >Thuế - kế toán</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item cursor-pointer"
+                      (click)="redirectToBlog(keyTab.COMPANY)"
+                      >Doanh nhgiệp</a
+                    >
+                  </li>
+                  <li class="!rounded-b-md cursor-pointer">
+                    <a
+                      class="dropdown-item !rounded-b-md"
+                      (click)="redirectToBlog(keyTab.PERSONAL)"
+                      >Cá nhân</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="nav-item mx-6 border-b-2 border-common-color dropdown nav-item-3"
+              >
+                <a
+                  class="nav-link block !text-white !font-semibold !text-base dropdown-toggle cursor-pointer"
+                  (click)="redirectTo('lien-he')"
+                  id="navbarDropdown"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  Liên hệ
+                </a>
+                <ul
+                  class="dropdown-menu !border-0 !p-0 w-60 dropdown-menu-3"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <li class="!rounded-md">
+                    <a
+                      class="dropdown-item !rounded-md cursor-pointer"
+                      (click)="redirectTo('lien-he')"
+                      >Tuyển dụng</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="snap-container"></div>
+</div>
+
+<div class="mobile-layout common-bg-color fixed z-20 w-full">
+  <div class="custom-header">
     <div class="flex items-center">
-      <a class="mx-4 block w-24" href="" aria-current="page"
+      <a class="mx-4 block w-16" href="" aria-current="page"
         ><img
           src="https://i.imgur.com/iyPUbcM.png"
           alt="2KT – Đại lý Thuế Chuyên Nghiệp"
           loading="lazy"
       /></a>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light common-bg-color">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li
-              class="nav-item mx-6 border-b-2 border-common-color hover:!border-white"
-            >
-              <a
-                class="nav-link block !text-white !font-semibold !text-base cursor-pointer"
-                aria-current="page"
-                (click)="redirectTo('')"
-                >Trang chủ</a
-              >
-            </li>
-            <li
-              class="nav-item mx-6 border-b-2 border-common-color hover:!border-white"
-            >
-              <a
-                class="nav-link block !text-white !font-semibold !text-base cursor-pointer"
-                (click)="redirectTo('gioi-thieu')"
-                >Giới thiệu</a
-              >
-            </li>
-            <li
-              class="nav-item mx-6 border-b-2 border-common-color dropdown nav-item-1"
-            >
-              <a
-                class="nav-link block !text-white !font-semibold !text-base dropdown-toggle"
-                (click)="redirectTo('dich-vu')"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-              >
-                Dịch vụ
-              </a>
-              <ul
-                class="dropdown-menu divide-y divide-slate-100 !border-0 !p-0 w-60 dropdown-menu-1"
-                aria-labelledby="navbarDropdown"
-              >
-                <li class="!rounded-t-md">
-                  <a
-                    class="dropdown-item !rounded-t-md cursor-pointer"
-                    (click)="redirectToService('dai-ly-thue')"
-                    >Đại lý thuế</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    (click)="redirectToService('ke-toan')"
-                    >Kế toán</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    (click)="redirectToService('quyet-toan-thue')"
-                    >Quyết toán thuế</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    (click)="redirectToService('bao-hiem-xa-hoi')"
-                    >Bảo hiểm xã hội</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    (click)="redirectToService('dang-ky-kinh-doanh')"
-                    >Đăng ký kinh doanh</a
-                  >
-                </li>
-                <li class="!rounded-b-md">
-                  <a
-                    class="dropdown-item !rounded-b-md cursor-pointer"
-                    (click)="redirectToService('dao-tao-ke-toan')"
-                    >Đào tạo kế toán</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li
-              class="nav-item mx-6 border-b-2 border-common-color dropdown nav-item-2"
-            >
-              <a
-                class="nav-link block !text-white !font-semibold !text-base dropdown-toggle cursor-pointer"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-                (click)="redirectToBlog('')"
-              >
-                Tin tức
-              </a>
-              <ul
-                class="dropdown-menu divide-y divide-slate-100 !border-0 !p-0 w-60 dropdown-menu-2"
-                aria-labelledby="navbarDropdown"
-              >
-                <li class="!rounded-t-md">
-                  <a
-                    class="dropdown-item !rounded-t-md cursor-pointer"
-                    (click)="redirectToBlog(keyTab.TAX)"
-                    >Thuế - kế toán</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    (click)="redirectToBlog(keyTab.COMPANY)"
-                    >Doanh nhgiệp</a
-                  >
-                </li>
-                <li class="!rounded-b-md cursor-pointer">
-                  <a
-                    class="dropdown-item !rounded-b-md"
-                    (click)="redirectToBlog(keyTab.PERSONAL)"
-                    >Cá nhân</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li
-              class="nav-item mx-6 border-b-2 border-common-color dropdown nav-item-3"
-            >
-              <a
-                class="nav-link block !text-white !font-semibold !text-base dropdown-toggle cursor-pointer"
-                (click)="redirectTo('lien-he')"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                Liên hệ
-              </a>
-              <ul
-                class="dropdown-menu !border-0 !p-0 w-60 dropdown-menu-3"
-                aria-labelledby="navbarDropdown"
-              >
-                <li class="!rounded-md">
-                  <a
-                    class="dropdown-item !rounded-md cursor-pointer"
-                    (click)="redirectTo('lien-he')"
-                    >Tuyển dụng</a
-                  >
-                </li>
-              </ul>
-            </li>
-          </ul>
+    <div class="custom-menu-icon mr-2" (click)="toggleMenu()">
+      <i class="fa-solid fa-bars text-2xl text-orange-50"></i>
+    </div>
+  </div>
+  <div *ngIf="isMenuOpen" class="custom-menu common-bg-color">
+    <ul class="navbar-nav">
+      <li class="mx-6 my-1">
+        <a
+          class="block !text-orange-50 !font-normal !text-base cursor-pointer"
+          (click)="redirectTo('')"
+          >Trang chủ</a
+        >
+      </li>
+      <li class="mx-6 my-1">
+        <a
+          class="block !text-orange-50 !font-normal !text-base cursor-pointer"
+          (click)="redirectTo('gioi-thieu')"
+          >Giới thiệu</a
+        >
+      </li>
+      <li class="mx-6 my-1">
+        <div class="flex items-center">
+          <a
+            class="block !text-orange-50 !font-normal !text-base"
+            (click)="redirectTo('dich-vu')"
+          >
+            Dịch vụ
+          </a>
+          <div (click)="expendMenu('service')" class="mx-2">
+            <i
+              [ngClass]="
+                serviceIsOpen
+                  ? 'fa-solid fa-angle-down text-xs text-orange-100'
+                  : 'fa-solid fa-angle-right text-xs text-orange-100'
+              "
+            ></i>
+          </div>
         </div>
-      </div>
-    </nav>
+        <ul *ngIf="serviceIsOpen" class="!border-0 !p-0 w-60 ml-4">
+          <li class="my-2">
+            <a
+              class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
+              (click)="redirectToService('dai-ly-thue')"
+              >Đại lý thuế</a
+            >
+          </li>
+          <li class="my-2">
+            <a
+              class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
+              (click)="redirectToService('ke-toan')"
+              >Kế toán</a
+            >
+          </li>
+          <li class="my-2">
+            <a
+              class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
+              (click)="redirectToService('quyet-toan-thue')"
+              >Quyết toán thuế</a
+            >
+          </li>
+          <li class="my-2">
+            <a
+              class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
+              (click)="redirectToService('bao-hiem-xa-hoi')"
+              >Bảo hiểm xã hội</a
+            >
+          </li>
+          <li class="my-2">
+            <a
+              class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
+              (click)="redirectToService('dang-ky-kinh-doanh')"
+              >Đăng ký kinh doanh</a
+            >
+          </li>
+          <li class="mt-2">
+            <a
+              class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
+              (click)="redirectToService('dao-tao-ke-toan')"
+              >Đào tạo kế toán</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="mx-6 my-1">
+        <div class="flex items-center">
+          <div class="flex items-center">
+            <a
+              class="block !text-orange-50 !font-normal !text-base cursor-pointer"
+              id="navbarDropdown"
+              (click)="redirectToBlog('')"
+            >
+              Tin tức
+            </a>
+            <div (click)="expendMenu('blog')" class="mx-2">
+              <i
+                [ngClass]="
+                  blogIsOpen
+                    ? 'fa-solid fa-angle-down text-xs text-orange-100'
+                    : 'fa-solid fa-angle-right text-xs text-orange-100'
+                "
+              ></i>
+            </div>
+          </div>
+        </div>
+        <ul class="!border-0 !p-0 w-60 ml-4" *ngIf="blogIsOpen">
+          <li class="my-2">
+            <a
+              class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
+              (click)="redirectToBlog(keyTab.TAX)"
+              >Thuế - kế toán</a
+            >
+          </li>
+          <li class="my-2">
+            <a
+              class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
+              (click)="redirectToBlog(keyTab.COMPANY)"
+              >Doanh nhgiệp</a
+            >
+          </li>
+          <li class="mt-2">
+            <a
+              class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
+              (click)="redirectToBlog(keyTab.PERSONAL)"
+              >Cá nhân</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li class="mx-6 my-1">
+        <div class="flex items-center">
+          <a
+            class="block !text-orange-50 !font-normal !text-base cursor-pointer"
+            (click)="redirectTo('lien-he')"
+          >
+            Liên hệ
+          </a>
+          <div (click)="expendMenu('contact')" class="mx-2">
+            <i
+              [ngClass]="
+                contactIsOpen
+                  ? 'fa-solid fa-angle-down text-xs text-orange-100'
+                  : 'fa-solid fa-angle-right text-xs text-orange-100'
+              "
+            ></i>
+          </div>
+        </div>
+        <ul class="!border-0 !p-0 w-60 ml-4" *ngIf="contactIsOpen">
+          <li class="mt-2">
+            <a
+              class="dropdown-item !font-normal !text-base !rounded-md cursor-pointer"
+              (click)="redirectTo('lien-he')"
+              >Tuyển dụng</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </div>
-<div class="snap-container"></div>
-<!-- <mat-toolbar color="primary">
-  <button mat-icon-button (click)="toggleMenu()">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>Logo</span>
-</mat-toolbar>
-<div *ngIf="isMenuOpen" class="menu">
-  <button mat-button (click)="closeMenu()">Close Menu</button>
-  <ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-  </ul>
-</div> -->
+<div class="mobile-snap-container"></div>
