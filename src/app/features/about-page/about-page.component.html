@@ -6,12 +6,12 @@
       [isHomePage]="false"
     ></app-profile-card>
   </div>
-  <!-- <div class="flex justify-center bg-gray-100 py-16">
+  <div class="flex justify-center bg-gray-100 py-16">
     <div>
       <h2 class="title text-center">Đội ngũ của chúng tôi</h2>
       <div class="flex lg:flex-row flex-col">
         <div *ngFor="let item of items" class="item">
-          <div class="my-8 mx-4">
+          <div class="my-8 lg:mx-4">
             <div class="card card-staff text-center w-80 !p-0">
               <img
                 class="card-img-top"
@@ -31,15 +31,11 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
   <div class="service-container flex justify-center">
     <div class="my-16">
       <h1 class="common-color text-center">Dịch vụ của 2KT</h1>
-      <div
-        class="flex mt-8"
-        (swipeLeft)="swipeLeft()"
-        (swipeRight)="swipeRight()"
-      >
+      <div class="flex mt-8 h-auto">
         <carousel
           [interval]="5000"
           [itemsPerSlide]="itemsPerSlide"

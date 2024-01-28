@@ -63,12 +63,4 @@ export class ContentPageComponent {
     this.commonStore.patchState({ tabValue });
     this.router.navigate(['tin-tuc']);
   }
-  swipeRight() {
-    this.carousel.nextSlide();
-    console.log('swipeRight');
-  }
-  swipeLeft() {
-    console.log('swipeLeft');
-    this.carousel.previousSlide();
-  }
 }

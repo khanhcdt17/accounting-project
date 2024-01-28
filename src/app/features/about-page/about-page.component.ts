@@ -77,13 +77,4 @@ export class AboutPageComponent {
   redirectAbout() {
     this.route.navigate(['lien-he']);
   }
-
-  swipeRight() {
-    this.carousel.nextSlide();
-    console.log('swipeRight');
-  }
-  swipeLeft() {
-    console.log('swipeLeft');
-    this.carousel.previousSlide();
-  }
 }

@@ -1,10 +1,6 @@
 <!-- <h3>Tin tức</h3> -->
 <ng-container *ngIf="vm$ | async as vm">
-  <div
-    class="flex justify-center relative"
-    (swipeLeft)="swipeLeft()"
-    (swipeRight)="swipeRight()"
-  >
+  <div class="flex justify-center relative">
     <div class="bc-container absolute w-full"></div>
     <div class="">
       <carousel

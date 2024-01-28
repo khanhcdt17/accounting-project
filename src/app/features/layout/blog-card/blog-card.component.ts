@@ -27,12 +27,4 @@ export class BlogCardComponent {
       this.chuck = 1;
     }
   }
-  swipeRight() {
-    this.carousel.nextSlide();
-    console.log('swipeRight');
-  }
-  swipeLeft() {
-    console.log('swipeLeft');
-    this.carousel.previousSlide();
-  }
 }
