@@ -25,3 +25,9 @@
 .infor-card-container {
   min-height: 28rem;
 }
+
+@media screen and (max-width: 992px) {
+  .infor-card-container {
+    min-height: 0rem;
+  }
+}

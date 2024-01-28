@@ -18,16 +18,19 @@ export class HeaderComponent {
   constructor(private commonStore: CommonStore, private route: Router) {}
 
   redirectToBlog(tabValue: string) {
+    this.isMenuOpen = !this.isMenuOpen;
     this.commonStore.patchState({ tabValue });
     this.route.navigate(['tin-tuc']);
   }
 
   redirectToService(selectedServiceId: string) {
+    this.isMenuOpen = !this.isMenuOpen;
     this.commonStore.patchState({ selectedServiceId });
     this.route.navigate([`dich-vu/${selectedServiceId}`]);
   }
 
   redirectTo(url: string) {
+    this.isMenuOpen = !this.isMenuOpen;
     this.route.navigate([url]);
   }
 

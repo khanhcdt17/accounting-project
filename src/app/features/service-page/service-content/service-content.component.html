@@ -7,10 +7,10 @@
         *ngIf="vm.selectedService"
       >
         <div class="overlay"></div>
-        <h1 class="text-center text-6xl relative uppercase">
+        <h1 class="text-center lg:text-6xl text-3xl relative uppercase mx-">
           {{ vm.selectedService.serviceTitle }}
         </h1>
-        <p class="text-center pt-8 text-lg relative">
+        <p class="text-center pt-8 text-lg relative px-2">
           {{ vm.selectedService.serviceDes }}
         </p>
       </div>
@@ -28,7 +28,7 @@
         </ng-container>
       </ng-container>
     </div>
-    <div class="my-32 common-bg pb-40 pt-24 sv-container">
+    <div class="lg:my-32 common-bg lg:pb-40 my-16 pt-24 sv-container">
       <h2 class="text-center text-white">
         VÌ SAO NÊN SỬ DỤNG DỊCH VỤ CỦA 2KT?
       </h2>
@@ -41,7 +41,7 @@
               loading="lazy"
             />
           </div>
-          <div class="why-content z-10 flex flex-col items-end">
+          <div class="why-content z-10 flex flex-col items-end mx-2">
             <div
               class="border rounded shadow bg-white mt-3 w-1/2 sv-content"
               *ngFor="let item of contentWhys"
@@ -62,7 +62,7 @@
         </div>
       </div>
     </div>
-    <div class="mx-28 my-32">
+    <div class="mx-28 lg:my-32 mb-32">
       <div><h2 class="common-color text-center">NGHIỆP VỤ THỰC HIỆN</h2></div>
       <div class="flex flex-wrap justify-center">
         <ng-container *ngFor="let serviceMajor of listServiceMajor">
@@ -89,8 +89,9 @@
           <div class="sv-line-style-bg" [style.height.px]="divHeight"></div>
         </div>
       </div>
-      <div class="flex justify-center relative mt-8">
-        <div class="grid grid-cols-11 grid-rows-7 w-2/3">
+      <div class="flex justify-center relative lg:mt-8">
+        <!-- desktop mode -->
+        <div class="hidden lg:grid grid-cols-11 grid-rows-7 w-2/3">
           <ng-container
             *ngFor="let item of process"
             class="flex items-center w-full"
@@ -148,6 +149,41 @@
             </ng-container>
           </ng-container>
         </div>
+        <!-- mobile mode -->
+        <div class="lg:hidden flex flex-col mx-2">
+          <div
+            *ngFor="let item of process"
+            class="lg:hidden flex flex-col items-center w-full mt-8"
+          >
+            <div class="col-span-1 flex items-center justify-center">
+              <div
+                class="flex justify-center items-center rounded-full common-bg icon-rounded"
+              >
+                <div
+                  class="flex rounded-full bg-white justify-center items-center icon-container"
+                >
+                  <i class="icon-size fa-solid fa-arrow-down"></i>
+                </div>
+              </div>
+            </div>
+            <ng-container
+              *ngTemplateOutlet="
+                processStep;
+                context: { step: item.step, justify: 'justify-center my-3' }
+              "
+            ></ng-container>
+            <ng-container
+              *ngTemplateOutlet="
+                processContent;
+                context: {
+                  title: item.title,
+                  content: item.content,
+                  arrow: ''
+                }
+              "
+            ></ng-container>
+          </div>
+        </div>
       </div>
     </div>
     <div class="mb-16 mt-24 flex justify-center">
@@ -155,7 +191,7 @@
         <app-contact-form></app-contact-form>
       </div>
     </div>
-    <div class="py-16">
+    <div class="lg:py-16">
       <h2 class="common-color text-center">ĐÁNH GIÁ CỦA KHÁCH HÀNG</h2>
       <app-review-card></app-review-card>
     </div>

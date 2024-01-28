@@ -79,6 +79,9 @@
   .form-content {
     @apply w-1/2;
   }
+  .sv-container {
+    @apply pb-8;
+  }
 }
 
 .icon-container {
@@ -105,7 +108,7 @@
 }
 
 .sv-line-style {
-  margin-top: 166px;
+  margin-top: 172px;
   width: 2px;
   background-color: #fce6dd;
   height: 80%;
@@ -154,4 +157,37 @@
 .sv-line-style-bg {
   width: 2px;
   background-color: #ff4700;
+}
+
+@media screen and (max-width: 1450px) {
+  .sv-line-style {
+    margin-top: 210px;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .sv-line-style {
+    margin-top: 100px;
+    height: 90%;
+  }
+  .square {
+    max-width: 780px;
+  }
+
+  .form-content {
+    @apply w-1/2;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .form-content {
+    @apply w-2/3;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .form-content {
+    @apply w-5/6;
+  }
 }
