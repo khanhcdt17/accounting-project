@@ -21,3 +21,18 @@
   color: #c24902;
   font-family: "Roboto", Sans-serif !important;
 }
+
+.infor-card {
+  @apply mx-2;
+}
+
+@media screen and (max-width: 992px) {
+  .card-content {
+    @apply grid grid-cols-1 pt-8 bg-gray-50;
+  }
+  .infor-card {
+    @apply mt-4;
+  }
+}
+@media screen and (min-width: 993px) {
+}

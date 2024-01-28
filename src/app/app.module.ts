@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,7 +25,6 @@ import { BlogPageComponent } from './features/blog-page/blog-page.component';
 import { ContactPageComponent } from './features/contact-page/contact-page.component';
 import { LinkCardComponent } from './features/layout/link-card/link-card.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MessageComponent } from './features/chat-box/message/message.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContentPageComponent } from './features/blog-page/content-page/content-page.component';
 import { ChunkPipe } from './features/common/chunk.pipe';
@@ -56,7 +55,6 @@ import { ContactFormComponent } from './features/layout/contact-form/contact-for
     BlogPageComponent,
     ContactPageComponent,
     LinkCardComponent,
-    MessageComponent,
     ContentPageComponent,
     ChunkPipe,
     ToastComponent,
@@ -71,6 +69,7 @@ import { ContactFormComponent } from './features/layout/contact-form/contact-for
     CarouselModule,
     ReactiveFormsModule,
     HttpClientModule,
+    HammerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

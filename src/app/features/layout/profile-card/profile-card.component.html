@@ -1,19 +1,19 @@
-<div class="flex mb-3 border-0 justify-center">
-  <div class="row g-0 profile-card-container">
-    <div class="col-md-6 flex items-center">
+<div class="flex mb-3 border-0 justify-center mx-2">
+  <div class="grid lg:grid-cols-2 grid-cols-1 g-0 profile-card-container">
+    <div class="col-span-1 flex items-center">
       <img
         src="{{ imgSrc }}"
-        class="img-fluid rounded shadow-xl shadow-gray-500"
+        class="img-fluid lg:rounded lg:shadow-xl lg:shadow-gray-500"
         loading="lazy"
       />
     </div>
     <div
-      class="col-md-6 !pl-8"
+      class="col-span-1 lg:!pl-8"
       [ngClass]="{ ' flex items-center': !isHomePage }"
     >
       <div class="card-body profile-card-content">
         <h2
-          class="card-title common-color"
+          class="card-title common-color lg:!mt-0 mt-4"
           [ngClass]="{ 'text-center': title }"
         >
           {{ title }}

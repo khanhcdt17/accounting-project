@@ -1,6 +1,6 @@
 @media (max-width: 992px) {
   .profile-card-container {
-    max-width: 80vw;
+    max-width: 90vw;
   }
 }
 
@@ -22,4 +22,10 @@
   flex-grow: 1;
   order: 10;
   display: inline-block;
+}
+
+@media (min-width: 450px) {
+  .question-content {
+    @apply w-80;
+  }
 }

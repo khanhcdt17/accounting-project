@@ -91,3 +91,27 @@
 .card-bg-inherit {
   background: none;
 }
+
+@media screen and (max-width: 992px) {
+  .sc-text {
+    @apply block;
+  }
+
+  .sc-text,
+  .sc-text-btn {
+    @apply hidden;
+  }
+  .sc-container {
+    height: 330px;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  .sc-container {
+    height: 330px;
+  }
+  .sc-text,
+  .sc-text-btn {
+    @apply block;
+  }
+}

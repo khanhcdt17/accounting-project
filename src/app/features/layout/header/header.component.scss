@@ -6,65 +6,114 @@
   border-color: #ff4700;
 }
 
-.dropdown-item {
-  color: #000000;
-  font-size: 14px;
-  line-height: 30px;
-  text-align: left;
-  display: block;
-  padding: 8px 30px;
-  position: relative;
-  text-decoration: none;
-  outline: none;
-  font-weight: 600;
+.custom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  color: #fff;
 }
 
-.dropdown-item {
-  &:hover {
-    color: #ffffff;
-    background: #ff5f00;
+.custom-menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.custom-title {
+  font-size: 1.2em;
+}
+
+.custom-menu {
+  display: none;
+  flex-direction: column;
+  color: #fff;
+  padding: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .custom-menu-icon {
+    display: flex;
+  }
+
+  .custom-menu {
+    display: flex;
+  }
+
+  .desktop-layout {
+    display: none;
+  }
+
+  .mobile-snap-container {
+    padding-top: 68px;
   }
 }
 
-.nav-item-1 {
-  &:hover {
-    .dropdown-menu-1 {
-      display: block;
+@media screen and (min-width: 993px) {
+  .mobile-layout {
+    display: none;
+  }
+
+  .dropdown-item {
+    color: #000000;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: left;
+    display: block;
+    padding: 8px 30px;
+    position: relative;
+    text-decoration: none;
+    outline: none;
+    font-weight: 600;
+  }
+
+  .dropdown-item {
+    &:hover {
+      color: #ffffff;
+      background: #ff5f00;
     }
   }
-}
 
-.dropdown-item {
-  &:hover {
-    color: #ffffff;
-    background: #ff5f00;
-  }
-}
-
-.nav-item-1 {
-  &:hover {
-    .dropdown-menu-1 {
-      display: block;
+  .nav-item-1 {
+    &:hover {
+      .dropdown-menu-1 {
+        display: block;
+      }
     }
   }
-}
 
-.nav-item-2 {
-  &:hover {
-    .dropdown-menu-2 {
-      display: block;
+  .dropdown-item {
+    &:hover {
+      color: #ffffff;
+      background: #ff5f00;
     }
   }
-}
 
-.nav-item-3 {
-  &:hover {
-    .dropdown-menu-3 {
-      display: block;
+  .nav-item-1 {
+    &:hover {
+      .dropdown-menu-1 {
+        display: block;
+      }
     }
   }
-}
 
-.snap-container {
-  padding-top: 90px;
+  .nav-item-2 {
+    &:hover {
+      .dropdown-menu-2 {
+        display: block;
+      }
+    }
+  }
+
+  .nav-item-3 {
+    &:hover {
+      .dropdown-menu-3 {
+        display: block;
+      }
+    }
+  }
+
+  .snap-container {
+    padding-top: 90px;
+  }
 }

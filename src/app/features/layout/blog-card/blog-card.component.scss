@@ -14,6 +14,14 @@
   .carousel-control-prev {
     left: -150px !important;
   }
+  @media screen and (max-width: 992px) {
+    .carousel-control-next {
+      display: none !important;
+    }
+    .carousel-control-prev {
+      display: none !important;
+    }
+  }
 }
 
 .bc-card {

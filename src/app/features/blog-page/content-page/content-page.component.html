@@ -161,14 +161,19 @@
             </div>
             <div class="flex justify-center">
               <carousel
-                [interval]="0000"
+                [interval]="7000"
                 [itemsPerSlide]="3"
                 [singleSlideOffset]="true"
                 [startFromIndex]="6"
+                [noWrap]="false"
                 [noPause]="true"
+                [showIndicators]="false"
                 #carousel
               >
-                <slide *ngFor="let content of vm.relatedContent" class="item !w-full">
+                <slide
+                  *ngFor="let content of vm.relatedContent"
+                  class="item !w-full"
+                >
                   <div class="carousel my-8 mx-2">
                     <div class="card text-center max-w-96 bc-card mt-6">
                       <div class="flex items-center justify-center p-8">

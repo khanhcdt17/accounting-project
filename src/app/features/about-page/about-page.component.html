@@ -9,9 +9,9 @@
   <div class="flex justify-center bg-gray-100 py-16">
     <div>
       <h2 class="title text-center">Đội ngũ của chúng tôi</h2>
-      <div class="flex">
+      <div class="flex lg:flex-row flex-col">
         <div *ngFor="let item of items" class="item">
-          <div class="my-8 mx-4">
+          <div class="my-8 lg:mx-4">
             <div class="card card-staff text-center w-80 !p-0">
               <img
                 class="card-img-top"
@@ -35,79 +35,154 @@
   <div class="service-container flex justify-center">
     <div class="my-16">
       <h1 class="common-color text-center">Dịch vụ của 2KT</h1>
-      <div class="flex mt-8">
+      <div class="flex mt-8 h-auto">
         <carousel
           [interval]="5000"
-          [itemsPerSlide]="4"
+          [itemsPerSlide]="itemsPerSlide"
           [singleSlideOffset]="true"
           [startFromIndex]="6"
+          [noWrap]="false"
           [noPause]="true"
+          [showIndicators]="false"
           #carousel
         >
-          <slide *ngFor="let item of serviceItems" class="item">
-            <div class="carousel my-16">
-              <div class="card card-sv text-center w-64 !p-0 !shadow-none">
-                <div class="common-bg rounded-t-2xl !shadow-none">
-                  <div
-                    class="card-img-to card-img-top-sv flex items-center justify-center sv-icon"
-                  >
-                    <i class="{{ item.image }} "></i>
+          <ng-container *ngIf="!isMobileMode">
+            <slide *ngFor="let item of serviceItems" class="item">
+              <div class="carousel my-16">
+                <div class="card card-sv text-center w-64 !p-0 !shadow-none">
+                  <div class="common-bg rounded-t-2xl !shadow-none">
+                    <div
+                      class="card-img-to card-img-top-sv flex items-center justify-center sv-icon"
+                    >
+                      <i class="{{ item.image }} "></i>
+                    </div>
+                    <h5 class="card-text my-4">{{ item.name }}<br /></h5>
                   </div>
-                  <h5 class="card-text my-4">{{ item.name }}<br /></h5>
-                </div>
-                <div class="card-body flex justify-center">
-                  <p class="card-text px-3 text-justify py-2">
-                    “ {{ item.comment }} ”
-                  </p>
-                </div>
-                <div class="border-t">
-                  <a class="flex items-center justify-between sv-btn-more"
-                    ><p class="p-0 font-semibold !text-sm ml-6 sv-more">
-                      XEM THÊM
+                  <div class="card-body flex justify-center">
+                    <p class="card-text px-3 text-justify py-2">
+                      “ {{ item.comment }} ”
                     </p>
-                    <i class="fa-solid fa-arrow-right mr-6 sv-more"></i
-                  ></a>
+                  </div>
+                  <div class="border-t">
+                    <a class="flex items-center justify-between sv-btn-more"
+                      ><p class="p-0 font-semibold !text-sm ml-6 sv-more">
+                        XEM THÊM
+                      </p>
+                      <i class="fa-solid fa-arrow-right mr-6 sv-more"></i
+                    ></a>
+                  </div>
+                </div>
+              </div> </slide
+          ></ng-container>
+          <ng-container *ngIf="isMobileMode">
+            <slide *ngFor="let chuck of serviceItems | chunk : 2" class="item">
+              <div *ngFor="let item of chuck" class="pt-2">
+                <div class="carousel my-16">
+                  <div class="card card-sv text-center w-64 !p-0 !shadow-none">
+                    <div class="common-bg rounded-t-2xl !shadow-none">
+                      <div
+                        class="card-img-to card-img-top-sv flex items-center justify-center sv-icon"
+                      >
+                        <i class="{{ item.image }} "></i>
+                      </div>
+                      <h5 class="card-text my-4">{{ item.name }}<br /></h5>
+                    </div>
+                    <div class="card-body flex justify-center">
+                      <p class="card-text px-3 text-justify py-2">
+                        “ {{ item.comment }} ”
+                      </p>
+                    </div>
+                    <div class="border-t">
+                      <a class="flex items-center justify-between sv-btn-more"
+                        ><p class="p-0 font-semibold !text-sm ml-6 sv-more">
+                          XEM THÊM
+                        </p>
+                        <i class="fa-solid fa-arrow-right mr-6 sv-more"></i
+                      ></a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </slide>
+            </slide>
+          </ng-container>
         </carousel>
       </div>
     </div>
   </div>
-  <div class="bg-gray-100 pb-64 pt-32">
-    <div class="content-1 flex justify-center relative">
-      <div class="u-shape-1"></div>
-      <div class="u-shape-2"></div>
-      <img
-        src="https://i.imgur.com/fE4ktRo.jpg"
-        alt=""
-        class="u-image"
-        data-image-width="1500"
-        data-image-height="1000"
-        loading="lazy"
-      />
-      <div class="u-group-1">
-        <h3 class="common-color text-left mt-12 pl-12">Uy tín tạo niềm tin</h3>
-        <p class="px-12 mt-4 text-lg text-justify">
-          Các dịch vụ của 2KT luôn đáp ứng được yêu cầu của khách hàng. Đội ngũ
-          tư vấn luôn hỗ trợ khách hàng 24/7. Chúng tôi cam kết có trách nhiệm
-          đồng hành dài lâu cùng Doanh nghiệp trên từng chặng đường phát triển
-          thành công, bền vững.
-        </p>
-        <a
-          class="btn btn-danger btn-common btn-border-radius ml-12 mb-6"
-          (click)="redirectAbout()"
-          >Liên hệ tư vấn miễn phí
-          <i class="fa-solid fa-comments text-white text-sm ml-1"></i
-        ></a>
+  <ng-container *ngIf="!isMobileMode">
+    <div class="bg-gray-100 pb-64 pt-32">
+      <div class="content-1 flex justify-center relative">
+        <div class="u-shape-1"></div>
+        <div class="u-shape-2"></div>
+        <img
+          src="https://i.imgur.com/fE4ktRo.jpg"
+          alt=""
+          class="u-image"
+          data-image-width="1500"
+          data-image-height="1000"
+          loading="lazy"
+        />
+        <div class="u-group-1">
+          <h3 class="common-color text-left mt-12 pl-12">
+            Uy tín tạo niềm tin
+          </h3>
+          <p class="px-12 mt-4 text-lg text-justify">
+            Các dịch vụ của 2KT luôn đáp ứng được yêu cầu của khách hàng. Đội
+            ngũ tư vấn luôn hỗ trợ khách hàng 24/7. Chúng tôi cam kết có trách
+            nhiệm đồng hành dài lâu cùng Doanh nghiệp trên từng chặng đường phát
+            triển thành công, bền vững.
+          </p>
+          <a
+            class="btn btn-danger btn-common btn-border-radius ml-12 mb-6"
+            (click)="redirectAbout()"
+            >Liên hệ tư vấn miễn phí
+            <i class="fa-solid fa-comments text-white text-sm ml-1"></i
+          ></a>
+        </div>
+      </div></div
+  ></ng-container>
+  <ng-container *ngIf="isMobileMode">
+    <div class="py-16">
+      <div class="flex justify-center">
+        <div class="grid grid-cols-12 w-3/4 relative">
+          <div class="bg-white col-span-2 h-auto aspect-bottom"></div>
+          <div class="common-bg col-span-10 h-auto aspect-bottom"></div>
+          <div class="common-bg h-auto aspect-top col-span-10"></div>
+          <div class="absolute flex justify-center items-center w-full h-full">
+            <img
+              src="https://i.imgur.com/fE4ktRo.jpg"
+              alt=""
+              class="w-full"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 flex justify-center">
+        <div class="w-3/4">
+          <h3 class="common-color text-left mt-4">Uy tín tạo niềm tin</h3>
+          <p class="mt-4 text-justify">
+            Các dịch vụ của 2KT luôn đáp ứng được yêu cầu của khách hàng. Đội
+            ngũ tư vấn luôn hỗ trợ khách hàng 24/7. Chúng tôi cam kết có trách
+            nhiệm đồng hành dài lâu cùng Doanh nghiệp trên từng chặng đường phát
+            triển thành công, bền vững.
+          </p>
+          <a
+            class="btn btn-danger btn-common btn-border-radius mb-6"
+            (click)="redirectAbout()"
+            >Liên hệ tư vấn miễn phí
+            <i class="fa-solid fa-comments text-white text-sm ml-1"></i
+          ></a>
+        </div>
       </div>
     </div>
-  </div>
+  </ng-container>
   <div class="service-container flex justify-center">
     <div class="">
-      <div class="!my-16 !mx-52 common-bg flex row">
-        <div class="col-5 h-fit flex items-center justify-center">
+      <div
+        class="!my-16 lg:!mx-52 mx-8 common-bg grid lg:grid-cols-12 grid-cols-1"
+      >
+        <div class="col-span-5 h-fit flex items-center justify-center">
           <img
             src="https://i.imgur.com/ImrHkrF.jpg"
             alt=""
@@ -115,15 +190,15 @@
             loading="lazy"
           />
         </div>
-        <div class="col-7 !p-16">
+        <div class="col-span-7 lg:!p-16 p-8">
           <i class="fa-solid fa-quote-left text-white icon-2"></i>
-          <p class="text-white text-lg mt-6">
+          <p class="text-white lg:text-lg mt-6">
             2KT Phát triển đội ngũ nhân viên, bộ phận kinh doanh, tư vấn và các
             bộ phận khác luôn luôn tận tâm, tận lực phục vụ vì lợi ích của khách
             hàng, làm cho khách hàng tin cậy như một người bạn, một người đồng
             hành trong sự nghiệp.
           </p>
-          <p class="text-white text-lg mt-6">
+          <p class="text-white lg:text-lg mt-6">
             Các dịch vụ mà 2KT mang lại cho khách hàng đều có độ tin cậy cao,
             con người 2KT với tri thức và văn hóa cao luôn mang lại cho khách
             hàng cảm giác tin cậy trong giao dịch.
@@ -132,38 +207,76 @@
       </div>
     </div>
   </div>
-  <div class="bg-gray-100 pb-64 pt-32">
-    <div class="content-1 flex justify-center relative">
-      <div class="u-shape-3"></div>
-      <div class="u-shape-2"></div>
-      <img
-        src="https://i.imgur.com/aPOz74X.jpg"
-        alt=""
-        class="u-image"
-        data-image-width="1500"
-        data-image-height="1000"
-        loading="lazy"
-      />
-      <div class="u-group-2">
-        <h3 class="common-color text-left mx-12 mt-12">
-          Tri thức cho cộng đồng
-        </h3>
-        <p class="px-12 mt-4 text-lg text-justify">
-          2KT sẵn sàng chia sẻ với cộng đồng, mang lại kiến thức thiết thực cho
-          sinh viên, đào tạo cho đội ngũ kế toán của Doanh nghiệp, cá nhân có
-          nhu cầu. Với những doanh nghiệp mới thành lập, các doanh nghiệp vừa và
-          nhỏ, chúng tôi sẵn sàng tư vấn miễn phí, hỗ trợ doanh nghiệp khởi
-          nghiệp.
-        </p>
-        <a
-          class="btn btn-danger btn-common btn-border-radius ml-12 mb-6"
-          (click)="redirectAbout()"
-          >Liên hệ tư vấn miễn phí
-          <i class="fa-solid fa-comments text-white text-sm ml-1"></i
-        ></a>
+  <ng-container *ngIf="!isMobileMode">
+    <div class="bg-gray-100 pb-64 pt-32">
+      <div class="content-1 flex justify-center relative">
+        <div class="u-shape-3"></div>
+        <div class="u-shape-2"></div>
+        <img
+          src="https://i.imgur.com/aPOz74X.jpg"
+          alt=""
+          class="u-image"
+          data-image-width="1500"
+          data-image-height="1000"
+          loading="lazy"
+        />
+        <div class="u-group-2">
+          <h3 class="common-color text-left mx-12 mt-12">
+            Tri thức cho cộng đồng
+          </h3>
+          <p class="px-12 mt-4 text-lg text-justify">
+            2KT sẵn sàng chia sẻ với cộng đồng, mang lại kiến thức thiết thực
+            cho sinh viên, đào tạo cho đội ngũ kế toán của Doanh nghiệp, cá nhân
+            có nhu cầu. Với những doanh nghiệp mới thành lập, các doanh nghiệp
+            vừa và nhỏ, chúng tôi sẵn sàng tư vấn miễn phí, hỗ trợ doanh nghiệp
+            khởi nghiệp.
+          </p>
+          <a
+            class="btn btn-danger btn-common btn-border-radius ml-12 mb-6"
+            (click)="redirectAbout()"
+            >Liên hệ tư vấn miễn phí
+            <i class="fa-solid fa-comments text-white text-sm ml-1"></i
+          ></a>
+        </div>
+      </div></div
+  ></ng-container>
+  <ng-container *ngIf="isMobileMode">
+    <div class="py-16">
+      <div class="flex justify-center">
+        <div class="grid grid-cols-12 w-5/6 relative">
+          <div class="bg-white col-span-2 h-auto aspect-bottom-2"></div>
+          <div class="common-bg col-span-10 h-auto aspect-bottom-2"></div>
+          <div class="common-bg h-auto aspect-top-2 col-span-10"></div>
+          <div class="absolute flex justify-center items-center w-full h-full">
+            <img
+              src="https://i.imgur.com/aPOz74X.jpg"
+              alt=""
+              class="w-4/5"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 flex justify-center">
+        <div class="w-3/4">
+          <h3 class="common-color text-left mt-4">Tri thức cho cộng đồng</h3>
+          <p class="mt-4 text-justify">
+            2KT sẵn sàng chia sẻ với cộng đồng, mang lại kiến thức thiết thực
+            cho sinh viên, đào tạo cho đội ngũ kế toán của Doanh nghiệp, cá nhân
+            có nhu cầu. Với những doanh nghiệp mới thành lập, các doanh nghiệp
+            vừa và nhỏ, chúng tôi sẵn sàng tư vấn miễn phí, hỗ trợ doanh nghiệp
+            khởi nghiệp.
+          </p>
+          <a
+            class="btn btn-danger btn-common btn-border-radius mb-6"
+            (click)="redirectAbout()"
+            >Liên hệ tư vấn miễn phí
+            <i class="fa-solid fa-comments text-white text-sm ml-1"></i
+          ></a>
+        </div>
       </div>
     </div>
-  </div>
+  </ng-container>
   <div class="">
     <app-footer></app-footer>
   </div>
