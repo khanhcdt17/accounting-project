@@ -5,7 +5,7 @@
     <nav class="navbar navbar-light !justify-center !pt-12">
       <a
         *ngFor="let tab of listTabs"
-        class="mx-4 title border-b-2 border-white cursor-pointer"
+        class="lg:mx-4 mx-2 title border-b-2 border-white cursor-pointer"
         [ngClass]="{
           'border-common':
             (vm.tabValue === '' && tab.value === 'all') ||
@@ -17,7 +17,7 @@
 
       <form class="form-inline flex">
         <input
-          class="form-control mr-sm-2"
+          class="form-control mr-sm-2 mx-16 lg:mx-4 mt-3 lg:!mt-0"
           type="search"
           placeholder="Tìm kiếm"
           aria-label="Search"
