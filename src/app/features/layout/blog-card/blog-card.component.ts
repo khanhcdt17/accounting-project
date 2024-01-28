@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonStore } from '../../common/common.store';
 import { DEFAULT_URL, TAB_CONTENT } from '../../common/constant.model';
+import { CarouselComponent } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'app-blog-card',
@@ -8,6 +9,7 @@ import { DEFAULT_URL, TAB_CONTENT } from '../../common/constant.model';
   styleUrls: ['./blog-card.component.scss'],
 })
 export class BlogCardComponent {
+  @ViewChild(CarouselComponent) carousel!: CarouselComponent;
   defaultUrl = DEFAULT_URL;
   constructor(private commonStore: CommonStore) {}
   chuck = 2;
@@ -24,5 +26,13 @@ export class BlogCardComponent {
       this.itemsPerSlide = 1;
       this.chuck = 1;
     }
+  }
+  swipeRight() {
+    this.carousel.nextSlide();
+    console.log('swipeRight');
+  }
+  swipeLeft() {
+    console.log('swipeLeft');
+    this.carousel.previousSlide();
   }
 }

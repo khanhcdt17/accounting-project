@@ -159,14 +159,19 @@
             <div class="ml-12">
               <h3>Bài viết liên quan</h3>
             </div>
-            <div class="flex justify-center">
+            <div
+              class="flex justify-center"
+              (swipeLeft)="swipeLeft()"
+              (swipeRight)="swipeRight()"
+            >
               <carousel
-                [interval]="0000"
+                [interval]="7000"
                 [itemsPerSlide]="3"
                 [singleSlideOffset]="true"
                 [startFromIndex]="6"
                 [noWrap]="false"
                 [noPause]="true"
+                [showIndicators]="false"
                 #carousel
               >
                 <slide

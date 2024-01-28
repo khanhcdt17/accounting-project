@@ -1,7 +1,8 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { CommonStore } from '../../common/common.store';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CATE_ID, DEFAULT_URL, TAB_CONTENT } from '../../common/constant.model';
+import { CarouselComponent } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'app-content-page',
@@ -10,6 +11,8 @@ import { CATE_ID, DEFAULT_URL, TAB_CONTENT } from '../../common/constant.model';
   encapsulation: ViewEncapsulation.None,
 })
 export class ContentPageComponent {
+  @ViewChild(CarouselComponent) carousel!: CarouselComponent;
+
   defaultUrl = DEFAULT_URL;
 
   constructor(
@@ -59,5 +62,13 @@ export class ContentPageComponent {
   tabClick(tabValue: string) {
     this.commonStore.patchState({ tabValue });
     this.router.navigate(['tin-tuc']);
+  }
+  swipeRight() {
+    this.carousel.nextSlide();
+    console.log('swipeRight');
+  }
+  swipeLeft() {
+    console.log('swipeLeft');
+    this.carousel.previousSlide();
   }
 }

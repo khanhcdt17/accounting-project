@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -69,6 +69,7 @@ import { ContactFormComponent } from './features/layout/contact-form/contact-for
     CarouselModule,
     ReactiveFormsModule,
     HttpClientModule,
+    HammerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CarouselComponent } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'app-review-card',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./review-card.component.scss'],
 })
 export class ReviewCardComponent implements OnInit {
+  @ViewChild(CarouselComponent) carousel!: CarouselComponent;
   items = [
     {
       image: 'https://i.imgur.com/wGoNqk3.jpg',
@@ -53,5 +55,13 @@ export class ReviewCardComponent implements OnInit {
     } else if (window.innerWidth <= 1120) {
       this.itemsPerSlide = 1;
     }
+  }
+  swipeRight() {
+    this.carousel.nextSlide();
+    console.log('swipeRight');
+  }
+  swipeLeft() {
+    console.log('swipeLeft');
+    this.carousel.previousSlide();
   }
 }

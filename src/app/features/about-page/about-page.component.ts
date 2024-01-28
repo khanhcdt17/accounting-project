@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { CarouselComponent } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'app-about-page',
@@ -7,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./about-page.component.scss'],
 })
 export class AboutPageComponent {
+  @ViewChild(CarouselComponent) carousel!: CarouselComponent;
   items = [
     {
       image: 'https://i.imgur.com/0A0Q1nm.png',
@@ -58,10 +60,30 @@ export class AboutPageComponent {
       comment: `2KT sẵn sàng chia sẻ với cộng đồng, mang lại kiến thức thiết thực cho sinh viên, đào tạo cho đội ngũ kế toán của Doanh nghiệp, cá nhân có nhu cầu`,
     },
   ];
+  itemsPerSlide = 4;
+  isMobileMode = false;
 
   constructor(private route: Router) {}
 
+  ngOnInit() {
+    if (window.innerWidth <= 1550 && window.innerWidth > 1120) {
+      this.itemsPerSlide = 3;
+    } else if (window.innerWidth <= 1120) {
+      this.itemsPerSlide = 1;
+      this.isMobileMode = true;
+    }
+  }
+
   redirectAbout() {
     this.route.navigate(['lien-he']);
+  }
+
+  swipeRight() {
+    this.carousel.nextSlide();
+    console.log('swipeRight');
+  }
+  swipeLeft() {
+    console.log('swipeLeft');
+    this.carousel.previousSlide();
   }
 }

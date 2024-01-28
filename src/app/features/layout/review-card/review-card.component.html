@@ -1,4 +1,8 @@
-<div class="flex justify-center">
+<div
+  class="flex justify-center"
+  (swipeLeft)="swipeLeft()"
+  (swipeRight)="swipeRight()"
+>
   <div class="pb-16">
     <carousel
       [interval]="5000"
@@ -7,6 +11,7 @@
       [startFromIndex]="6"
       [noWrap]="false"
       [noPause]="true"
+      [showIndicators]="false"
       #carousel
     >
       <slide *ngFor="let item of items" class="item">
