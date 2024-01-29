@@ -65,7 +65,7 @@ export class AboutPageComponent {
 
   constructor(private route: Router) {}
 
-  ngOnInit() {
+  ngAfterContentInit() {
     if (window.innerWidth <= 1550 && window.innerWidth > 1120) {
       this.itemsPerSlide = 3;
     } else if (window.innerWidth <= 1120) {

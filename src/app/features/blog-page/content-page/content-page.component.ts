@@ -12,7 +12,7 @@ import { CarouselComponent } from 'ngx-bootstrap/carousel';
 })
 export class ContentPageComponent {
   @ViewChild(CarouselComponent) carousel!: CarouselComponent;
-
+  itemsPerSlide = 3;
   defaultUrl = DEFAULT_URL;
 
   constructor(
@@ -62,5 +62,13 @@ export class ContentPageComponent {
   tabClick(tabValue: string) {
     this.commonStore.patchState({ tabValue });
     this.router.navigate(['tin-tuc']);
+  }
+
+  ngAfterContentInit(): void {
+    if (window.innerWidth <= 1550 && window.innerWidth > 1120) {
+      this.itemsPerSlide = 2;
+    } else if (window.innerWidth <= 1120) {
+      this.itemsPerSlide = 1;
+    }
   }
 }
