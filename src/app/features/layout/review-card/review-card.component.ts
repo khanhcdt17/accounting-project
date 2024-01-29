@@ -6,7 +6,7 @@ import { CarouselComponent } from 'ngx-bootstrap/carousel';
   templateUrl: './review-card.component.html',
   styleUrls: ['./review-card.component.scss'],
 })
-export class ReviewCardComponent implements OnInit {
+export class ReviewCardComponent {
   @ViewChild(CarouselComponent) carousel!: CarouselComponent;
   items = [
     {
@@ -49,7 +49,7 @@ export class ReviewCardComponent implements OnInit {
   itemsPerSlide = 3;
   constructor() {}
 
-  ngOnInit(): void {
+  ngAfterContentInit(): void {
     if (window.innerWidth <= 1550 && window.innerWidth > 1120) {
       this.itemsPerSlide = 2;
     } else if (window.innerWidth <= 1120) {

@@ -19,7 +19,7 @@ export class BlogCardComponent {
       displayContents: state.displayContents,
     };
   });
-  ngOnInit() {
+  ngAfterContentInit() {
     if (window.innerWidth <= 1550 && window.innerWidth > 1120) {
       this.itemsPerSlide = 2;
     } else if (window.innerWidth <= 1120) {
