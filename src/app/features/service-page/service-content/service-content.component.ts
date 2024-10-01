@@ -371,6 +371,6 @@ export class ServiceContentComponent {
 
   ngOnInit() {
     const selectedServiceId = this.activeRoute.snapshot.params['id'];
-    this.commonStore.patchState({ selectedServiceId });
+    this.commonStore.patchState({ selectedDetailServiceId: selectedServiceId });
   }
 }

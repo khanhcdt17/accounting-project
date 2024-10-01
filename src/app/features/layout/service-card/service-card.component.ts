@@ -65,7 +65,7 @@ export class ServiceCardComponent {
     },
   ];
   redirectToService(selectedServiceId: string) {
-    this.commonStore.patchState({ selectedServiceId });
+    this.commonStore.patchState({ selectedDetailServiceId: selectedServiceId });
     this.route.navigate([`dich-vu/${selectedServiceId}`]);
   }
 }

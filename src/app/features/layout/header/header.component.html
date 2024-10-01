@@ -14,7 +14,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li
-                class="nav-item mx-6 border-b-2 border-common-color hover:!border-white"
+                class="nav-item mx-2 border-b-2 border-common-color hover:!border-white"
               >
                 <a
                   class="nav-link block !text-white !font-semibold !text-base cursor-pointer"
@@ -24,7 +24,7 @@
                 >
               </li>
               <li
-                class="nav-item mx-6 border-b-2 border-common-color hover:!border-white"
+                class="nav-item mx-2 border-b-2 border-common-color hover:!border-white"
               >
                 <a
                   class="nav-link block !text-white !font-semibold !text-base cursor-pointer"
@@ -32,7 +32,7 @@
                   >Giới thiệu</a
                 >
               </li>
-              <li
+              <!-- <li
                 class="nav-item mx-6 border-b-2 border-common-color dropdown nav-item-1"
               >
                 <a
@@ -53,49 +53,82 @@
                   <li class="!rounded-t-md">
                     <a
                       class="dropdown-item !rounded-t-md cursor-pointer"
-                      (click)="redirectToService('dai-ly-thue')"
+                      (click)="redirectToDetailService('dai-ly-thue')"
                       >Đại lý thuế</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item cursor-pointer"
-                      (click)="redirectToService('ke-toan')"
+                      (click)="redirectToDetailService('ke-toan')"
                       >Kế toán</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item cursor-pointer"
-                      (click)="redirectToService('quyet-toan-thue')"
+                      (click)="redirectToDetailService('quyet-toan-thue')"
                       >Quyết toán thuế</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item cursor-pointer"
-                      (click)="redirectToService('bao-hiem-xa-hoi')"
+                      (click)="redirectToDetailService('bao-hiem-xa-hoi')"
                       >Bảo hiểm xã hội</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item cursor-pointer"
-                      (click)="redirectToService('dang-ky-kinh-doanh')"
+                      (click)="redirectToDetailService('dang-ky-kinh-doanh')"
                       >Đăng ký kinh doanh</a
                     >
                   </li>
                   <li class="!rounded-b-md">
                     <a
                       class="dropdown-item !rounded-b-md cursor-pointer"
-                      (click)="redirectToService('dao-tao-ke-toan')"
+                      (click)="redirectToDetailService('dao-tao-ke-toan')"
                       >Đào tạo kế toán</a
                     >
                   </li>
                 </ul>
-              </li>
+              </li> -->
+              <!-- new tab  -->
               <li
-                class="nav-item mx-6 border-b-2 border-common-color dropdown nav-item-2"
+                class="nav-item mx-2 border-b-2 border-common-color dropdown nav-item-1"
+                *ngFor="let header of headers"
+              >
+                <a
+                  class="nav-link block !text-white !font-semibold !text-base dropdown-toggle"
+                  (click)="redirectToService(header.key)"
+                  id="navbarDropdown"
+                  role="button"
+                  aria-expanded="false"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                >
+                  {{ header.title }}
+                </a>
+                <ul
+                  class="dropdown-menu divide-y divide-slate-100 !border-0 !p-0 w-60 dropdown-menu-1"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <li
+                    class="!rounded-t-md"
+                    *ngFor="let children of header.children"
+                  >
+                    <a
+                      class="dropdown-item !rounded-t-md cursor-pointer"
+                      (click)="redirectToDetailService('dai-ly-thue')"
+                      >{{ children.title }}</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!-- end new tab -->
+              <li
+                class="nav-item mx-2 border-b-2 border-common-color dropdown nav-item-2"
               >
                 <a
                   class="nav-link block !text-white !font-semibold !text-base dropdown-toggle cursor-pointer"
@@ -134,7 +167,7 @@
                 </ul>
               </li>
               <li
-                class="nav-item mx-6 border-b-2 border-common-color dropdown nav-item-3"
+                class="nav-item mx-2 border-b-2 border-common-color dropdown nav-item-3"
               >
                 <a
                   class="nav-link block !text-white !font-semibold !text-base dropdown-toggle cursor-pointer"
@@ -219,42 +252,42 @@
           <li class="my-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToService('dai-ly-thue')"
+              (click)="redirectToDetailService('dai-ly-thue')"
               >Đại lý thuế</a
             >
           </li>
           <li class="my-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToService('ke-toan')"
+              (click)="redirectToDetailService('ke-toan')"
               >Kế toán</a
             >
           </li>
           <li class="my-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToService('quyet-toan-thue')"
+              (click)="redirectToDetailService('quyet-toan-thue')"
               >Quyết toán thuế</a
             >
           </li>
           <li class="my-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToService('bao-hiem-xa-hoi')"
+              (click)="redirectToDetailService('bao-hiem-xa-hoi')"
               >Bảo hiểm xã hội</a
             >
           </li>
           <li class="my-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToService('dang-ky-kinh-doanh')"
+              (click)="redirectToDetailService('dang-ky-kinh-doanh')"
               >Đăng ký kinh doanh</a
             >
           </li>
           <li class="mt-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToService('dao-tao-ke-toan')"
+              (click)="redirectToDetailService('dao-tao-ke-toan')"
               >Đào tạo kế toán</a
             >
           </li>
@@ -305,6 +338,37 @@
           </li>
         </ul>
       </li>
+      <!-- new tab -->
+      <li class="mx-6 my-1" *ngFor="let item of headers">
+        <div class="flex items-center">
+          <a
+            class="block !text-orange-50 !font-normal !text-base cursor-pointer"
+            (click)="redirectTo('lien-he')"
+          >
+            Liên hệ
+          </a>
+          <div (click)="expendMenu('contact')" class="mx-2">
+            <i
+              [ngClass]="
+                contactIsOpen
+                  ? 'fa-solid fa-angle-down text-xs text-orange-100'
+                  : 'fa-solid fa-angle-right text-xs text-orange-100'
+              "
+            ></i>
+          </div>
+        </div>
+        <ul class="!border-0 !p-0 w-60 ml-4" *ngIf="contactIsOpen">
+          <li class="mt-2">
+            <a
+              class="dropdown-item !font-normal !text-base !rounded-md cursor-pointer"
+              (click)="redirectTo('lien-he')"
+              >Tuyển dụng</a
+            >
+          </li>
+        </ul>
+      </li>
+      <!--end  new tab -->
+
       <li class="mx-6 my-1">
         <div class="flex items-center">
           <a
