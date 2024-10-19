@@ -20,54 +20,54 @@ export class HeaderComponent {
       key: 'thanh-lap',
       title: 'Dịch vụ thành lập',
       children: [
-        { title: 'Thành lập công ty' },
-        { title: 'Công ty TNHH' },
-        { title: 'Công ty cổ phần' },
-        { title: 'Công ty vốn nước ngoài' },
-        { title: 'Chi nhánh công ty' },
-        { title: 'Hộ kinh doanh cá thể' },
+        { title: 'Thành lập công ty', key: 'thanh-lap-cong-ty' },
+        { title: 'Công ty TNHH', key: 'cong-ty-tnhh' },
+        { title: 'Công ty cổ phần', key: 'cong-ty-co-phan' },
+        { title: 'Công ty vốn nước ngoài', key: 'cong-ty-von-nuoc-ngoai' },
+        { title: 'Chi nhánh công ty', key: 'chi-nhanh-cong-ty' },
+        { title: 'Hộ kinh doanh cá thể', key: 'ho-kinh-doanh-ca-the' },
       ],
     },
     {
-      key: '',
+      key: 'ke-toan',
       title: 'Dịch vụ kế toán',
       children: [
-        { title: 'Kế toán trọn gói' },
-        { title: 'Kế toán nội bộ' },
-        { title: 'Khai thuế ban đầu' },
-        { title: 'Báo cáo tài chính' },
-        { title: 'Quyết toán thuế cuối năm' },
-        { title: 'Làm sổ sách kế toán' },
-        { title: 'Hoàn thuế GTGT' },
-        { title: 'Hoàn thuế TNCN' },
+        { title: 'Kế toán trọn gói', key: '' },
+        { title: 'Kế toán nội bộ', key: '' },
+        { title: 'Khai thuế ban đầu', key: '' },
+        { title: 'Báo cáo tài chính', key: '' },
+        { title: 'Quyết toán thuế cuối năm', key: '' },
+        { title: 'Làm sổ sách kế toán', key: '' },
+        { title: 'Hoàn thuế GTGT', key: '' },
+        { title: 'Hoàn thuế TNCN', key: '' },
       ],
     },
     {
-      key: '',
+      key: 'thay-doi-gpkq',
       title: 'Thay đổi GPKD',
       children: [
-        { title: 'Thay đổi tên' },
-        { title: 'Đổi địa chỉ' },
-        { title: 'Thêm ngành nghề' },
-        { title: 'Tăng vốn điều lệ' },
-        { title: 'Thêm cổ đông' },
-        { title: 'Đổi đại diện pháp luật' },
-        { title: 'Đổi loại hình công ty' },
-        { title: 'Cập nhật CCCD' },
+        { title: 'Thay đổi tên', key: '' },
+        { title: 'Đổi địa chỉ', key: '' },
+        { title: 'Thêm ngành nghề', key: '' },
+        { title: 'Tăng vốn điều lệ', key: '' },
+        { title: 'Thêm cổ đông', key: '' },
+        { title: 'Đổi đại diện pháp luật', key: '' },
+        { title: 'Đổi loại hình công ty', key: '' },
+        { title: 'Cập nhật CCCD', key: '' },
       ],
     },
     {
-      key: '',
+      key: 'dich-vu-khac',
       title: 'Dịch vụ khác',
       children: [
-        { title: 'Hóa đơn điện tử' },
-        { title: 'Bảo hiểm xã hội' },
-        { title: 'Tạm ngừng kinh đoanh' },
-        { title: 'Giải thể doanh nghiệp' },
-        { title: 'Đăng ký kinh doanh' },
-        { title: 'Chữ ký số' },
-        { title: 'Đăng ký MST cá nhân' },
-        { title: 'Soạn thảo hợp đồng' },
+        { title: 'Hóa đơn điện tử', key: '' },
+        { title: 'Bảo hiểm xã hội', key: '' },
+        { title: 'Tạm ngừng kinh đoanh', key: '' },
+        { title: 'Giải thể doanh nghiệp', key: '' },
+        { title: 'Đăng ký kinh doanh', key: '' },
+        { title: 'Chữ ký số', key: '' },
+        { title: 'Đăng ký MST cá nhân', key: '' },
+        { title: 'Soạn thảo hợp đồng', key: '' },
       ],
     },
   ];
@@ -80,10 +80,16 @@ export class HeaderComponent {
     this.route.navigate(['tin-tuc']);
   }
 
-  redirectToDetailService(selectedServiceId: string) {
+  redirectToDetailService(
+    selectedServiceId: string,
+    selectedDetailServiceId: string
+  ) {
     this.isMenuOpen = !this.isMenuOpen;
-    this.commonStore.patchState({ selectedDetailServiceId: selectedServiceId });
-    this.route.navigate([`dich-vu/${selectedServiceId}`]);
+    this.commonStore.patchState({
+      selectedDetailServiceId: selectedDetailServiceId,
+    });
+    this.commonStore.patchState({ selectedServiceId: selectedServiceId });
+    this.route.navigate([`dich-vu/${selectedDetailServiceId}`]);
   }
 
   redirectTo(url: string) {

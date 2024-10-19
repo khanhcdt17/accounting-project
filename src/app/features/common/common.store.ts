@@ -66,6 +66,10 @@ export class CommonStore extends ComponentStore<State> {
     return this.get((x) => x.selectedServiceId);
   }
 
+  get snapshotSelectedService(): ServiceModel {
+    return this.get((x) => x.selectedService);
+  }
+
   private loadAllContents = this.effect(
     pipe(
       switchMap(() => this.contentApi.getPosts()),
@@ -142,11 +146,12 @@ export class CommonStore extends ComponentStore<State> {
   private loadServiceContent = this.effect<string>(
     pipe(
       tap((serviceContent) => {
-        console.log('load content', serviceContent);
-        
+        console.log('serviceContent', serviceContent);
         const selectedService = ListServices.find(
           (x) => x.key === serviceContent
         );
+        console.log('selected service', selectedService);
+
         this.patchState({ selectedService: selectedService });
       })
     )

@@ -120,7 +120,9 @@
                   >
                     <a
                       class="dropdown-item !rounded-t-md cursor-pointer"
-                      (click)="redirectToDetailService('dai-ly-thue')"
+                      (click)="
+                        redirectToDetailService(header.key, children.key)
+                      "
                       >{{ children.title }}</a
                     >
                   </li>
@@ -252,42 +254,42 @@
           <li class="my-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToDetailService('dai-ly-thue')"
+              (click)="redirectToDetailService('TODO', 'dai-ly-thue')"
               >Đại lý thuế</a
             >
           </li>
           <li class="my-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToDetailService('ke-toan')"
+              (click)="redirectToDetailService('TODO', 'ke-toan')"
               >Kế toán</a
             >
           </li>
           <li class="my-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToDetailService('quyet-toan-thue')"
+              (click)="redirectToDetailService('TODO', 'quyet-toan-thue')"
               >Quyết toán thuế</a
             >
           </li>
           <li class="my-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToDetailService('bao-hiem-xa-hoi')"
+              (click)="redirectToDetailService('TODO', 'bao-hiem-xa-hoi')"
               >Bảo hiểm xã hội</a
             >
           </li>
           <li class="my-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToDetailService('dang-ky-kinh-doanh')"
+              (click)="redirectToDetailService('TODO', 'dang-ky-kinh-doanh')"
               >Đăng ký kinh doanh</a
             >
           </li>
           <li class="mt-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToDetailService('dao-tao-ke-toan')"
+              (click)="redirectToDetailService('TODO','dao-tao-ke-toan')"
               >Đào tạo kế toán</a
             >
           </li>

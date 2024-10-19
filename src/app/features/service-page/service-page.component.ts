@@ -9,8 +9,6 @@ import { CommonStore } from '../common/common.store';
 })
 export class ServicePageComponent {
   vm$ = this.commonStore.select((state) => {
-    console.log('state.selectedService', state.selectedService);
-
     return {
       selectedService: state.selectedService,
     };
@@ -97,15 +95,15 @@ export class ServicePageComponent {
   constructor(private route: Router, private commonStore: CommonStore) {}
 
   ngOnInit() {
-    if (!this.commonStore.snapshotSelectedServiceId)
+    if (!this.commonStore.snapshotSelectedService)
       this.commonStore.patchState({ selectedServiceId: 'dich-vu' });
   }
 
   redirectToContent(nav: string, key: string) {
-    if (key !== 'dich-vu') this.route.navigate([`dich-vu/${nav}`]);
-    else {
-      console.log('key', key);
-
+    if (key !== 'dich-vu') {
+      this.commonStore.patchState({ selectedDetailServiceId: nav });
+      this.route.navigate([`dich-vu/${nav}`]);
+    } else {
       this.commonStore.patchState({ selectedServiceId: nav });
     }
   }

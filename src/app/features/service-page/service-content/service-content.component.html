@@ -16,17 +16,36 @@
       </div>
     </div>
     <div class="my-16">
-      <ng-container *ngFor="let content of introductionContents">
-        <ng-container *ngIf="content.id === vm.selectedService.key">
-          <app-profile-card
-            [imgSrc]="'https://i.imgur.com/3abWgNu.jpg'"
-            [isHomePage]="false"
-            [title]="'GIỚI THIỆU SƠ LƯỢC'"
-            [content1]="content.content1"
-            [content2]="content.content2"
-          ></app-profile-card>
-        </ng-container>
-      </ng-container>
+      <div [ngSwitch]="vm.selectedDetailServiceId">
+        <div *ngSwitchCase="'thanh-lap-cong-ty'">
+          <app-thanh-lap-cong-ty
+            class="flex justify-center"
+          ></app-thanh-lap-cong-ty>
+        </div>
+        <div *ngSwitchCase="'cong-ty-tnhh'">
+          <app-cong-ty-tnhh class="flex justify-center"></app-cong-ty-tnhh>
+        </div>
+        <div *ngSwitchCase="'cong-ty-co-phan'">
+          <app-cong-ty-co-phan
+            class="flex justify-center"
+          ></app-cong-ty-co-phan>
+        </div>
+        <div *ngSwitchCase="'cong-ty-von-nuoc-ngoai'">
+          <app-cong-ty-von-nuoc-ngoai
+            class="flex justify-center"
+          ></app-cong-ty-von-nuoc-ngoai>
+        </div>
+        <div *ngSwitchCase="'chi-nhanh-cong-ty'">
+          <app-chi-nhanh-cong-ty
+            class="flex justify-center"
+          ></app-chi-nhanh-cong-ty>
+        </div>
+        <div *ngSwitchCase="'ho-kinh-doanh-ca-the'">
+          <app-ho-kinh-doanh-ca-the
+            class="flex justify-center"
+          ></app-ho-kinh-doanh-ca-the>
+        </div>
+      </div>
     </div>
     <div class="lg:my-32 common-bg lg:pb-40 my-16 pt-24 sv-container">
       <h2 class="text-center text-white">
@@ -66,7 +85,7 @@
       <div><h2 class="common-color text-center">NGHIỆP VỤ THỰC HIỆN</h2></div>
       <div class="flex flex-wrap justify-center">
         <ng-container *ngFor="let serviceMajor of listServiceMajor">
-          <ng-container *ngIf="serviceMajor.id === vm.selectedService.key">
+          <ng-container *ngIf="serviceMajor.id === vm.selectedServiceId">
             <div
               *ngFor="let major of serviceMajor.major"
               class="w-fit mx-3 mt-12"

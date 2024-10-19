@@ -32,6 +32,12 @@ import { ToastComponent } from './features/common/toast/toast.component';
 import { ServiceContentComponent } from './features/service-page/service-content/service-content.component';
 import { MajorCardComponent } from './features/layout/major-card/major-card.component';
 import { ContactFormComponent } from './features/layout/contact-form/contact-form.component';
+import { ThanhLapCongTyComponent } from './features/service-page/service-details/thanh-lap-cong-ty/thanh-lap-cong-ty.component';
+import { CongTyTnhhComponent } from './features/service-page/service-details/cong-ty-tnhh/cong-ty-tnhh.component';
+import { CongTyCoPhanComponent } from './features/service-page/service-details/cong-ty-co-phan/cong-ty-co-phan.component';
+import { CongTyVonNuocNgoaiComponent } from './features/service-page/service-details/cong-ty-von-nuoc-ngoai/cong-ty-von-nuoc-ngoai.component';
+import { ChiNhanhCongTyComponent } from './features/service-page/service-details/chi-nhanh-cong-ty/chi-nhanh-cong-ty.component';
+import { HoKinhDoanhCaTheComponent } from './features/service-page/service-details/ho-kinh-doanh-ca-the/ho-kinh-doanh-ca-the.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +67,12 @@ import { ContactFormComponent } from './features/layout/contact-form/contact-for
     ServiceContentComponent,
     MajorCardComponent,
     ContactFormComponent,
+    ThanhLapCongTyComponent,
+    CongTyTnhhComponent,
+    CongTyCoPhanComponent,
+    CongTyVonNuocNgoaiComponent,
+    ChiNhanhCongTyComponent,
+    HoKinhDoanhCaTheComponent,
   ],
   imports: [
     BrowserModule,

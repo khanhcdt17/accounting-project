@@ -25,9 +25,13 @@ export interface ServiceContent {
   nav: string;
 }
 
+export const Service = {
+  dichVu: 'dich-vu',
+};
+
 export const ListServices: ServiceModel[] = [
   {
-    key: 'dich-vu',
+    key: Service.dichVu,
     title: 'Giải pháp toàn diện cho khách hàng',
     description:
       'Cam kết cung cấp các giải pháp thuế toàn diện cho khách hàng, Luôn rõ ràng trong tư vấn, đàm phán và quy trình làm việc, mang lại hiệu quả tốt nhất cho khách hàng',
@@ -99,19 +103,13 @@ export const ListServices: ServiceModel[] = [
     contents: [],
   },
   {
-    key: 'quyet-toan-thue',
-    title: 'Dịch vụ quyết toán thuế',
-    description: 'Dịch vụ quyết toán thuế chuyên nghiệp, hiệu suất tối đa.',
-    contents: [],
-  },
-  {
     key: 'thay-doi-gpkq',
     title: 'Thay đổi GPKD',
     description: 'Khám phá sức mạnh tài chính với dịch vụ đại lý thuế.',
     contents: [],
   },
   {
-    key: 'dich-vu-khaci',
+    key: 'dich-vu-khac',
     title: 'Dịch vụ khác',
     description: 'An tâm, vững bền với dịch vụ bảo hiểm xã hội.',
     contents: [],

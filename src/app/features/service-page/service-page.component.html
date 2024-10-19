@@ -1,5 +1,5 @@
 <ng-container *ngIf="vm$ | async as vm">
-  <div class="hp-content">
+  <div class="hp-content" *ngIf="vm.selectedService">
     <app-header></app-header>
     <!-- <div class="custom-bg-color pb-8" *ngFor="let service of services"> -->
     <div class="text-white pt-32 pb-64 service-card relative px-4">

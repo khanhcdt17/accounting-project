@@ -5,8 +5,9 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonStore } from '../../common/common.store';
+import { ListServices } from '../../common/constant.model';
 
 @Component({
   selector: 'app-service-content',
@@ -16,7 +17,7 @@ import { CommonStore } from '../../common/common.store';
 export class ServiceContentComponent {
   introductionContents = [
     {
-      id: 'ke-toan',
+      id: 'thanh-lap',
       content1: `Dịch vụ kế toán đóng vai trò quan trọng trong quá trình hoạt động của doanh nghiệp. 
     Kế toán không chỉ là một phần của hệ thống tài chính mà còn là trụ cột quan trọng giúp doanh nghiệp đi đúng hướng và duy trì sự ổn định. 
     Nhận thức được điều này, 2KT đã triển khai và cung cấp các dịch vụ kế toán trọn gói đáp ứng đầy đủ nghiệp vụ với mức chi phí tối ưu, 
@@ -76,7 +77,8 @@ export class ServiceContentComponent {
     private activeRoute: ActivatedRoute,
     private commonStore: CommonStore,
     private renderer: Renderer2,
-    private el: ElementRef
+    private el: ElementRef,
+    private route: Router
   ) {}
 
   // @HostListener('window:scroll', ['$event'])
@@ -90,6 +92,8 @@ export class ServiceContentComponent {
   vm$ = this.commonStore.select((state) => {
     return {
       selectedService: state.selectedService,
+      selectedDetailServiceId: state.selectedDetailServiceId,
+      selectedServiceId: state.selectedServiceId,
     };
   });
 
@@ -132,7 +136,7 @@ export class ServiceContentComponent {
 
   listServiceMajor = [
     {
-      id: 'ke-toan',
+      id: 'thanh-lap',
       major: [
         {
           icon: 'fa-solid fa-clipboard-list',
@@ -183,7 +187,7 @@ export class ServiceContentComponent {
       ],
     },
     {
-      id: 'dai-ly-thue',
+      id: '',
       major: [
         {
           icon: 'fa-solid fa-address-book',
@@ -371,6 +375,17 @@ export class ServiceContentComponent {
 
   ngOnInit() {
     const selectedServiceId = this.activeRoute.snapshot.params['id'];
-    this.commonStore.patchState({ selectedDetailServiceId: selectedServiceId });
+    if (selectedServiceId) {
+      const selectedService = ListServices.find((x) =>
+        x.contents.find((c) => c.nav === selectedServiceId)
+      );
+      this.commonStore.patchState({
+        selectedDetailServiceId: selectedServiceId,
+      });
+      this.commonStore.patchState({ selectedService: selectedService });
+    } else {
+      this.commonStore.patchState({ selectedServiceId: 'dich-vu' });
+      this.route.navigate(['dich-vu']);
+    }
   }
 }
