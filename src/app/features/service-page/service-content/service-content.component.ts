@@ -245,7 +245,7 @@ export class ServiceContentComponent {
       ],
     },
     {
-      id: 'dang-ky-kinh-doanh',
+      id: 'dich-vu-khac',
       major: [
         {
           icon: 'fa-solid fa-clipboard-list',
@@ -287,47 +287,6 @@ export class ServiceContentComponent {
           icon: 'fa-regular fa-file-lines',
           title: `KIỂM TRA CHỨNG TỪ`,
           content: `Nhân viên thực hiện kiểm tra chứng từ đầu vào, đầu ra theo đúng quy định của pháp luật`,
-        },
-      ],
-    },
-    {
-      id: 'bao-hiem-xa-hoi',
-      major: [
-        {
-          icon: 'fa-regular fa-id-card',
-          title: `TẠO TÀI KHOẢN KÊ KHAI BẢO HIỂM XÃ HỘI CHO DOANH NGHIỆP`,
-          content: `Đăng ký và thiết lập tài khoản trực tuyến để kê khai các thông tin liên quan đến Bảo hiểm xã hội của doanh nghiệp như
-       đăng ký tham gia Bảo hiểm xã hội cho nhân viên, kê khai các thông tin về thu nhập và các chi phí phải đóng Bảo hiểm xã hội.`,
-        },
-        {
-          icon: 'fa-solid fa-address-book',
-          title: `ĐĂNG KÝ BẢO HIỂM XÃ HỘI LẦN ĐẦU CHO DOANH NGHIỆP VÀ NGƯỜI LAO ĐỘNG`,
-          content: `Đăng ký thông tin doanh nghiệp và nhân viên, xác định các mức đóng góp Bảo hiểm xã hội, và thực hiện các bước cần thiết để tuân thủ các quy định pháp luật và chính sách Bảo hiểm xã hội.`,
-        },
-        {
-          icon: 'fa-regular fa-paste',
-          title: `THỦ TỤC NỘP HỒ SƠ BẢO HIỂM XÃ HỘI THAY DOANH NGHIỆP`,
-          content: `2KT thay doanh nghiệp nộp hồ sơ trực tiếp tại cơ quan BHXH hoặc nộp trực tuyến qua mạng.`,
-        },
-      ],
-    },
-    {
-      id: 'dao-tao-ke-toan',
-      major: [
-        {
-          icon: 'fa-solid fa-graduation-cap',
-          title: `TIẾP NHẬN HỌC VIÊN ĐÀO TẠO`,
-          content: `Tiếp nhận các học viên, sinh viên mới ra trường về thực tập, đào tạo`,
-        },
-        {
-          icon: 'fa-solid fa-book-open-reader',
-          title: `ĐÀO TẠO CÁC QUY TRÌNH KẾ TOÁN CƠ BẢN`,
-          content: `Đào tạo về nguyên lý kế toán, các quy trình cơ bản về kế toán, quy trình hoạt động của doanh nghiệp`,
-        },
-        {
-          icon: 'fa-solid fa-layer-group',
-          title: `ĐÀO TẠO NÂNG CAO`,
-          content: `Đào tạo chuyên sâu về kế toán và luật doanh nghiệp, các linh vực liên quan`,
         },
       ],
     },

@@ -193,7 +193,48 @@ export const ListServices: ServiceModel[] = [
   {
     key: 'dich-vu-khac',
     title: 'Dịch vụ khác',
-    description: 'An tâm, vững bền với dịch vụ bảo hiểm xã hội.',
-    contents: [],
+    description: 'Dịch vụ khác giá rẻ.',
+    contents: [
+      {
+        img: 'https://i.imgur.com/SIgFzGt.jpg',
+        label: 'Hóa đơn điện tử',
+        nav: 'hoa-don-dien-tu',
+      },
+      {
+        img: 'https://i.imgur.com/kFNcTLb.jpg',
+        label: 'Bảo hiểm xã hội',
+        nav: 'bao-hiem-xa-hoi',
+      },
+      {
+        img: 'https://i.imgur.com/jcCVM7S.jpg',
+        label: 'Tạm ngừng kinh doanh',
+        nav: 'tam-ngung-kinh-doanh',
+      },
+      {
+        img: 'https://i.imgur.com/fz6vPUq.jpg',
+        label: 'Giải thể doanh nghiệp',
+        nav: 'giai-the-doanh-nghiep',
+      },
+      {
+        img: 'https://i.imgur.com/3abWgNu.jpg',
+        label: 'Đăng ký kinh doanh',
+        nav: 'dang-ky-kinh-doanh',
+      },
+      {
+        img: 'https://i.imgur.com/P0V4AUm.jpg',
+        label: 'Chữ ký số',
+        nav: 'chu-ky-so',
+      },
+      {
+        img: 'https://i.imgur.com/kFNcTLb.jpg',
+        label: 'Đăng ký MST cá nhân',
+        nav: 'dang-ky-mst-ca-nhan',
+      },
+      {
+        img: 'https://i.imgur.com/jcCVM7S.jpg',
+        label: 'Soạn thảo hợp đồng',
+        nav: 'soan-thao-hop-dong',
+      },
+    ],
   },
 ];
