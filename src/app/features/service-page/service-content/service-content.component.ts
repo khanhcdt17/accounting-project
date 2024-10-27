@@ -4,19 +4,22 @@ import {
   HostListener,
   Renderer2,
   ViewChild,
+  ViewEncapsulation,
 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonStore } from '../../common/common.store';
+import { ListServices, ServiceModel } from '../../common/constant.model';
 
 @Component({
   selector: 'app-service-content',
   templateUrl: './service-content.component.html',
   styleUrls: ['./service-content.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ServiceContentComponent {
   introductionContents = [
     {
-      id: 'ke-toan',
+      id: 'thanh-lap',
       content1: `Dịch vụ kế toán đóng vai trò quan trọng trong quá trình hoạt động của doanh nghiệp. 
     Kế toán không chỉ là một phần của hệ thống tài chính mà còn là trụ cột quan trọng giúp doanh nghiệp đi đúng hướng và duy trì sự ổn định. 
     Nhận thức được điều này, 2KT đã triển khai và cung cấp các dịch vụ kế toán trọn gói đáp ứng đầy đủ nghiệp vụ với mức chi phí tối ưu, 
@@ -76,7 +79,8 @@ export class ServiceContentComponent {
     private activeRoute: ActivatedRoute,
     private commonStore: CommonStore,
     private renderer: Renderer2,
-    private el: ElementRef
+    private el: ElementRef,
+    private route: Router
   ) {}
 
   // @HostListener('window:scroll', ['$event'])
@@ -90,6 +94,8 @@ export class ServiceContentComponent {
   vm$ = this.commonStore.select((state) => {
     return {
       selectedService: state.selectedService,
+      selectedDetailServiceId: state.selectedDetailServiceId,
+      selectedServiceId: state.selectedServiceId,
     };
   });
 
@@ -132,7 +138,7 @@ export class ServiceContentComponent {
 
   listServiceMajor = [
     {
-      id: 'ke-toan',
+      id: 'thanh-lap',
       major: [
         {
           icon: 'fa-solid fa-clipboard-list',
@@ -183,7 +189,7 @@ export class ServiceContentComponent {
       ],
     },
     {
-      id: 'dai-ly-thue',
+      id: 'ke-toan',
       major: [
         {
           icon: 'fa-solid fa-address-book',
@@ -214,7 +220,7 @@ export class ServiceContentComponent {
       ],
     },
     {
-      id: 'quyet-toan-thue',
+      id: 'thay-doi-gpkd',
       major: [
         {
           icon: 'fa-solid fa-address-book',
@@ -239,7 +245,7 @@ export class ServiceContentComponent {
       ],
     },
     {
-      id: 'dang-ky-kinh-doanh',
+      id: 'dich-vu-khac',
       major: [
         {
           icon: 'fa-solid fa-clipboard-list',
@@ -281,47 +287,6 @@ export class ServiceContentComponent {
           icon: 'fa-regular fa-file-lines',
           title: `KIỂM TRA CHỨNG TỪ`,
           content: `Nhân viên thực hiện kiểm tra chứng từ đầu vào, đầu ra theo đúng quy định của pháp luật`,
-        },
-      ],
-    },
-    {
-      id: 'bao-hiem-xa-hoi',
-      major: [
-        {
-          icon: 'fa-regular fa-id-card',
-          title: `TẠO TÀI KHOẢN KÊ KHAI BẢO HIỂM XÃ HỘI CHO DOANH NGHIỆP`,
-          content: `Đăng ký và thiết lập tài khoản trực tuyến để kê khai các thông tin liên quan đến Bảo hiểm xã hội của doanh nghiệp như
-       đăng ký tham gia Bảo hiểm xã hội cho nhân viên, kê khai các thông tin về thu nhập và các chi phí phải đóng Bảo hiểm xã hội.`,
-        },
-        {
-          icon: 'fa-solid fa-address-book',
-          title: `ĐĂNG KÝ BẢO HIỂM XÃ HỘI LẦN ĐẦU CHO DOANH NGHIỆP VÀ NGƯỜI LAO ĐỘNG`,
-          content: `Đăng ký thông tin doanh nghiệp và nhân viên, xác định các mức đóng góp Bảo hiểm xã hội, và thực hiện các bước cần thiết để tuân thủ các quy định pháp luật và chính sách Bảo hiểm xã hội.`,
-        },
-        {
-          icon: 'fa-regular fa-paste',
-          title: `THỦ TỤC NỘP HỒ SƠ BẢO HIỂM XÃ HỘI THAY DOANH NGHIỆP`,
-          content: `2KT thay doanh nghiệp nộp hồ sơ trực tiếp tại cơ quan BHXH hoặc nộp trực tuyến qua mạng.`,
-        },
-      ],
-    },
-    {
-      id: 'dao-tao-ke-toan',
-      major: [
-        {
-          icon: 'fa-solid fa-graduation-cap',
-          title: `TIẾP NHẬN HỌC VIÊN ĐÀO TẠO`,
-          content: `Tiếp nhận các học viên, sinh viên mới ra trường về thực tập, đào tạo`,
-        },
-        {
-          icon: 'fa-solid fa-book-open-reader',
-          title: `ĐÀO TẠO CÁC QUY TRÌNH KẾ TOÁN CƠ BẢN`,
-          content: `Đào tạo về nguyên lý kế toán, các quy trình cơ bản về kế toán, quy trình hoạt động của doanh nghiệp`,
-        },
-        {
-          icon: 'fa-solid fa-layer-group',
-          title: `ĐÀO TẠO NÂNG CAO`,
-          content: `Đào tạo chuyên sâu về kế toán và luật doanh nghiệp, các linh vực liên quan`,
         },
       ],
     },
@@ -371,6 +336,25 @@ export class ServiceContentComponent {
 
   ngOnInit() {
     const selectedServiceId = this.activeRoute.snapshot.params['id'];
-    this.commonStore.patchState({ selectedServiceId });
+    if (selectedServiceId) {
+      const selectedService = ListServices.find((x) =>
+        x.contents.find((c) => c.nav === selectedServiceId)
+      );
+      this.commonStore.patchState({
+        selectedDetailServiceId: selectedServiceId,
+      });
+      this.commonStore.patchState({ selectedService: selectedService });
+    } else {
+      this.commonStore.patchState({ selectedServiceId: 'dich-vu' });
+      this.route.navigate(['dich-vu']);
+    }
+  }
+
+  getDescription(detailService: string, service: ServiceModel) {
+    if (!detailService) return service.description;
+    return (
+      service.contents.find((x) => x.nav === detailService)?.label ??
+      service.description
+    );
   }
 }

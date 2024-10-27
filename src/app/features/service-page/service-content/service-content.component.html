@@ -8,27 +8,117 @@
       >
         <div class="overlay"></div>
         <h1 class="text-center lg:text-6xl text-3xl relative uppercase mx-">
-          {{ vm.selectedService.serviceTitle }}
+          {{ vm.selectedService.title }}
         </h1>
-        <p class="text-center pt-8 text-lg relative px-2">
-          {{ vm.selectedService.serviceDes }}
+        <p class="text-center pt-8 text-3xl relative px-2">
+          {{ getDescription(vm.selectedDetailServiceId, vm.selectedService) }}
         </p>
       </div>
     </div>
-    <div class="my-16">
-      <ng-container *ngFor="let content of introductionContents">
-        <ng-container *ngIf="content.id === vm.selectedService.key">
-          <app-profile-card
-            [imgSrc]="'https://i.imgur.com/3abWgNu.jpg'"
-            [isHomePage]="false"
-            [title]="'GIỚI THIỆU SƠ LƯỢC'"
-            [content1]="content.content1"
-            [content2]="content.content2"
-          ></app-profile-card>
-        </ng-container>
-      </ng-container>
+    <div class="my-16 mx-3">
+      <div [ngSwitch]="vm.selectedDetailServiceId">
+        <div *ngSwitchCase="'thanh-lap-cong-ty'">
+          <app-thanh-lap-cong-ty
+            class="flex justify-center"
+          ></app-thanh-lap-cong-ty>
+        </div>
+        <div *ngSwitchCase="'cong-ty-tnhh'">
+          <app-cong-ty-tnhh class="flex justify-center"></app-cong-ty-tnhh>
+        </div>
+        <div *ngSwitchCase="'cong-ty-co-phan'">
+          <app-cong-ty-co-phan
+            class="flex justify-center"
+          ></app-cong-ty-co-phan>
+        </div>
+        <div *ngSwitchCase="'cong-ty-von-nuoc-ngoai'">
+          <app-cong-ty-von-nuoc-ngoai
+            class="flex justify-center"
+          ></app-cong-ty-von-nuoc-ngoai>
+        </div>
+        <div *ngSwitchCase="'chi-nhanh-cong-ty'">
+          <app-chi-nhanh-cong-ty
+            class="flex justify-center"
+          ></app-chi-nhanh-cong-ty>
+        </div>
+        <div *ngSwitchCase="'ho-kinh-doanh-ca-the'">
+          <app-ho-kinh-doanh-ca-the
+            class="flex justify-center"
+          ></app-ho-kinh-doanh-ca-the>
+        </div>
+        <div *ngSwitchCase="'ke-toan-tron-goi'">
+          <app-ke-toan-tron-goi
+            class="flex justify-center"
+          ></app-ke-toan-tron-goi>
+        </div>
+        <div *ngSwitchCase="'ke-toan-noi-bo'">
+          <app-ke-toan-noi-bo class="flex justify-center"></app-ke-toan-noi-bo>
+        </div>
+        <div *ngSwitchCase="'khai-thue-ban-dau'">
+          <app-khai-thue-ban-dau
+            class="flex justify-center"
+          ></app-khai-thue-ban-dau>
+        </div>
+        <div *ngSwitchCase="'bao-cao-tai-chinh'">
+          <app-bao-cao-tai-chinh
+            class="flex justify-center"
+          ></app-bao-cao-tai-chinh>
+        </div>
+        <div *ngSwitchCase="'quyet-toan-thue-cuoi-nam'">
+          <app-quyet-toan-thue-cuoi-nam
+            class="flex justify-center"
+          ></app-quyet-toan-thue-cuoi-nam>
+        </div>
+        <div *ngSwitchCase="'lam-so-sach-ke-toan'">
+          <app-lam-so-sach-ke-toan
+            class="flex justify-center"
+          ></app-lam-so-sach-ke-toan>
+        </div>
+        <div *ngSwitchCase="'hoan-thue-gtgt'">
+          <app-hoan-thue-gtgt class="flex justify-center"></app-hoan-thue-gtgt>
+        </div>
+        <div *ngSwitchCase="'hoan-thue-tncn'">
+          <app-hoan-thue-tncn class="flex justify-center"></app-hoan-thue-tncn>
+        </div>
+        <div *ngSwitchCase="'thay-doi-ten'">
+          <app-thay-doi-ten class="flex justify-center"></app-thay-doi-ten>
+        </div>
+        <div *ngSwitchCase="'doi-dia-chi'">
+          <app-doi-dia-chi class="flex justify-center"></app-doi-dia-chi>
+        </div>
+        <div *ngSwitchCase="'them-nganh-nghe'">
+          <app-them-nganh-nghe
+            class="flex justify-center"
+          ></app-them-nganh-nghe>
+        </div>
+        <div *ngSwitchCase="'tang-von-dieu-le'">
+          <app-tang-von-dieu-le
+            class="flex justify-center"
+          ></app-tang-von-dieu-le>
+        </div>
+        <div *ngSwitchCase="'them-co-dong'">
+          <app-them-co-dong class="flex justify-center"></app-them-co-dong>
+        </div>
+        <div *ngSwitchCase="'doi-dai-dien-phap-luat'">
+          <app-thay-doi-dai-dien-phap-luat
+            class="flex justify-center"
+          ></app-thay-doi-dai-dien-phap-luat>
+        </div>
+        <div *ngSwitchCase="'doi-loai-hinh-cong-ty'">
+          <app-doi-loai-hinh-cong-ty
+            class="flex justify-center"
+          ></app-doi-loai-hinh-cong-ty>
+        </div>
+        <div *ngSwitchCase="'cap-nhat-cccd'">
+          <app-cap-nhat-cccd class="flex justify-center"></app-cap-nhat-cccd>
+        </div>
+        <div *ngSwitchCase="'hoa-don-dien-tu'">
+          <app-hoa-don-dien-tu
+            class="flex justify-center"
+          ></app-hoa-don-dien-tu>
+        </div>
+      </div>
     </div>
-    <div class="lg:my-32 common-bg lg:pb-40 my-16 pt-24 sv-container">
+    <div class="lg:mb-32 common-bg lg:pb-40 mb-16 pt-24 sv-container">
       <h2 class="text-center text-white">
         VÌ SAO NÊN SỬ DỤNG DỊCH VỤ CỦA 2KT?
       </h2>
@@ -66,7 +156,7 @@
       <div><h2 class="common-color text-center">NGHIỆP VỤ THỰC HIỆN</h2></div>
       <div class="flex flex-wrap justify-center">
         <ng-container *ngFor="let serviceMajor of listServiceMajor">
-          <ng-container *ngIf="serviceMajor.id === vm.selectedService.key">
+          <ng-container *ngIf="serviceMajor.id === vm.selectedServiceId">
             <div
               *ngFor="let major of serviceMajor.major"
               class="w-fit mx-3 mt-12"

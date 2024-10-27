@@ -1,35 +1,35 @@
-<div class="hp-content">
-  <app-header></app-header>
-  <div class="custom-bg-color pb-8">
+<ng-container *ngIf="vm$ | async as vm">
+  <div class="hp-content" *ngIf="vm.selectedService">
+    <app-header></app-header>
+    <!-- <div class="custom-bg-color pb-8" *ngFor="let service of services"> -->
     <div class="text-white pt-32 pb-64 service-card relative px-4">
       <div class="overlay"></div>
       <h1 class="text-center text-6xl relative">
-        Giải pháp toàn diện cho khách hàng
+        {{ vm.selectedService.title }}
       </h1>
-      <p class="text-center pt-8 text-lg relative">
-        Cam kết cung cấp các giải pháp thuế toàn diện cho khách hàng,<br />
-        Luôn rõ ràng trong tư vấn, đàm phán và quy trình làm việc, mang lại hiệu
-        quả tốt nhất cho khách hàng
+      <p class="text-center pt-8 text-xl relative ">
+        {{ vm.selectedService.description }}
       </p>
     </div>
     <div class="px-16">
       <div class="flex flex-wrap justify-center lg:mx-4 mb-16 lx-container">
         <div
-          *ngFor="let service of services"
+          *ngFor="let item of vm.selectedService.contents"
           class="sv-card flex items-end m-2 cursor-pointer z-10"
-          [ngStyle]="{ 'background-image': 'url(' + service?.img + ')' }"
-          (click)="redirectToContent(service.nav)"
+          [ngStyle]="{ 'background-image': 'url(' + item?.img + ')' }"
+          (click)="redirectToContent(item.nav, vm.selectedService.key)"
         >
           <h3
             class="text-center w-full text-white common-bg !mb-0 opacity-80 py-4"
           >
-            {{ service.label }}
+            {{ item.label }}
           </h3>
         </div>
       </div>
+      <!-- </div> -->
+    </div>
+    <div class="">
+      <app-footer></app-footer>
     </div>
   </div>
-  <div class="">
-    <app-footer></app-footer>
-  </div>
-</div>
+</ng-container>

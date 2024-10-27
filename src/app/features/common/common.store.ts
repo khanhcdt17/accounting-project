@@ -6,7 +6,7 @@ import { BlogContent } from '../blog-page/blog-page.util';
 import {
   CATE_ID,
   TAB_CONTENT,
-  serviceModel,
+  ServiceModel,
   ListServices,
 } from './constant.model';
 
@@ -18,8 +18,9 @@ const state = {
   selectedContent: null as unknown as BlogContent,
   relatedContent: [] as BlogContent[],
   selectedId: 0,
+  selectedDetailServiceId: '',
   selectedServiceId: '',
-  selectedService: null as unknown as serviceModel,
+  selectedService: null as unknown as ServiceModel,
 };
 
 type State = typeof state;
@@ -59,6 +60,14 @@ export class CommonStore extends ComponentStore<State> {
 
   get snapshotSelectedContent(): BlogContent {
     return this.get((x) => x.selectedContent);
+  }
+
+  get snapshotSelectedServiceId(): string {
+    return this.get((x) => x.selectedServiceId);
+  }
+
+  get snapshotSelectedService(): ServiceModel {
+    return this.get((x) => x.selectedService);
   }
 
   private loadAllContents = this.effect(
@@ -137,10 +146,13 @@ export class CommonStore extends ComponentStore<State> {
   private loadServiceContent = this.effect<string>(
     pipe(
       tap((serviceContent) => {
+        console.log('serviceContent', serviceContent);
         const selectedService = ListServices.find(
           (x) => x.key === serviceContent
         );
-        this.patchState({ selectedService });
+        console.log('selected service', selectedService);
+
+        this.patchState({ selectedService: selectedService });
       })
     )
   );
