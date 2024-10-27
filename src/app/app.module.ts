@@ -56,6 +56,12 @@ import { DoiLoaiHinhCongTyComponent } from './features/service-page/service-deta
 import { CapNhatCccdComponent } from './features/service-page/service-details/cap-nhat-cccd/cap-nhat-cccd.component';
 import { HoaDonDienTuComponent } from './features/service-page/service-details/hoa-don-dien-tu/hoa-don-dien-tu.component';
 import { BaoHiemXaHoiComponent } from './features/service-page/service-details/bao-hiem-xa-hoi/bao-hiem-xa-hoi.component';
+import { TamNgungKinhDoanhComponent } from './features/service-page/service-details/tam-ngung-kinh-doanh/tam-ngung-kinh-doanh.component';
+import { GiaiTheDoanhNghiepComponent } from './features/service-page/service-details/giai-the-doanh-nghiep/giai-the-doanh-nghiep.component';
+import { DangKyKinhDoanhComponent } from './features/service-page/service-details/dang-ky-kinh-doanh/dang-ky-kinh-doanh.component';
+import { ChuKySoComponent } from './features/service-page/service-details/chu-ky-so/chu-ky-so.component';
+import { DangKyMstCaNhanComponent } from './features/service-page/service-details/dang-ky-mst-ca-nhan/dang-ky-mst-ca-nhan.component';
+import { SoanThaoHopDongComponent } from './features/service-page/service-details/soan-thao-hop-dong/soan-thao-hop-dong.component';
 
 @NgModule({
   declarations: [
@@ -109,6 +115,12 @@ import { BaoHiemXaHoiComponent } from './features/service-page/service-details/b
     CapNhatCccdComponent,
     HoaDonDienTuComponent,
     BaoHiemXaHoiComponent,
+    TamNgungKinhDoanhComponent,
+    GiaiTheDoanhNghiepComponent,
+    DangKyKinhDoanhComponent,
+    ChuKySoComponent,
+    DangKyMstCaNhanComponent,
+    SoanThaoHopDongComponent,
   ],
   imports: [
     BrowserModule,
