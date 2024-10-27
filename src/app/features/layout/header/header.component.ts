@@ -12,6 +12,10 @@ export class HeaderComponent {
   keyTab = TAB_CONTENT;
   isMenuOpen = false;
   serviceIsOpen = false;
+  thanhLapIsOpen = false;
+  keToanIsOpen = false;
+  thayDoiIsOpen = false;
+  khacIsOpen = false;
   blogIsOpen = false;
   contactIsOpen = false;
 
@@ -19,6 +23,7 @@ export class HeaderComponent {
     {
       key: 'thanh-lap',
       title: 'Dịch vụ thành lập',
+      isOpen: false,
       children: [
         { title: 'Thành lập công ty', key: 'thanh-lap-cong-ty' },
         { title: 'Công ty TNHH', key: 'cong-ty-tnhh' },
@@ -32,32 +37,34 @@ export class HeaderComponent {
       key: 'ke-toan',
       title: 'Dịch vụ kế toán',
       children: [
-        { title: 'Kế toán trọn gói', key: '' },
-        { title: 'Kế toán nội bộ', key: '' },
-        { title: 'Khai thuế ban đầu', key: '' },
-        { title: 'Báo cáo tài chính', key: '' },
-        { title: 'Quyết toán thuế cuối năm', key: '' },
-        { title: 'Làm sổ sách kế toán', key: '' },
-        { title: 'Hoàn thuế GTGT', key: '' },
-        { title: 'Hoàn thuế TNCN', key: '' },
+        { title: 'Kế toán trọn gói', key: 'ke-toan-tron-goi' },
+        { title: 'Kế toán nội bộ', key: 'ke-toan-noi-bo' },
+        { title: 'Khai thuế ban đầu', key: 'khai-thue-ban-dau' },
+        { title: 'Báo cáo tài chính', key: 'bao-cao-tai-chinh' },
+        { title: 'Quyết toán thuế cuối năm', key: 'quyet-toan-thue-cuoi-nam' },
+        { title: 'Làm sổ sách kế toán', key: 'lam-so-sach-ke-toan' },
+        { title: 'Hoàn thuế GTGT', key: 'hoan-thue-gtgt' },
+        { title: 'Hoàn thuế TNCN', key: 'hoan-thue-tncn' },
       ],
     },
     {
-      key: 'thay-doi-gpkq',
+      key: 'thay-doi-gpkd',
+      isOpen: false,
       title: 'Thay đổi GPKD',
       children: [
-        { title: 'Thay đổi tên', key: '' },
-        { title: 'Đổi địa chỉ', key: '' },
-        { title: 'Thêm ngành nghề', key: '' },
-        { title: 'Tăng vốn điều lệ', key: '' },
-        { title: 'Thêm cổ đông', key: '' },
-        { title: 'Đổi đại diện pháp luật', key: '' },
-        { title: 'Đổi loại hình công ty', key: '' },
-        { title: 'Cập nhật CCCD', key: '' },
+        { title: 'Thay đổi tên', key: 'thay-doi-ten' },
+        { title: 'Đổi địa chỉ', key: 'doi-dia-chi' },
+        { title: 'Thêm ngành nghề', key: 'them-nganh-nghe' },
+        { title: 'Tăng vốn điều lệ', key: 'tang-von-dieu-le' },
+        { title: 'Thêm cổ đông', key: 'them-co-dong' },
+        { title: 'Đổi đại diện pháp luật', key: 'doi-dai-dien-phap-luat' },
+        { title: 'Đổi loại hình công ty', key: 'doi-loai-hinh-cong-ty' },
+        { title: 'Cập nhật CCCD', key: 'cap-nhat-cccd' },
       ],
     },
     {
       key: 'dich-vu-khac',
+      isOpen: false,
       title: 'Dịch vụ khác',
       children: [
         { title: 'Hóa đơn điện tử', key: '' },
@@ -109,9 +116,6 @@ export class HeaderComponent {
 
   expendMenu(menu: string) {
     switch (menu) {
-      case 'service':
-        this.serviceIsOpen = !this.serviceIsOpen;
-        break;
       case 'blog':
         this.blogIsOpen = !this.blogIsOpen;
         break;
@@ -119,5 +123,11 @@ export class HeaderComponent {
         this.contactIsOpen = !this.contactIsOpen;
         break;
     }
+  }
+
+  expendServiceMenu(service: string) {
+    this.headers.forEach((x) => {
+      if (x.key === service) x.isOpen = !x.isOpen;
+    });
   }
 }

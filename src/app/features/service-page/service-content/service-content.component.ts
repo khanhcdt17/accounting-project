@@ -4,15 +4,17 @@ import {
   HostListener,
   Renderer2,
   ViewChild,
+  ViewEncapsulation,
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonStore } from '../../common/common.store';
-import { ListServices } from '../../common/constant.model';
+import { ListServices, ServiceModel } from '../../common/constant.model';
 
 @Component({
   selector: 'app-service-content',
   templateUrl: './service-content.component.html',
   styleUrls: ['./service-content.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ServiceContentComponent {
   introductionContents = [
@@ -187,7 +189,7 @@ export class ServiceContentComponent {
       ],
     },
     {
-      id: '',
+      id: 'ke-toan',
       major: [
         {
           icon: 'fa-solid fa-address-book',
@@ -218,7 +220,7 @@ export class ServiceContentComponent {
       ],
     },
     {
-      id: 'quyet-toan-thue',
+      id: 'thay-doi-gpkd',
       major: [
         {
           icon: 'fa-solid fa-address-book',
@@ -387,5 +389,13 @@ export class ServiceContentComponent {
       this.commonStore.patchState({ selectedServiceId: 'dich-vu' });
       this.route.navigate(['dich-vu']);
     }
+  }
+
+  getDescription(detailService: string, service: ServiceModel) {
+    if (!detailService) return service.description;
+    return (
+      service.contents.find((x) => x.nav === detailService)?.label ??
+      service.description
+    );
   }
 }

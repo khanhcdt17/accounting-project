@@ -10,12 +10,12 @@
         <h1 class="text-center lg:text-6xl text-3xl relative uppercase mx-">
           {{ vm.selectedService.title }}
         </h1>
-        <p class="text-center pt-8 text-lg relative px-2">
-          {{ vm.selectedService.description }}
+        <p class="text-center pt-8 text-3xl relative px-2">
+          {{ getDescription(vm.selectedDetailServiceId, vm.selectedService) }}
         </p>
       </div>
     </div>
-    <div class="my-16">
+    <div class="my-16 mx-3">
       <div [ngSwitch]="vm.selectedDetailServiceId">
         <div *ngSwitchCase="'thanh-lap-cong-ty'">
           <app-thanh-lap-cong-ty
@@ -45,9 +45,75 @@
             class="flex justify-center"
           ></app-ho-kinh-doanh-ca-the>
         </div>
+        <div *ngSwitchCase="'ke-toan-tron-goi'">
+          <app-ke-toan-tron-goi
+            class="flex justify-center"
+          ></app-ke-toan-tron-goi>
+        </div>
+        <div *ngSwitchCase="'ke-toan-noi-bo'">
+          <app-ke-toan-noi-bo class="flex justify-center"></app-ke-toan-noi-bo>
+        </div>
+        <div *ngSwitchCase="'khai-thue-ban-dau'">
+          <app-khai-thue-ban-dau
+            class="flex justify-center"
+          ></app-khai-thue-ban-dau>
+        </div>
+        <div *ngSwitchCase="'bao-cao-tai-chinh'">
+          <app-bao-cao-tai-chinh
+            class="flex justify-center"
+          ></app-bao-cao-tai-chinh>
+        </div>
+        <div *ngSwitchCase="'quyet-toan-thue-cuoi-nam'">
+          <app-quyet-toan-thue-cuoi-nam
+            class="flex justify-center"
+          ></app-quyet-toan-thue-cuoi-nam>
+        </div>
+        <div *ngSwitchCase="'lam-so-sach-ke-toan'">
+          <app-lam-so-sach-ke-toan
+            class="flex justify-center"
+          ></app-lam-so-sach-ke-toan>
+        </div>
+        <div *ngSwitchCase="'hoan-thue-gtgt'">
+          <app-hoan-thue-gtgt class="flex justify-center"></app-hoan-thue-gtgt>
+        </div>
+        <div *ngSwitchCase="'hoan-thue-tncn'">
+          <app-hoan-thue-tncn class="flex justify-center"></app-hoan-thue-tncn>
+        </div>
+        <div *ngSwitchCase="'thay-doi-ten'">
+          <app-thay-doi-ten class="flex justify-center"></app-thay-doi-ten>
+        </div>
+        <div *ngSwitchCase="'doi-dia-chi'">
+          <app-doi-dia-chi class="flex justify-center"></app-doi-dia-chi>
+        </div>
+        <div *ngSwitchCase="'them-nganh-nghe'">
+          <app-them-nganh-nghe
+            class="flex justify-center"
+          ></app-them-nganh-nghe>
+        </div>
+        <div *ngSwitchCase="'tang-von-dieu-le'">
+          <app-tang-von-dieu-le
+            class="flex justify-center"
+          ></app-tang-von-dieu-le>
+        </div>
+        <div *ngSwitchCase="'them-co-dong'">
+          <app-them-co-dong class="flex justify-center"></app-them-co-dong>
+        </div>
+        <div *ngSwitchCase="'doi-dai-dien-phap-luat'">
+          <app-thay-doi-dai-dien-phap-luat
+            class="flex justify-center"
+          ></app-thay-doi-dai-dien-phap-luat>
+        </div>
+        <div *ngSwitchCase="'doi-loai-hinh-cong-ty'">
+          <app-doi-loai-hinh-cong-ty
+            class="flex justify-center"
+          ></app-doi-loai-hinh-cong-ty>
+        </div>
+        <div *ngSwitchCase="'cap-nhat-cccd'">
+          <app-cap-nhat-cccd class="flex justify-center"></app-cap-nhat-cccd>
+        </div>
       </div>
     </div>
-    <div class="lg:my-32 common-bg lg:pb-40 my-16 pt-24 sv-container">
+    <div class="lg:mb-32 common-bg lg:pb-40 mb-16 pt-24 sv-container">
       <h2 class="text-center text-white">
         VÌ SAO NÊN SỬ DỤNG DỊCH VỤ CỦA 2KT?
       </h2>

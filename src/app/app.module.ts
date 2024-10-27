@@ -38,6 +38,22 @@ import { CongTyCoPhanComponent } from './features/service-page/service-details/c
 import { CongTyVonNuocNgoaiComponent } from './features/service-page/service-details/cong-ty-von-nuoc-ngoai/cong-ty-von-nuoc-ngoai.component';
 import { ChiNhanhCongTyComponent } from './features/service-page/service-details/chi-nhanh-cong-ty/chi-nhanh-cong-ty.component';
 import { HoKinhDoanhCaTheComponent } from './features/service-page/service-details/ho-kinh-doanh-ca-the/ho-kinh-doanh-ca-the.component';
+import { KeToanTronGoiComponent } from './features/service-page/service-details/ke-toan-tron-goi/ke-toan-tron-goi.component';
+import { KeToanNoiBoComponent } from './features/service-page/service-details/ke-toan-noi-bo/ke-toan-noi-bo.component';
+import { KhaiThueBanDauComponent } from './features/service-page/service-details/khai-thue-ban-dau/khai-thue-ban-dau.component';
+import { BaoCaoTaiChinhComponent } from './features/service-page/service-details/bao-cao-tai-chinh/bao-cao-tai-chinh.component';
+import { QuyetToanThueCuoiNamComponent } from './features/service-page/service-details/quyet-toan-thue-cuoi-nam/quyet-toan-thue-cuoi-nam.component';
+import { LamSoSachKeToanComponent } from './features/service-page/service-details/lam-so-sach-ke-toan/lam-so-sach-ke-toan.component';
+import { HoanThueGtgtComponent } from './features/service-page/service-details/hoan-thue-gtgt/hoan-thue-gtgt.component';
+import { HoanThueTncnComponent } from './features/service-page/service-details/hoan-thue-tncn/hoan-thue-tncn.component';
+import { ThayDoiTenComponent } from './features/service-page/service-details/thay-doi-ten/thay-doi-ten.component';
+import { DoiDiaChiComponent } from './features/service-page/service-details/doi-dia-chi/doi-dia-chi.component';
+import { ThemNganhNgheComponent } from './features/service-page/service-details/them-nganh-nghe/them-nganh-nghe.component';
+import { TangVonDieuLeComponent } from './features/service-page/service-details/tang-von-dieu-le/tang-von-dieu-le.component';
+import { ThemCoDongComponent } from './features/service-page/service-details/them-co-dong/them-co-dong.component';
+import { ThayDoiDaiDienPhapLuatComponent } from './features/service-page/service-details/thay-doi-dai-dien-phap-luat/thay-doi-dai-dien-phap-luat.component';
+import { DoiLoaiHinhCongTyComponent } from './features/service-page/service-details/doi-loai-hinh-cong-ty/doi-loai-hinh-cong-ty.component';
+import { CapNhatCccdComponent } from './features/service-page/service-details/cap-nhat-cccd/cap-nhat-cccd.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +89,22 @@ import { HoKinhDoanhCaTheComponent } from './features/service-page/service-detai
     CongTyVonNuocNgoaiComponent,
     ChiNhanhCongTyComponent,
     HoKinhDoanhCaTheComponent,
+    KeToanTronGoiComponent,
+    KeToanNoiBoComponent,
+    KhaiThueBanDauComponent,
+    BaoCaoTaiChinhComponent,
+    QuyetToanThueCuoiNamComponent,
+    LamSoSachKeToanComponent,
+    HoanThueGtgtComponent,
+    HoanThueTncnComponent,
+    ThayDoiTenComponent,
+    DoiDiaChiComponent,
+    ThemNganhNgheComponent,
+    TangVonDieuLeComponent,
+    ThemCoDongComponent,
+    ThayDoiDaiDienPhapLuatComponent,
+    DoiLoaiHinhCongTyComponent,
+    CapNhatCccdComponent,
   ],
   imports: [
     BrowserModule,

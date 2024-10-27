@@ -232,7 +232,7 @@
           >Giới thiệu</a
         >
       </li>
-      <li class="mx-6 my-1">
+      <!-- <li class="mx-6 my-1">
         <div class="flex items-center">
           <a
             class="block !text-orange-50 !font-normal !text-base"
@@ -289,12 +289,43 @@
           <li class="mt-2">
             <a
               class="dropdown-item !text-orange-50 !font-normal !text-base cursor-pointer"
-              (click)="redirectToDetailService('TODO','dao-tao-ke-toan')"
+              (click)="redirectToDetailService('TODO', 'dao-tao-ke-toan')"
               >Đào tạo kế toán</a
             >
           </li>
         </ul>
+      </li> -->
+
+      <!-- new tab -->
+      <li class="mx-6 my-1" *ngFor="let item of headers">
+        <div class="flex items-center">
+          <a
+            class="block !text-orange-50 !font-normal !text-base cursor-pointer"
+            (click)="redirectToService(item.key)"
+          >
+            {{ item.title }}
+          </a>
+          <div (click)="expendServiceMenu(item.key)" class="mx-2">
+            <i
+              [ngClass]="
+                item.isOpen
+                  ? 'fa-solid fa-angle-down text-xs text-orange-100'
+                  : 'fa-solid fa-angle-right text-xs text-orange-100'
+              "
+            ></i>
+          </div>
+        </div>
+        <ul class="!border-0 !p-0 w-60 ml-4" *ngIf="item.isOpen">
+          <li class="mt-2" *ngFor="let children of item.children">
+            <a
+              class="dropdown-item !font-normal !text-base !rounded-md cursor-pointer"
+              (click)="redirectToDetailService(item.key, children.key)"
+              >{{ children.title }}</a
+            >
+          </li>
+        </ul>
       </li>
+      <!--end  new tab -->
       <li class="mx-6 my-1">
         <div class="flex items-center">
           <div class="flex items-center">
@@ -340,37 +371,6 @@
           </li>
         </ul>
       </li>
-      <!-- new tab -->
-      <li class="mx-6 my-1" *ngFor="let item of headers">
-        <div class="flex items-center">
-          <a
-            class="block !text-orange-50 !font-normal !text-base cursor-pointer"
-            (click)="redirectTo('lien-he')"
-          >
-            Liên hệ
-          </a>
-          <div (click)="expendMenu('contact')" class="mx-2">
-            <i
-              [ngClass]="
-                contactIsOpen
-                  ? 'fa-solid fa-angle-down text-xs text-orange-100'
-                  : 'fa-solid fa-angle-right text-xs text-orange-100'
-              "
-            ></i>
-          </div>
-        </div>
-        <ul class="!border-0 !p-0 w-60 ml-4" *ngIf="contactIsOpen">
-          <li class="mt-2">
-            <a
-              class="dropdown-item !font-normal !text-base !rounded-md cursor-pointer"
-              (click)="redirectTo('lien-he')"
-              >Tuyển dụng</a
-            >
-          </li>
-        </ul>
-      </li>
-      <!--end  new tab -->
-
       <li class="mx-6 my-1">
         <div class="flex items-center">
           <a
