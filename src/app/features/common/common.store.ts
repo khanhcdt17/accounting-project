@@ -146,12 +146,9 @@ export class CommonStore extends ComponentStore<State> {
   private loadServiceContent = this.effect<string>(
     pipe(
       tap((serviceContent) => {
-        console.log('serviceContent', serviceContent);
         const selectedService = ListServices.find(
           (x) => x.key === serviceContent
         );
-        console.log('selected service', selectedService);
-
         this.patchState({ selectedService: selectedService });
       })
     )
