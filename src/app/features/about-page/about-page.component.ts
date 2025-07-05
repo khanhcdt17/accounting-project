@@ -37,27 +37,27 @@ export class AboutPageComponent {
     {
       image: 'fa-solid fa-scale-balanced',
       name: 'Đại lý thuế',
-      comment: `2KT giúp bạn tiết kiệm thời gian và công sức, giảm rủi ro pháp lý, giảm chi phí, cập nhật thông tin thuế mới nhất và tư vấn chiến lược thuế.`,
+      comment: `Dịch vụ thuê - kế toán 2KT giúp bạn tiết kiệm thời gian và công sức, giảm rủi ro pháp lý, giảm chi phí, cập nhật thông tin thuế mới nhất và tư vấn chiến lược thuế.`,
     },
     {
       image: 'fa-solid fa-money-bill-trend-up',
       name: 'Quyết toán thuế',
-      comment: `2KT sẽ cam kết đảm bảo tiến độ và chất lượng công việc, nhằm đáp ứng nhu cầu giải quyết vấn đề quyết toán thuế ở Doanh nghiệp.`,
+      comment: `Dịch vụ thuê - kế toán 2KT sẽ cam kết đảm bảo tiến độ và chất lượng công việc, nhằm đáp ứng nhu cầu giải quyết vấn đề quyết toán thuế ở Doanh nghiệp.`,
     },
     {
       image: 'fa-solid fa-building',
       name: 'Đăng ký kinh doanh',
-      comment: `Với dịch vụ đăng ký kinh doanh uy tín mà 2KT mang lại, việc startup công ty sẽ trở nên dễ dàng, hiệu quả, nhanh gọn lại còn tiết kiệm hơn.`,
+      comment: `Với dịch vụ đăng ký kinh doanh uy tín mà dịch vụ thuê - kế toán 2KT mang lại, việc startup công ty sẽ trở nên dễ dàng, hiệu quả, nhanh gọn lại còn tiết kiệm hơn.`,
     },
     {
       image: 'fa-solid fa-address-card',
       name: 'Bảo hiểm xã hội',
-      comment: `Nếu bạn là công ty đang gặp vướng mắc về thủ tục đăng ký bảo hiểm xã hội, thì hãy để dịch vụ chuyên nghiệp, uy tín của 2KT hỗ trợ bạn.`,
+      comment: `Nếu bạn là công ty đang gặp vướng mắc về thủ tục đăng ký bảo hiểm xã hội, thì hãy để dịch vụ chuyên nghiệp, uy tín của dịch vụ thuê - kế toán 2KT hỗ trợ bạn.`,
     },
     {
       image: 'fa-solid fa-graduation-cap',
       name: 'Đào tạo kế toán',
-      comment: `2KT sẵn sàng chia sẻ với cộng đồng, mang lại kiến thức thiết thực cho sinh viên, đào tạo cho đội ngũ kế toán của Doanh nghiệp, cá nhân có nhu cầu`,
+      comment: `Dịch vụ thuê - kế toán 2KT sẵn sàng chia sẻ với cộng đồng, mang lại kiến thức thiết thực cho sinh viên, đào tạo cho đội ngũ kế toán của Doanh nghiệp, cá nhân có nhu cầu`,
     },
   ];
   itemsPerSlide = 4;
