@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class ProfileCardComponent {
   @Input() imgSrc = '';
   @Input() isHomePage = true;
-  @Input() title = 'Đại Lý Thuế 2KT';
+  @Input() title = 'Dịch vụ thuê - kế toán 2KT';
   @Input() content1 = '';
   @Input() content2 = '';
 

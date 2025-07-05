@@ -10,9 +10,9 @@ export class QuestionComponent {
   profiles = [
     {
       index: 0,
-      title: '2KT bao gồm những dịch vụ gì?',
+      title: 'Dịch vụ thuê - kế toán 2KT bao gồm những dịch vụ gì?',
       contents: [
-        `Đại lý Thuế 2KT cung cấp dịch vụ kế toán, báo cáo thuế trọn gói, dịch vụ Đăng ký Kinh doanh, Quyết toán thuế, Đăng ký Lao động, Bảo hiểm xã hội.`,
+        `Dịch vụ thuê - kế toán 2KT cung cấp dịch vụ kế toán, báo cáo thuế trọn gói, dịch vụ Đăng ký Kinh doanh, Quyết toán thuế, Đăng ký Lao động, Bảo hiểm xã hội.`,
       ],
       isOpen: false,
     },
@@ -29,7 +29,7 @@ export class QuestionComponent {
       index: 2,
       title: 'Có phát sinh thêm chi phí hay không?',
       contents: [
-        `Đại lý Thuế 2KT cam kết không phát sinh thêm các khoản chi phí khác, ngoài các khoảng phí, là phí mà chúng tôi đã thông báo cho bạn bằng văn bản.`,
+        `Dịch vụ thuê - kế toán 2KT cam kết không phát sinh thêm các khoản chi phí khác, ngoài các khoảng phí, là phí mà chúng tôi đã thông báo cho bạn bằng văn bản.`,
       ],
       isOpen: false,
     },
@@ -37,8 +37,8 @@ export class QuestionComponent {
       index: 3,
       title: 'Dữ liệu thanh toán có bảo mật không?',
       contents: [
-        `Hoàn toàn bảo mật. Đại lý Thuế 2KT cam kết không chia sẻ dữ liệu khách hàng cho bất kỳ bên thứ 3 nào trừ những báo cáo gửi cho cơ quan Thuế. 
-      Điều khoản bảo mật là điểm nổi bật của Đại lý Thuế 2KT - Dịch vụ kế toán báo cáo Thuế chuyên nghiệp`,
+        `Hoàn toàn bảo mật. Dịch vụ thuê - kế toán 2KT cam kết không chia sẻ dữ liệu khách hàng cho bất kỳ bên thứ 3 nào trừ những báo cáo gửi cho cơ quan Thuế. 
+      Điều khoản bảo mật là điểm nổi bật của Dịch vụ thuê - kế toán 2KT - Dịch vụ kế toán báo cáo Thuế chuyên nghiệp`,
       ],
       isOpen: false,
     },

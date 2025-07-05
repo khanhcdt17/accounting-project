@@ -22,38 +22,38 @@ export class ServiceContentComponent {
       id: 'thanh-lap',
       content1: `Dịch vụ kế toán đóng vai trò quan trọng trong quá trình hoạt động của doanh nghiệp. 
     Kế toán không chỉ là một phần của hệ thống tài chính mà còn là trụ cột quan trọng giúp doanh nghiệp đi đúng hướng và duy trì sự ổn định. 
-    Nhận thức được điều này, 2KT đã triển khai và cung cấp các dịch vụ kế toán trọn gói đáp ứng đầy đủ nghiệp vụ với mức chi phí tối ưu, 
+    Nhận thức được điều này,dịch vụ thuê - kế toán 2KT đã triển khai và cung cấp các dịch vụ kế toán trọn gói đáp ứng đầy đủ nghiệp vụ với mức chi phí tối ưu, 
     mang đến giải pháp hoàn hảo cho mọi doanh nghiệp.`,
-      content2: `Với đội ngũ chuyên viên giàu kinh nghiệm, 2KT cam kết mang đến cho doanh nghiệp gói dịch vụ Kế Toán Thuế trọn gói chất lượng nhất. 
+      content2: `Với đội ngũ chuyên viên giàu kinh nghiệm, dịch vụ thuê - kế toán 2KT cam kết mang đến cho doanh nghiệp gói dịch vụ Kế Toán Thuế trọn gói chất lượng nhất. 
     Chúng tôi không chỉ đảm bảo tuân thủ quy định một cách chặt chẽ mà còn tối ưu hóa quy trình làm việc, giảm thiểu rủi ro, 
     giúp khách hàng giải quyết mọi vấn đề một cách triệt để và nhanh chóng nhất.`,
     },
     {
       id: 'quyet-toan-thue',
       content1: `Chúng tôi cung cấp các dịch vụ quyết toán thuế liên quan đến xác định (giải quyết), tư vấn về các trách nhiệm, nghĩa vụ, 
-      và quyền lợi của các pháp nhân (khách hàng). Theo đúng quy định của luật thuế, 2KT đóng vai trò là đại diện cho các thực thể trong giao dịch với Ủy viên thuế.
+      và quyền lợi của các pháp nhân (khách hàng). Theo đúng quy định của luật thuế, dịch vụ thuê - kế toán 2KT đóng vai trò là đại diện cho các thực thể trong giao dịch với Ủy viên thuế.
        Không chỉ giới hạn ở việc giải quyết vấn đề về thuế mà còn mở rộng ra xử lý các thách thức về kế toán của doanh nghiệp với các dịch vụ kế toán trọn gói, đại lý thuế, 
        nộp báo cáo,…`,
-      content2: `2KT là người bạn đồng hành đáng tin cậy, tận tâm, chuyên nghiệp mang lại giải pháp toàn diện và giúp doanh nghiệp xây dựng cơ sở tài chính vững chắc, 
+      content2: `dịch vụ thuê - kế toán 2KT là người bạn đồng hành đáng tin cậy, tận tâm, chuyên nghiệp mang lại giải pháp toàn diện và giúp doanh nghiệp xây dựng cơ sở tài chính vững chắc, 
       đạt được mức độ tuân thủ cao nhất đối với các quy định thuế và kế toán.`,
     },
     {
       id: 'dang-ky-kinh-doanh',
       content1: `Chúng tôi cung cấp các dịch vụ đăng ký kinh doanh liên quan đến xác định (giải quyết), tư vấn về các trách nhiệm, nghĩa vụ, 
-    và quyền lợi của các pháp nhân (khách hàng). Theo đúng quy định của luật thuế, 2KT đóng vai trò là đại diện cho các thực thể trong giao dịch với Ủy viên thuế.
+    và quyền lợi của các pháp nhân (khách hàng). Theo đúng quy định của luật thuế, dịch vụ thuê - kế toán 2KT đóng vai trò là đại diện cho các thực thể trong giao dịch với Ủy viên thuế.
      Không chỉ giới hạn ở việc giải quyết vấn đề về thuế mà còn mở rộng ra xử lý các thách thức về kế toán của doanh nghiệp với các dịch vụ kế toán trọn gói, đại lý thuế, 
      nộp báo cáo,…`,
-      content2: `2KT là người bạn đồng hành đáng tin cậy, tận tâm, chuyên nghiệp mang lại giải pháp toàn diện và giúp doanh nghiệp xây dựng cơ sở tài chính vững chắc, 
+      content2: `dịch vụ thuê - kế toán 2KT là người bạn đồng hành đáng tin cậy, tận tâm, chuyên nghiệp mang lại giải pháp toàn diện và giúp doanh nghiệp xây dựng cơ sở tài chính vững chắc, 
      đạt được mức độ tuân thủ cao nhất đối với các quy định thuế và kế toán.`,
     },
     {
       id: 'dai-ly-thue',
       content1: `Chúng tôi cung cấp các dịch vụ đại lý thuế liên quan đến xác định (giải quyết), 
     tư vấn về các trách nhiệm, nghĩa vụ, và quyền lợi của các pháp nhân (khách hàng). Theo đúng quy định của luật thuế,
-     2KT đóng vai trò là đại diện cho các thực thể trong giao dịch với Ủy viên thuế. 
+     dịch vụ thuê - kế toán 2KT đóng vai trò là đại diện cho các thực thể trong giao dịch với Ủy viên thuế. 
      Không chỉ giới hạn ở việc giải quyết vấn đề về thuế mà còn mở rộng ra xử lý các thách thức về kế toán của doanh
       nghiệp với các dịch vụ kế toán trọn gói, quyết toán thuế, nộp báo cáo,…`,
-      content2: `2KT không chỉ là một đại lý thuế thông thường mà còn là người bạn đồng hành đáng tin cậy, tận tâm, chuyên nghiệp 
+      content2: `dịch vụ thuê - kế toán 2KT không chỉ là một đại lý thuế thông thường mà còn là người bạn đồng hành đáng tin cậy, tận tâm, chuyên nghiệp 
       mang lại giải pháp toàn diện và giúp doanh nghiệp xây dựng cơ sở tài chính vững chắc, đạt được mức độ tuân thủ cao nhất đối với các quy định thuế và kế toán.`,
     },
     {
@@ -63,7 +63,7 @@ export class ServiceContentComponent {
      việc đăng ký hồ sơ bảo hiểm xã hội là bước quan trọng. `,
       content2: `Tuy nhiên, rất nhiều doanh nghiệp vẫn gặp khó khăn trong quá trình này. 
      Nếu bạn đang đối mặt với những thách thức trong việc thực hiện thủ tục này,
-      hãy để 2KT giúp bạn đơn giản hóa mọi điều với dịch vụ Bảo hiểm xã hội của chúng tôi. `,
+      hãy để dịch vụ thuê - kế toán 2KT giúp bạn đơn giản hóa mọi điều với dịch vụ Bảo hiểm xã hội của chúng tôi. `,
     },
     {
       id: 'dao-tao-ke-toan',
@@ -104,11 +104,11 @@ export class ServiceContentComponent {
       title: 'TIẾT KIỆM THỜI GIAN VÀ CHI PHÍ',
       content: `Dịch vụ kế toán trọn gói giúp doanh nghiệp tiết kiệm được khá nhiều chi phí như chi phí đầu tư vào máy móc, phần mềm, 
       chi phí đào tạo nhân sự, chi phí lương,… Đặc biệt, đối với các doanh nghiệp vừa và nhỏ, hoặc đang trong giai đoạn khởi nghiệp, 
-      khi nguồn lực tài chính còn eo hẹp thì việc lựa chọn dịch vụ kế toán trọn gói từ 2KT sẽ là lựa chọn tối ưu nhất.`,
+      khi nguồn lực tài chính còn eo hẹp thì việc lựa chọn dịch vụ kế toán trọn gói từ dịch vụ thuê - kế toán 2KT sẽ là lựa chọn tối ưu nhất.`,
     },
     {
       title: 'BẢO MẬT THÔNG TIN TUYỆT ĐỐI',
-      content: `2KT cam kết khi sử dụng dịch vụ kế toán trọn gói sẽ bảo mật thông tin tuyệt đối, 
+      content: `Dịch vụ thuê - kế toán 2KT cam kết khi sử dụng dịch vụ kế toán trọn gói sẽ bảo mật thông tin tuyệt đối, 
       tuân thủ theo các tiêu chuẩn ngành, liên tục được cập nhật và kiểm tra hệ thống để đảm bảo an toàn thông tin và 
       dữ liệu của khách hàng từ bất kỳ rủi ro nào.`,
     },
@@ -121,13 +121,13 @@ export class ServiceContentComponent {
     {
       title: 'THÔNG TIN MINH BẠCH',
       content: `Chúng tôi đặt sự minh bạch hàng đầu trong việc tư vấn và đàm phán, 
-      cam kết cung cấp thông tin rõ ràng và chi tiết về dịch vụ kế toán Doanh nghiệp trọn gói. Sau khi đội ngũ kế toán của 2KT đã thực hiện kiểm tra thông tin và 
+      cam kết cung cấp thông tin rõ ràng và chi tiết về dịch vụ kế toán Doanh nghiệp trọn gói. Sau khi đội ngũ kế toán của dịch vụ thuê - kế toán 2KT đã thực hiện kiểm tra thông tin và 
       rà soát số liệu một cách kỹ lưỡng sẽ thông báo chi phí cụ thể, rõ ràng, tối ưu nhất về dịch vụ kế toán trọn gói đến khách hàng.`,
     },
     {
       title: 'ĐẢM BẢO CHÍNH XÁC TUYỆT ĐỐI',
       content: `Chúng tôi cam kết đảm bảo chính xác tuyệt đối trong mọi khía cạnh của quy trình cung cấp dịch vụ kế toán Doanh nghiệp trọn gói.
-     Điều này không chỉ giúp 2KT duy trì mà còn nâng cao chất lượng của dịch vụ kế toán trọn gói, mang lại sự tin cậy cao nhất cho doanh nghiệp của bạn.`,
+     Điều này không chỉ giúp dịch vụ thuê - kế toán 2KT duy trì mà còn nâng cao chất lượng của dịch vụ kế toán trọn gói, mang lại sự tin cậy cao nhất cho doanh nghiệp của bạn.`,
     },
     {
       title: 'DỰ ĐOÁN RỦI RO TÀI CHÍNH',
@@ -159,7 +159,7 @@ export class ServiceContentComponent {
           title:
             'THỦ TỤC NỘP THUẾ MÔN BÀI, ĐĂNG KÝ MUA, ĐẶT IN HÓA ĐƠN BAN ĐẦU',
           content:
-            '2KT thay mặt khách hàng liên hệ và phối hợp với cán bộ Thuế để thực hiện các nghiệp vụ theo quy định.',
+            'Dịch vụ thuê - kế toán 2KT thay mặt khách hàng liên hệ và phối hợp với cán bộ Thuế để thực hiện các nghiệp vụ theo quy định.',
         },
         {
           icon: 'fa-solid fa-file-invoice-dollar',
@@ -264,7 +264,7 @@ export class ServiceContentComponent {
         {
           icon: 'fa-solid fa-wallet',
           title: `THỦ TỤC NỘP THUẾ MÔN BÀI, ĐĂNG KÝ MUA, ĐẶT IN HÓA ĐƠN BAN ĐẦU`,
-          content: `2KT thay mặt khách hàng liên hệ và phối hợp với cán bộ Thuế để thực hiện các nghiệp vụ theo quy định.`,
+          content: `Dịch vụ thuê - kế toán 2KT thay mặt khách hàng liên hệ và phối hợp với cán bộ Thuế để thực hiện các nghiệp vụ theo quy định.`,
         },
         {
           icon: 'fa-solid fa-file-invoice-dollar',
@@ -295,14 +295,14 @@ export class ServiceContentComponent {
   process = [
     {
       title: `TIẾP NHẬN THÔNG TIN`,
-      content: `2KT tiếp nhận thông tin tiếp nhận thông tin từ khách hàng và tiến hành trao đổi chi tiết, 
+      content: `Dịch vụ thuê - kế toán 2KT tiếp nhận thông tin tiếp nhận thông tin từ khách hàng và tiến hành trao đổi chi tiết, 
       liệt kê thông tin để tìm ra vấn đề mấu chốt mà khách hàng đang gặp phải. 
       Những thông tin khách hàng cung cấp sẽ được chuyển giao đến các chuyên viên để kiểm tra thông tin và phân tích vấn đề.`,
       step: 1,
     },
     {
       title: `KIỂM TRA THÔNG TIN`,
-      content: `2KT sẽ kiểm tra và xác minh thông tin khách hàng cung cấp để đảm bảo tính chính xác, đầy đủ và hợp lệ. 
+      content: `Dịch vụ thuê - kế toán 2KT sẽ kiểm tra và xác minh thông tin khách hàng cung cấp để đảm bảo tính chính xác, đầy đủ và hợp lệ. 
     Sau đó khách hàng sẽ được tư vấn sơ bộ và lắng nghe các đề xuất giải pháp cho doanh nghiệp của mình.`,
       step: 2,
     },
@@ -324,12 +324,12 @@ export class ServiceContentComponent {
     },
     {
       title: `LIÊN HỆ CÁN BỘ THUẾ PHỤ TRÁCH VÀ PHỐI HỢP LÀM VIỆC THUẾ`,
-      content: `2KT thay mặt khách hàng liên hệ và phối hợp với cán bộ Thuế để thực hiện các nghiệp vụ theo quy định.`,
+      content: `Dịch vụ thuê - kế toán 2KT thay mặt khách hàng liên hệ và phối hợp với cán bộ Thuế để thực hiện các nghiệp vụ theo quy định.`,
       step: 6,
     },
     {
       title: `THÔNG BÁO CHO KHÁCH HÀNG KHI CÓ QUYẾT ĐỊNH`,
-      content: `Sau khi quá trình hoàn tất, 2KT sẽ nhanh chóng thông báo về kết quả thực hiện thủ tục cho khách hàng.`,
+      content: `Sau khi quá trình hoàn tất, dịch vụ thuê - kế toán 2KT sẽ nhanh chóng thông báo về kết quả thực hiện thủ tục cho khách hàng.`,
       step: 7,
     },
   ];
